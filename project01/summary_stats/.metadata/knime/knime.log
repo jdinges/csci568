@@ -1,0 +1,1445 @@
+2011-09-11 19:41:54,030 INFO  main NodeLogger : #############################################################
+2011-09-11 19:41:54,031 INFO  main NodeLogger : #                                                           #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Welcome to KNIME v2.4.2.0030673 (Build August 29, 2011)        #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # the Konstanz Information Miner                            #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Based on Eclipse, www.eclipse.org                         #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Uses: Java, GEF, Log4J                                    #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : #                                                           #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : #############################################################
+2011-09-11 19:41:54,031 INFO  main NodeLogger : #                                                           #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Copyright, 2003 - 2011                                    #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # University of Konstanz, Germany.                          #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Chair for Bioinformatics and Information Mining           #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # Prof. Dr. Michael R. Berthold                             #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # and KNIME GmbH, Konstanz, Germany                         #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # website: http://www.knime.org                             #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : # email: contact@knime.org                                  #
+2011-09-11 19:41:54,031 INFO  main NodeLogger : #                                                           #
+2011-09-11 19:41:54,032 INFO  main NodeLogger : #############################################################
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # For more details see the KNIME log file:                  #
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/knime.log
+2011-09-11 19:41:54,032 INFO  main NodeLogger : #-----------------------------------------------------------#
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # logging date=Sun Sep 11 19:41:54 MDT 2011
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # java.version=1.6.0_26
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # java.vm.version=20.1-b02-383
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # java.vendor=Apple Inc.
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # os.name=Mac OS X
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # os.arch=x86_64
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # number of CPUs=4
+2011-09-11 19:41:54,032 INFO  main NodeLogger : # assertions=off
+2011-09-11 19:41:54,036 INFO  main NodeLogger : # host=Joshs-iMac.local
+2011-09-11 19:41:54,036 INFO  main NodeLogger : # max mem=505MB
+2011-09-11 19:41:54,036 INFO  main NodeLogger : #############################################################
+2011-09-11 19:41:54,066 DEBUG main KNIMECorePlugin : Setting KNIME max thread count to 8
+2011-09-11 19:41:54,066 DEBUG main KNIMECorePlugin : Setting KNIME temp dir to "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T"
+2011-09-11 19:41:54,066 INFO  main NodeLogger : Changing logging level to DEBUG
+2011-09-11 19:41:54,156 INFO  main KNIMECorePlugin : Setting console view log level to WARN
+2011-09-11 19:41:54,245 DEBUG main KnimeEncryption : Replacing current encryption key supplier "null" with this new one "org.knime.workbench.core.EclipseEncryptionKeySupplier@4145582".
+2011-09-11 19:41:54,255 DEBUG main KnimeEncryption : Replacing current encryption key supplier "org.knime.workbench.core.EclipseEncryptionKeySupplier@4145582" with this new one "org.knime.workbench.ui.masterkey.MasterKeyPreferencePage$1@3aa42c31".
+2011-09-11 19:41:55,014 DEBUG main KnimeResourceNavigator : KNIME resource navigator created
+2011-09-11 19:41:55,519 DEBUG main NodeContainer : Workflow Manager 0 has new state: EXECUTED
+2011-09-11 19:41:55,520 DEBUG main WorkflowManager : Created subworkflow 0
+2011-09-11 19:41:55,520 DEBUG main NodeContainer : Workflow Manager 0:1 has new state: EXECUTED
+2011-09-11 19:41:55,520 DEBUG main WorkflowManager : Created subworkflow 0:1
+2011-09-11 19:41:55,520 DEBUG main NodeContainer : Workflow Manager 0 has new state: EXECUTED
+2011-09-11 19:41:55,520 DEBUG main WorkflowManager : Added new subworkflow 0:1
+2011-09-11 19:41:55,520 DEBUG main NodeContainer : Setting dirty flag on Workflow Manager 0
+2011-09-11 19:41:55,520 DEBUG main WorkflowManager : Created project 0:1
+2011-09-11 19:41:55,550 DEBUG main RepositoryManager : Found category extension 'io' on path '/'
+2011-09-11 19:41:55,572 DEBUG main RepositoryManager : Found category extension 'database' on path '/'
+2011-09-11 19:41:55,573 DEBUG main RepositoryManager : Found category extension 'manipulation' on path '/'
+2011-09-11 19:41:55,574 DEBUG main RepositoryManager : Found category extension 'mining' on path '/'
+2011-09-11 19:41:55,574 DEBUG main RepositoryManager : Found category extension 'view' on path '/'
+2011-09-11 19:41:55,575 DEBUG main RepositoryManager : Found category extension 'statistics' on path '/'
+2011-09-11 19:41:55,576 DEBUG main RepositoryManager : Found category extension 'meta' on path '/'
+2011-09-11 19:41:55,577 DEBUG main RepositoryManager : Found category extension 'misc' on path '/'
+2011-09-11 19:41:55,578 DEBUG main RepositoryManager : Found category extension 'flowcontrol' on path '/'
+2011-09-11 19:41:55,579 DEBUG main RepositoryManager : Found category extension 'labs' on path '/'
+2011-09-11 19:41:55,580 DEBUG main RepositoryManager : Found category extension 'community' on path '/'
+2011-09-11 19:41:55,594 DEBUG main RepositoryManager : Found category extension 'timeseries' on path '/'
+2011-09-11 19:41:55,595 DEBUG main RepositoryManager : Found category extension 'read' on path '/io'
+2011-09-11 19:41:55,595 DEBUG main RepositoryManager : Found category extension 'write' on path '/io'
+2011-09-11 19:41:55,596 DEBUG main RepositoryManager : Found category extension 'column' on path '/manipulation'
+2011-09-11 19:41:55,597 DEBUG main RepositoryManager : Found category extension 'row' on path '/manipulation'
+2011-09-11 19:41:55,598 DEBUG main RepositoryManager : Found category extension 'clustering' on path '/mining'
+2011-09-11 19:41:55,598 DEBUG main RepositoryManager : Found category extension 'property' on path '/view'
+2011-09-11 19:41:55,599 DEBUG main RepositoryManager : Found category extension 'nn' on path '/mining'
+2011-09-11 19:41:55,599 DEBUG main RepositoryManager : Found category extension 'regression' on path '/statistics'
+2011-09-11 19:41:55,600 DEBUG main RepositoryManager : Found category extension 'rules' on path '/mining'
+2011-09-11 19:41:55,600 DEBUG main RepositoryManager : Found category extension 'dtree' on path '/mining'
+2011-09-11 19:41:55,601 DEBUG main RepositoryManager : Found category extension 'modeleval' on path '/mining'
+2011-09-11 19:41:55,601 DEBUG main RepositoryManager : Found category extension 'artificial' on path '/io'
+2011-09-11 19:41:55,601 DEBUG main RepositoryManager : Found category extension 'io-other' on path '/io'
+2011-09-11 19:41:55,602 DEBUG main RepositoryManager : Found category extension 'subgroup' on path '/mining'
+2011-09-11 19:41:55,604 DEBUG main RepositoryManager : Found category extension 'matrix' on path '/manipulation'
+2011-09-11 19:41:55,605 DEBUG main RepositoryManager : Found category extension 'miscClass' on path '/mining'
+2011-09-11 19:41:55,605 DEBUG main RepositoryManager : Found category extension 'bayes' on path '/mining'
+2011-09-11 19:41:55,606 DEBUG main RepositoryManager : Found category extension 'mds' on path '/mining'
+2011-09-11 19:41:55,606 DEBUG main RepositoryManager : Found category extension 'svm' on path '/mining'
+2011-09-11 19:41:55,606 DEBUG main RepositoryManager : Found category extension 'java-snippet' on path '/misc'
+2011-09-11 19:41:55,607 DEBUG main RepositoryManager : Found category extension 'pmml' on path '/manipulation'
+2011-09-11 19:41:55,607 DEBUG main RepositoryManager : Found category extension 'pca' on path '/mining'
+2011-09-11 19:41:55,608 DEBUG main RepositoryManager : Found category extension 'switches' on path '/flowcontrol'
+2011-09-11 19:41:55,608 DEBUG main RepositoryManager : Found category extension 'meta-mining' on path '/mining'
+2011-09-11 19:41:55,609 DEBUG main RepositoryManager : Found category extension 'variables' on path '/flowcontrol'
+2011-09-11 19:41:55,610 DEBUG main RepositoryManager : Found category extension 'view-util' on path '/view'
+2011-09-11 19:41:55,610 DEBUG main RepositoryManager : Found category extension 'row-other' on path '/manipulation/row'
+2011-09-11 19:41:55,611 DEBUG main RepositoryManager : Found category extension 'basisfunction' on path '/mining/rules'
+2011-09-11 19:41:55,611 DEBUG main RepositoryManager : Found category extension 'mlp' on path '/mining/nn'
+2011-09-11 19:41:55,612 DEBUG main RepositoryManager : Found category extension 'pnn' on path '/mining/nn'
+2011-09-11 19:41:55,613 DEBUG main RepositoryManager : Found category extension 'features' on path '/mining/meta-mining'
+2011-09-11 19:41:55,614 DEBUG main RepositoryManager : Found category extension 'loopsupport' on path '/flowcontrol/'
+2011-09-11 19:41:55,615 DEBUG main RepositoryManager : Found category extension 'crossvalidation' on path '/mining/meta-mining'
+2011-09-11 19:41:55,615 DEBUG main RepositoryManager : Found category extension 'column-split+combine' on path '/manipulation/column'
+2011-09-11 19:41:55,616 DEBUG main RepositoryManager : Found category extension 'column-filter' on path '/manipulation/column'
+2011-09-11 19:41:55,616 DEBUG main RepositoryManager : Found category extension 'column-transform' on path '/manipulation/column'
+2011-09-11 19:41:55,616 DEBUG main RepositoryManager : Found category extension 'binning' on path '/manipulation/column'
+2011-09-11 19:41:55,617 DEBUG main RepositoryManager : Found category extension 'column-convert+replace' on path '/manipulation/column'
+2011-09-11 19:41:55,617 DEBUG main RepositoryManager : Found category extension 'row-filter' on path '/manipulation/row'
+2011-09-11 19:41:55,618 DEBUG main RepositoryManager : Found category extension 'row-transform' on path '/manipulation/row'
+2011-09-11 19:41:55,718 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.smote.SmoteNodeFactory': SMOTE
+2011-09-11 19:41:55,731 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.filereader.FileReaderNodeFactory': File Reader
+2011-09-11 19:41:55,742 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.color.ColorManager2NodeFactory': Color Manager
+2011-09-11 19:41:55,748 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.size.SizeManager2NodeFactory': Size Manager
+2011-09-11 19:41:55,755 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.shape.ShapeManagerNodeFactory': Shape Manager
+2011-09-11 19:41:55,765 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.color.ColorAppenderNodeFactory': Color Appender
+2011-09-11 19:41:55,770 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.size.SizeAppenderNodeFactory': Size Appender
+2011-09-11 19:41:55,775 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.property.shape.ShapeAppenderNodeFactory': Shape Appender
+2011-09-11 19:41:55,781 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.table.TableNodeFactory': Interactive Table
+2011-09-11 19:41:55,797 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.scorer.scorer.AccuracyScorerNodeFactory': Scorer
+2011-09-11 19:41:55,809 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.column.FilterColumnNodeFactory': Column Filter
+2011-09-11 19:41:55,823 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.binner.BinnerNodeFactory': Numeric Binner
+2011-09-11 19:41:55,829 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.binnerdictionary.BinByDictionaryNodeFactory': Binner (Dictionary)
+2011-09-11 19:41:55,833 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.util.cache.CacheNodeFactory': Cache
+2011-09-11 19:41:55,840 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.cluster.kmeans.ClusterNodeFactory': k-Means
+2011-09-11 19:41:55,848 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.bfn.fuzzy.FuzzyBasisFunctionLearnerNodeFactory': Fuzzy Rule Learner
+2011-09-11 19:41:55,854 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.bfn.fuzzy.FuzzyBasisFunctionPredictorNodeFactory': Fuzzy Rule Predictor
+2011-09-11 19:41:55,860 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.bfn.radial.RadialBasisFunctionLearnerNodeFactory': PNN Learner (DDA)
+2011-09-11 19:41:55,864 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.bfn.radial.RadialBasisFunctionPredictorNodeFactory': PNN Predictor
+2011-09-11 19:41:55,869 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.util.sampledata.SampleDataNodeFactory': Data Generator
+2011-09-11 19:41:55,896 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.csvwriter.CSVWriterNodeFactory': CSV Writer
+2011-09-11 19:41:55,902 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.joiner.Joiner2NodeFactory': Joiner
+2011-09-11 19:41:55,907 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.split.SplitNodeFactory': Splitter
+2011-09-11 19:41:55,924 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.arffwriter.ARFFWriterNodeFactory': ARFF Writer
+2011-09-11 19:41:55,928 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.sorter.SorterNodeFactory': Sorter
+2011-09-11 19:41:56,021 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.arffreader.ARFFReaderNodeFactory': ARFF Reader
+2011-09-11 19:41:56,025 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.csvreader.CSVReaderNodeFactory': CSV Reader
+2011-09-11 19:41:56,030 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.linereader.LineReaderNodeFactory': Line Reader
+2011-09-11 19:41:56,035 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.statistics.Statistics2NodeFactory': Statistics
+2011-09-11 19:41:56,041 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.crosstable.CrosstabNodeFactory': Crosstab
+2011-09-11 19:41:56,046 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.valcount.ValueCounterNodeFactory': Value Counter
+2011-09-11 19:41:56,051 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.normalize.NormalizeNodeFactory': Normalizer
+2011-09-11 19:41:56,056 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.normalize.NormalizePMMLNodeFactory': Normalizer
+2011-09-11 19:41:56,061 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.normalize.PMMLNormalizerApplyNodeFactory': Normalizer (Apply)
+2011-09-11 19:41:56,066 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.pmml.numbertostring.NumberToStringNodeFactory': Number To String
+2011-09-11 19:41:56,072 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.pmml.stringtonumber.StringToNumberNodeFactory': String To Number
+2011-09-11 19:41:56,078 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.pmml.binner.BinnerNodeFactory': Numeric Binner
+2011-09-11 19:41:56,083 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnTrans.One2ManyColPMMLNodeFactory': One2Many
+2011-09-11 19:41:56,088 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.domain.DomainNodeFactory': Domain Calculator
+2011-09-11 19:41:56,093 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.append.row.AppendedRowsNodeFactory': Concatenate
+2011-09-11 19:41:56,097 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.append.row.AppendedRowsWithOptionalInNodeFactory': Concatenate (Optional in)
+2011-09-11 19:41:56,103 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.row.RowFilterNodeFactory': Row Filter
+2011-09-11 19:41:56,108 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.row.RowFilter2PortNodeFactory': Row Splitter
+2011-09-11 19:41:56,112 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.shuffle.ShuffleNodeFactory': Shuffle
+2011-09-11 19:41:56,117 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.sample.SamplingNodeFactory': Row Sampling
+2011-09-11 19:41:56,122 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.equalsizesampling.EqualSizeSamplingNodeFactory': Equal Size Sampling
+2011-09-11 19:41:56,126 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.partition.PartitionNodeFactory': Partitioning
+2011-09-11 19:41:56,132 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.cluster.fuzzycmeans.FuzzyClusterNodeFactory': Fuzzy c-Means
+2011-09-11 19:41:56,137 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.missingval.MissingValueHandlingNodeFactory': Missing Value
+2011-09-11 19:41:56,143 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.neural.rprop.RPropNodeFactory': RProp MLP Learner
+2011-09-11 19:41:56,147 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.neural.mlp.MLPPredictorNodeFactory': MultiLayerPerceptron Predictor
+2011-09-11 19:41:56,154 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.predictor.PredictorWriterNodeFactory': Model Writer
+2011-09-11 19:41:56,158 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.predictor.PredictorReaderNodeFactory': Model Reader
+2011-09-11 19:41:56,162 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.transpose.TransposeTableNodeFactory': Transpose
+2011-09-11 19:41:56,169 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.decisiontreenew.predictor.DecTreePredictorNodeFactory': Decision Tree Predictor
+2011-09-11 19:41:56,175 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.sota.SotaLearnerNodeFactory': SOTA Learner
+2011-09-11 19:41:56,179 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.rename.RenameNodeFactory': Rename
+2011-09-11 19:41:56,185 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnrenameregex.ColumnRenameRegexNodeFactory': Column Rename (Regex)
+2011-09-11 19:41:56,191 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.subgroupminer.BitVectorGeneratorNodeFactory': Bitvector Generator
+2011-09-11 19:41:56,201 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.subgroupminer.SubgroupMinerFactory2': Association Rule Learner
+2011-09-11 19:41:56,208 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.regression.linear.learn.LinRegLearnerNodeFactory': Linear Regression (Learner)
+2011-09-11 19:41:56,214 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.regression.polynomial.learner.PolyRegLearnerNodeFactory': Polynomial Regression (Learner)
+2011-09-11 19:41:56,218 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.regression.predict.RegressionPredictorNodeFactory': Regression (Predictor)
+2011-09-11 19:41:56,224 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.regression.logistic.learner.LogRegLearnerNodeFactory': Logistic Regression (Learner)
+2011-09-11 19:41:56,229 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.regression.logistic.predict.GeneralRegressionPredictorNodeFactory': Logistic Regression (Predictor)
+2011-09-11 19:41:56,234 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.scorer.entrop.NewEntropyNodeFactory': Entropy Scorer
+2011-09-11 19:41:56,238 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.table.read.ReadTableNodeFactory': Table Reader
+2011-09-11 19:41:56,242 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.table.write.WriteTableNodeFactory': Table Writer
+2011-09-11 19:41:56,245 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.subgroupminer.BitVectorGeneratorNodeFactory': Bitvector Generator
+2011-09-11 19:41:56,253 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.histogram.node.HistogramNodeFactory': Histogram (interactive)
+2011-09-11 19:41:56,259 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.histogram.node.FixedColumnHistogramNodeFactory': Histogram
+2011-09-11 19:41:56,262 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.normalize.NormalizeApplyNodeFactory': Normalizer (Apply)
+2011-09-11 19:41:56,267 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.plotter.box.BoxPlotNodeFactory': Box Plot
+2011-09-11 19:41:56,276 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.plotter.line.LinePlotterNodeFactory': Line Plot
+2011-09-11 19:41:56,280 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.plotter.parcoord.ParallelCoordinateNodeFactory': Parallel Coordinates
+2011-09-11 19:41:56,284 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory': Scatter Plot
+2011-09-11 19:41:56,289 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.plotter.scattermatrix.ScatterMatrixNodeFactory': Scatter Matrix
+2011-09-11 19:41:56,293 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.hilite': HiLite Filter
+2011-09-11 19:41:56,298 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.discretization.caim.modelcreator.CAIMDiscretizationNodeFactory': CAIM Binner
+2011-09-11 19:41:56,302 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.discretization.caim.modelapply.DiscretizationApplyNodeFactory': CAIM Applier
+2011-09-11 19:41:56,307 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.rowkey.RowKeyNodeFactory': RowID
+2011-09-11 19:41:56,313 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.knn.KnnNodeFactory': K Nearest Neighbor
+2011-09-11 19:41:56,318 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.cluster.hierarchical.HierarchicalClusterNodeFactory': Hierarchical Clustering
+2011-09-11 19:41:56,322 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.sota.predictor.SotaPredictorNodeFactory': SOTA Predictor
+2011-09-11 19:41:56,327 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.pie.node.fixed.FixedPieNodeFactory': Pie chart
+2011-09-11 19:41:56,331 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.pie.node.interactive.InteractivePieNodeFactory': Pie chart (interactive)
+2011-09-11 19:41:56,338 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.decisiontree2.learner.DecisionTreeLearnerNodeFactory': Decision Tree Learner
+2011-09-11 19:41:56,344 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.groupby.GroupByNodeFactory': GroupBy
+2011-09-11 19:41:56,348 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.ungroup.UngroupNodeFactory': Ungroup
+2011-09-11 19:41:56,355 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.pivot.Pivot2NodeFactory': Pivoting
+2011-09-11 19:41:56,359 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.bayes.naivebayes.predictor.NaiveBayesPredictorNodeFactory': Naive Bayes Predictor
+2011-09-11 19:41:56,371 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.bayes.mine.naivebayes.learner.NaiveBayesLearnerNodeFactory': Naive Bayes Learner
+2011-09-11 19:41:56,377 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.correlation.pmcc.PMCCNodeFactory': Linear Correlation
+2011-09-11 19:41:56,382 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.correlation.pmcc.PMCCFilterNodeFactory': Correlation Filter
+2011-09-11 19:41:56,387 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.lowvarfilter.LowVarFilterNodeFactory': Low Variance Filter
+2011-09-11 19:41:56,391 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.mds.MDSNodeFactory': MDS
+2011-09-11 19:41:56,396 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.mds.mdsprojection.MDSProjectionNodeFactory': MDS Projection
+2011-09-11 19:41:56,401 DEBUG main RepositoryManager : Found node extension 'org.knime.chem.node.viz.enrich.EnrichmentPlotterFactory': Enrichment Plotter
+2011-09-11 19:41:56,406 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.svm.learner.SVMLearnerNodeFactory': SVM Learner
+2011-09-11 19:41:56,409 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.svm.predictor.SVMPredictorNodeFactory': SVM Predictor
+2011-09-11 19:41:56,413 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.colcompare.ColumnComparatorNodeFactory': Column Comparator
+2011-09-11 19:41:56,417 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.rowsplit.NumericRowSplitterNodeFactory': Numeric Row Splitter
+2011-09-11 19:41:56,421 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.stringreplacer.StringReplacerNodeFactory': String Replacer
+2011-09-11 19:41:56,424 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.caseconvert.CaseConvertNodeFactory': Case Converter
+2011-09-11 19:41:56,428 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.stringreplacer.dict.SearchReplaceDictNodeFactory': String Replace (Dictionary)
+2011-09-11 19:41:56,433 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.cellsplit.CellSplitterNodeFactory': Cell Splitter
+2011-09-11 19:41:56,436 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.colconvert.numbertostring.NumberToStringNodeFactory': Number To String
+2011-09-11 19:41:56,440 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.colconvert.stringtonumber.StringToNumberNodeFactory': String To Number
+2011-09-11 19:41:56,443 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnTrans.One2ManyColNodeFactory': One2Many
+2011-09-11 19:41:56,447 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnTrans.Many2OneColNodeFactory': Many2One
+2011-09-11 19:41:56,451 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.colcombine.ColCombineNodeFactory': Column Combiner
+2011-09-11 19:41:56,455 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnmerge.ColumnMergerNodeFactory': Column Merger
+2011-09-11 19:41:56,459 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.cluster.assign.ClusterAssignerNodeFactory': Cluster Assigner
+2011-09-11 19:41:56,464 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.roc.ROCNodeFactory': ROC Curve
+2011-09-11 19:41:56,469 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBReaderNodeFactory': Database Reader
+2011-09-11 19:41:56,473 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBReaderConnectionNodeFactory': Database Connector
+2011-09-11 19:41:56,478 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DatabaseLoopingNodeFactory': Database Looping
+2011-09-11 19:41:56,482 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBConnectionNodeFactory': Database Connection Reader
+2011-09-11 19:41:56,485 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBRowFilterNodeFactory': Database Row Filter
+2011-09-11 19:41:56,489 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBQueryNodeFactory2': Database Query
+2011-09-11 19:41:56,492 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBColumnFilterNodeFactory': Database Column Filter
+2011-09-11 19:41:56,496 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBConnectionWriterNodeFactory': Database Connection Writer
+2011-09-11 19:41:56,499 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.database.DBWriterNodeFactory': Database Writer
+2011-09-11 19:41:56,503 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.cellsplitbypos.CellSplitterByPositionNodeFactory': Cell Splitter By Position
+2011-09-11 19:41:56,508 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.condbox.ConditionalBoxPlotNodeFactory': Conditional Box Plot
+2011-09-11 19:41:56,511 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.columnref.ColumnFilterRefNodeFactory': Reference Column Filter
+2011-09-11 19:41:56,515 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.rowref.RowFilterRefNodeFactory': Reference Row Filter
+2011-09-11 19:41:56,519 DEBUG main RepositoryManager : Found node extension 'org.knime.base.collection.list.create.CollectionCreateNodeFactory': Create Collection Column
+2011-09-11 19:41:56,523 DEBUG main RepositoryManager : Found node extension 'org.knime.base.collection.list.split.CollectionSplitNodeFactory': Split Collection Column
+2011-09-11 19:41:56,526 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.PMMLReaderNodeFactory': PMML Reader
+2011-09-11 19:41:56,531 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.regexsplit.RegexSplitNodeFactory': Regex Split
+2011-09-11 19:41:56,534 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.pmml.write.PMMLWriterNodeFactory': PMML Writer
+2011-09-11 19:41:56,539 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.colsort.ColumnResorterNodeFactory': Column Resorter
+2011-09-11 19:41:56,543 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.viz.liftchart.LiftChartNodeFactory': Lift Chart
+2011-09-11 19:41:56,547 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.setoperator.SetOperatorNodeFactory': Set Operator
+2011-09-11 19:41:56,552 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.xvalidation.XValidatePartitionerFactory': X-Partitioner
+2011-09-11 19:41:56,555 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.xvalidation.AggregateOutputNodeFactory': X-Aggregator
+2011-09-11 19:41:56,559 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.LoopStartCountNodeFactory': Counting Loop Start
+2011-09-11 19:41:56,563 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.chunk.LoopStartChunkNodeFactory': Chunk Loop Start
+2011-09-11 19:41:56,566 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.columnlist.ColumnListLoopStartNodeFactory': Column List Loop Start
+2011-09-11 19:41:56,570 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.condition.LoopStartGenericNodeFactory': Generic Loop Start
+2011-09-11 19:41:56,573 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.variableloophead.LoopStartVariableNodeFactory': TableRow To Variable Loop Start
+2011-09-11 19:41:56,577 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.LoopEndNodeFactory': Loop End
+2011-09-11 19:41:56,581 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.condition.LoopEndConditionNodeFactory': Variable Condition Loop End
+2011-09-11 19:41:56,586 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.filereader.VariableFileReaderNodeFactory': Variable Based File Reader
+2011-09-11 19:41:56,594 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.extractvariables.ExtractVariablesNodeFactory': Extract Variables (Data)
+2011-09-11 19:41:56,601 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.extractvariables.ExtractVariablesDBNodeFactory': Extract Variables (Database)
+2011-09-11 19:41:56,605 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.feature.backwardelim.BWElimLoopStart1NodeFactory': Backward Feature Elimination Start (1:1)
+2011-09-11 19:41:56,607 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.feature.backwardelim.BWElimLoopStart2NodeFactory': Backward Feature Elimination Start (2:2)
+2011-09-11 19:41:56,610 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.feature.backwardelim.BWElimLoopEndNodeFactory': Backward Feature Elimination End
+2011-09-11 19:41:56,615 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.feature.backwardelim.BWElimFilterNodeFactory': Backward Feature Elimination Filter
+2011-09-11 19:41:56,618 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.variabletotable.AppendVariableToTableNodeFactory': Variable To TableColumn
+2011-09-11 19:41:56,621 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.variabletotablerow.VariableToTableNodeFactory': Variable To TableRow
+2011-09-11 19:41:56,624 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.tablerowtovariable.TableToVariableNodeFactory': TableRow To Variable
+2011-09-11 19:41:56,627 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.injectvariables.InjectVariablesNodeFactory': Inject Variables (Data)
+2011-09-11 19:41:56,629 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.flowvariable.injectvariables.InjectVariablesDBNodeFactory': Inject Variables (Database)
+2011-09-11 19:41:56,633 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.nominal.NominalValueRowFilterNodeFactory': Nominal Value Row Filter
+2011-09-11 19:41:56,638 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.rules.RuleEngineNodeFactory': Rule Engine
+2011-09-11 19:41:56,641 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.LoopStartIntervalNodeFactory': Interval Loop Start
+2011-09-11 19:41:56,669 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.unpivot.UnpivotNodeFactory': Unpivoting
+2011-09-11 19:41:56,674 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.pca.PCANodeFactory': PCA
+2011-09-11 19:41:56,678 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.pca.PCAComputeNodeFactory': PCA Compute
+2011-09-11 19:41:56,682 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.pca.PCAApplyNodeFactory': PCA Apply
+2011-09-11 19:41:56,686 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.mine.pca.PCAReverseNodeFactory': PCA Inversion
+2011-09-11 19:41:56,691 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.double2int.DoubleToIntNodeFactory': Double To Int
+2011-09-11 19:41:56,695 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.filter.hilite.collector.HiLiteCollectorNodeFactory': HiLite Collector
+2011-09-11 19:41:56,702 DEBUG main RepositoryManager : Found node extension 'org.knime.exp.node.meta.looper.LoopEnd2NodeFactory': Loop End (2 ports)
+2011-09-11 19:41:56,706 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.matcher.SubsetMatcherNodeFactory': Subset Matcher
+2011-09-11 19:41:56,708 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.matcher.SubsetMatcherNodeFactory': Subset Matcher
+2011-09-11 19:41:56,711 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.image.ImageToTableNodeFactory': Image To Table
+2011-09-11 19:41:56,714 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.manualif.ManualIfNodeFactory': IF Switch
+2011-09-11 19:41:56,725 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.endif.EndifNodeFactory': End IF
+2011-09-11 19:41:56,728 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.startcase.StartcaseNodeFactory': CASE Switch
+2011-09-11 19:41:56,732 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.endcase.EndcaseNodeFactory': End CASE
+2011-09-11 19:41:56,735 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.endmodelcase.EndmodelcaseNodeFactory': End (Model) CASE
+2011-09-11 19:41:56,738 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.switches.emptytablereplacer.EmptyTableReplacerNodeFactory': Empty Table Replacer
+2011-09-11 19:41:56,742 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columntogrid.ColumnToGridNodeFactory': Column to Grid
+2011-09-11 19:41:56,745 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.extractsysprop.ReadSysPropertyNodeFactory': Extract System Properties
+2011-09-11 19:41:56,750 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnheaderextract.ColumnHeaderExtractorNodeFactory': Extract Column Header
+2011-09-11 19:41:56,754 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.columnheaderinsert.ColumnHeaderInsertNodeFactory': Insert Column Header
+2011-09-11 19:41:56,757 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.createtablestructure.CreateTableStructureNodeFactory': Create Table Structure
+2011-09-11 19:41:56,761 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.addemptyrows.AddEmptyRowsNodeFactory': Add Empty Rows
+2011-09-11 19:41:56,765 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.cellreplace.CellReplacerNodeFactory': Cell Replacer
+2011-09-11 19:41:56,770 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.autobinner.AutoBinnerLearnNodeFactory': Auto-Binner
+2011-09-11 19:41:56,774 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.preproc.autobinner.apply.AutoBinnerApplyNodeFactory': Auto-Binner (Apply)
+2011-09-11 19:41:56,778 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.tablecreator.TableCreator2NodeFactory': Table Creator
+2011-09-11 19:41:56,781 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.meta.looper.LoopEndJoinNodeFactory': Loop End (Column Append)
+2011-09-11 19:41:56,785 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.io.listfiles.ListFilesNodeFactory': List Files
+2011-09-11 19:41:56,789 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.image.readpng.ReadPNGFromURLNodeFactory': Read PNG Images
+2011-09-11 19:41:56,793 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.util.createtempdir.CreateTempDirectoryNodeFactory': Create Temp Dir
+2011-09-11 19:41:56,796 DEBUG main RepositoryManager : Found node extension 'org.knime.base.node.image.writepng.WritePNGNodeFactory': Write PNG Image
+2011-09-11 19:41:56,853 DEBUG main RepositoryManager : Found node extension 'org.knime.ext.sun.nodes.script.JavaScriptingNodeFactory': Java Snippet
+2011-09-11 19:41:56,857 DEBUG main RepositoryManager : Found node extension 'org.knime.ext.sun.nodes.script.node.editvar.JavaEditVariableNodeFactory': Java Edit Variable
+2011-09-11 19:41:56,861 DEBUG main RepositoryManager : Found node extension 'org.knime.ext.sun.nodes.script.node.ifswitch.JavaIfSwitchNodeFactory': Java IF (Table)
+2011-09-11 19:41:56,865 DEBUG main RepositoryManager : Found node extension 'org.knime.ext.sun.nodes.script.node.rowsplitter.JavaRowSplitterNodeFactory': Java Snippet Row Splitter
+2011-09-11 19:41:56,869 DEBUG main RepositoryManager : Found node extension 'org.knime.ext.sun.nodes.script.node.rowfilter.JavaRowFilterNodeFactory': Java Snippet Row Filter
+2011-09-11 19:41:56,906 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.filter.extract.ExtractFromToNodeFactory': Extract Time Window
+2011-09-11 19:41:56,911 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.movavg.MovingAverageNodeFactory': Moving Average
+2011-09-11 19:41:56,915 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.stringtotimestamp.String2DateNodeFactory': String to Date/Time
+2011-09-11 19:41:56,920 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.diff.TimeDifferenceNodeFactory': Time Difference
+2011-09-11 19:41:56,924 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.generator.DateGeneratorNodeFactory': Time Generator
+2011-09-11 19:41:56,928 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.extract.TimeFieldExtractorNodeFactory': Time Field Extractor
+2011-09-11 19:41:56,932 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.time2string.Time2StringNodeFactory': Time to String
+2011-09-11 19:41:56,936 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.preset.TimePresetNodeFactory': Preset Date/Time
+2011-09-11 19:41:56,939 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.mask.MaskTimeNodeFactory': Mask Date/Time
+2011-09-11 19:41:56,944 DEBUG main RepositoryManager : Found node extension 'org.knime.timeseries.node.extract.date.DateFieldExtractorNodeFactory': Date Field Extractor
+2011-09-11 19:41:56,944 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Cross Validation/
+2011-09-11 19:41:56,944 DEBUG main RepositoryFactory : meta node template name: Cross Validation
+2011-09-11 19:41:57,092 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Cross Validation") is not locked
+2011-09-11 19:41:57,093 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Cross Validation" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,100 DEBUG main WorkflowManager : Created subworkflow 0:1:0
+2011-09-11 19:41:57,100 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,108 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("X_Aggregator (#1)") is not locked
+2011-09-11 19:41:57,183 DEBUG main DataType : DoubleValue is the preferred value class of cell implementation DoubleCell, made sanity check
+2011-09-11 19:41:57,188 DEBUG main DataType : IntValue is the preferred value class of cell implementation IntCell, made sanity check
+2011-09-11 19:41:57,190 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("X_Partitioner (#2)") is not locked
+2011-09-11 19:41:57,197 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,197 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,198 DEBUG main WorkflowManager : Added new connection from node 0:1:0(0) to node 0:1:0:2(1)
+2011-09-11 19:41:57,199 DEBUG main WorkflowManager : Added new connection from node 0:1:0:1(2) to node 0:1:0(1)
+2011-09-11 19:41:57,199 DEBUG main WorkflowManager : Added new connection from node 0:1:0:1(1) to node 0:1:0(0)
+2011-09-11 19:41:57,205 DEBUG main NodeContainer : X-Aggregator 0:1:0:1 has new state: IDLE
+2011-09-11 19:41:57,207 DEBUG main NodeContainer : X-Partitioner 0:1:0:2 has new state: IDLE
+2011-09-11 19:41:57,208 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,209 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,209 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,209 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Cross Validation"  with no errors
+2011-09-11 19:41:57,210 DEBUG main NodeContainer : Setting dirty flag on Cross Validation 0:1:0
+2011-09-11 19:41:57,210 DEBUG main NodeContainer : Setting dirty flag on KNIME MetaNode Repository 0:1
+2011-09-11 19:41:57,213 DEBUG main RepositoryManager : Found meta node definition 'cross_validation': X-Validation
+2011-09-11 19:41:57,213 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Variables Loop (Data)/
+2011-09-11 19:41:57,213 DEBUG main RepositoryFactory : meta node template name: Variables Loop (Data)
+2011-09-11 19:41:57,219 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Variables Loop (Data)") is not locked
+2011-09-11 19:41:57,219 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Variables Loop (Data)" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,224 DEBUG main WorkflowManager : Created subworkflow 0:1:1
+2011-09-11 19:41:57,224 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,224 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Loop End (#2)") is not locked
+2011-09-11 19:41:57,229 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Row To Variable Loop Start (#3)") is not locked
+2011-09-11 19:41:57,233 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Inject Variables _Data_ (#4)") is not locked
+2011-09-11 19:41:57,237 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,237 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,237 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,237 DEBUG main WorkflowManager : Added new connection from node 0:1:1(0) to node 0:1:1:4(1)
+2011-09-11 19:41:57,238 DEBUG main WorkflowManager : Added new connection from node 0:1:1(1) to node 0:1:1:3(1)
+2011-09-11 19:41:57,238 DEBUG main WorkflowManager : Added new connection from node 0:1:1:3(1) to node 0:1:1:4(2)
+2011-09-11 19:41:57,238 DEBUG main WorkflowManager : Added new connection from node 0:1:1:2(1) to node 0:1:1(0)
+2011-09-11 19:41:57,240 DEBUG main NodeContainer : Loop End 0:1:1:2 has new state: IDLE
+2011-09-11 19:41:57,242 DEBUG main NodeContainer : TableRow To Variable Loop Start 0:1:1:3 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main NodeContainer : Inject Variables (Data) 0:1:1:4 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,244 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Variables Loop (Data)"  with no errors
+2011-09-11 19:41:57,246 DEBUG main RepositoryManager : Found meta node definition 'variables_loop': Variables Loop (Data)
+2011-09-11 19:41:57,246 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Variables Loop (Database)/
+2011-09-11 19:41:57,246 DEBUG main RepositoryFactory : meta node template name: Variables Loop (Database)
+2011-09-11 19:41:57,251 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Variables Loop (Database)") is not locked
+2011-09-11 19:41:57,251 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Variables Loop (Database)" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,258 DEBUG main WorkflowManager : Created subworkflow 0:1:2
+2011-09-11 19:41:57,258 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,258 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Loop End (#2)") is not locked
+2011-09-11 19:41:57,263 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Row To Variable Loop Start (#3)") is not locked
+2011-09-11 19:41:57,266 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Inject Variables _Database_ (#4)") is not locked
+2011-09-11 19:41:57,271 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,271 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,271 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,271 DEBUG main WorkflowManager : Added new connection from node 0:1:2(0) to node 0:1:2:4(1)
+2011-09-11 19:41:57,271 DEBUG main WorkflowManager : Added new connection from node 0:1:2(1) to node 0:1:2:3(1)
+2011-09-11 19:41:57,271 DEBUG main WorkflowManager : Added new connection from node 0:1:2:3(1) to node 0:1:2:4(2)
+2011-09-11 19:41:57,271 DEBUG main WorkflowManager : Added new connection from node 0:1:2:2(1) to node 0:1:2(0)
+2011-09-11 19:41:57,273 DEBUG main NodeContainer : Loop End 0:1:2:2 has new state: IDLE
+2011-09-11 19:41:57,275 DEBUG main NodeContainer : TableRow To Variable Loop Start 0:1:2:3 has new state: IDLE
+2011-09-11 19:41:57,277 DEBUG main NodeContainer : Inject Variables (Database) 0:1:2:4 has new state: IDLE
+2011-09-11 19:41:57,277 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,277 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,277 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,278 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,278 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,278 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Variables Loop (Database)"  with no errors
+2011-09-11 19:41:57,279 DEBUG main RepositoryManager : Found meta node definition 'variables_loop_db': Variables Loop (Database)
+2011-09-11 19:41:57,279 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Feature Elimination/
+2011-09-11 19:41:57,279 DEBUG main RepositoryFactory : meta node template name: Feature Elimination
+2011-09-11 19:41:57,291 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Feature Elimination") is not locked
+2011-09-11 19:41:57,291 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Feature Elimination" (version "2.3.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,305 DEBUG main WorkflowManager : Created subworkflow 0:1:3
+2011-09-11 19:41:57,305 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,305 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Backward Feature Elimination Start _1_1_ (#1)") is not locked
+2011-09-11 19:41:57,310 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Backward Feature Elimination Filter (#2)") is not locked
+2011-09-11 19:41:57,317 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Backward Feature Elimination End (#3)") is not locked
+2011-09-11 19:41:57,324 DEBUG main DataType : StringValue is the preferred value class of cell implementation StringCell, made sanity check
+2011-09-11 19:41:57,325 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Naive Bayes Learner (#6)") is not locked
+2011-09-11 19:41:57,334 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Partitioning (#7)") is not locked
+2011-09-11 19:41:57,341 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Naive Bayes Predictor (#8)") is not locked
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,348 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3(1) to node 0:1:3:2(2)
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3(0) to node 0:1:3:1(1)
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3:7(1) to node 0:1:3:6(1)
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3:3(2) to node 0:1:3:2(1)
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3:1(1) to node 0:1:3:7(1)
+2011-09-11 19:41:57,349 DEBUG main WorkflowManager : Added new connection from node 0:1:3:8(1) to node 0:1:3:3(1)
+2011-09-11 19:41:57,350 DEBUG main WorkflowManager : Added new connection from node 0:1:3:7(2) to node 0:1:3:8(2)
+2011-09-11 19:41:57,350 DEBUG main WorkflowManager : Added new connection from node 0:1:3:6(1) to node 0:1:3:8(1)
+2011-09-11 19:41:57,350 DEBUG main WorkflowManager : Added new connection from node 0:1:3:3(1) to node 0:1:3(0)
+2011-09-11 19:41:57,350 DEBUG main WorkflowManager : Added new connection from node 0:1:3:2(1) to node 0:1:3(1)
+2011-09-11 19:41:57,358 DEBUG main NodeContainer : Backward Feature Elimination Start (1:1) 0:1:3:1 has new state: IDLE
+2011-09-11 19:41:57,361 DEBUG main NodeContainer : Partitioning 0:1:3:7 has new state: IDLE
+2011-09-11 19:41:57,364 DEBUG main NodeContainer : Naive Bayes Learner 0:1:3:6 has new state: IDLE
+2011-09-11 19:41:57,367 DEBUG main NodeContainer : Naive Bayes Predictor 0:1:3:8 has new state: IDLE
+2011-09-11 19:41:57,369 DEBUG main NodeContainer : Backward Feature Elimination End 0:1:3:3 has new state: IDLE
+2011-09-11 19:41:57,371 DEBUG main NodeContainer : Backward Feature Elimination Filter 0:1:3:2 has new state: IDLE
+2011-09-11 19:41:57,372 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,372 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,373 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,373 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,374 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,374 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,374 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Feature Elimination"  with no errors
+2011-09-11 19:41:57,374 DEBUG main NodeContainer : Setting dirty flag on Feature Elimination 0:1:3
+2011-09-11 19:41:57,375 DEBUG main RepositoryManager : Found meta node definition 'feature_elimination': Feature Elimination
+2011-09-11 19:41:57,375 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Iterate list of files/
+2011-09-11 19:41:57,375 DEBUG main RepositoryFactory : meta node template name: Iterate list of files
+2011-09-11 19:41:57,382 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Iterate list of files") is not locked
+2011-09-11 19:41:57,382 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Iterate list of files" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,388 DEBUG main WorkflowManager : Created subworkflow 0:1:4
+2011-09-11 19:41:57,388 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,389 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Variable Based File Reader (#1)") is not locked
+2011-09-11 19:41:57,398 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Row To Variable Loop Start (#2)") is not locked
+2011-09-11 19:41:57,402 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Loop End (#3)") is not locked
+2011-09-11 19:41:57,407 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,407 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,407 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,407 DEBUG main WorkflowManager : Added new connection from node 0:1:4:2(1) to node 0:1:4:1(1)
+2011-09-11 19:41:57,407 DEBUG main WorkflowManager : Added new connection from node 0:1:4(0) to node 0:1:4:2(1)
+2011-09-11 19:41:57,407 DEBUG main WorkflowManager : Added new connection from node 0:1:4:3(1) to node 0:1:4(0)
+2011-09-11 19:41:57,410 DEBUG main NodeContainer : TableRow To Variable Loop Start 0:1:4:2 has new state: IDLE
+2011-09-11 19:41:57,418 DEBUG main NodeContainer : Loop End 0:1:4:3 has new state: IDLE
+2011-09-11 19:41:57,425 DEBUG main NodeContainer : Variable Based File Reader 0:1:4:1 has new state: IDLE
+2011-09-11 19:41:57,425 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,425 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,426 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,426 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,426 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,427 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,427 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,427 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Iterate list of files"  with no errors
+2011-09-11 19:41:57,427 DEBUG main NodeContainer : Setting dirty flag on Iterate List of Files 0:1:4
+2011-09-11 19:41:57,428 DEBUG main RepositoryManager : Found meta node definition 'iterate_list_of_files': Iterate List of Files
+2011-09-11 19:41:57,428 DEBUG main RepositoryFactory : found pre-installed template metanode_templates/Looper/
+2011-09-11 19:41:57,428 DEBUG main RepositoryFactory : meta node template name: Looper
+2011-09-11 19:41:57,434 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Looper") is not locked
+2011-09-11 19:41:57,434 DEBUG main WorkflowManager : Loading workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Looper" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:41:57,440 DEBUG main WorkflowManager : Created subworkflow 0:1:5
+2011-09-11 19:41:57,441 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,441 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Counting Loop Start (#1)") is not locked
+2011-09-11 19:41:57,445 DEBUG main NodeContainerMetaPersistorVersion200 : Workflow being loaded ("Loop End (#2)") is not locked
+2011-09-11 19:41:57,449 DEBUG main NodeContainer : Loop x-times 0:1:5 has new state: IDLE
+2011-09-11 19:41:57,450 DEBUG main NodeContainer : Loop x-times 0:1:5 has new state: IDLE
+2011-09-11 19:41:57,450 DEBUG main WorkflowManager : Added new connection from node 0:1:5(0) to node 0:1:5:1(1)
+2011-09-11 19:41:57,450 DEBUG main WorkflowManager : Added new connection from node 0:1:5:2(1) to node 0:1:5(0)
+2011-09-11 19:41:57,452 DEBUG main NodeContainer : Counting Loop Start 0:1:5:1 has new state: IDLE
+2011-09-11 19:41:57,454 DEBUG main NodeContainer : Loop End 0:1:5:2 has new state: IDLE
+2011-09-11 19:41:57,454 DEBUG main NodeContainer : Loop x-times 0:1:5 has new state: IDLE
+2011-09-11 19:41:57,454 DEBUG main NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:41:57,455 DEBUG main NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:41:57,455 DEBUG main NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:41:57,456 DEBUG main NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:41:57,456 DEBUG main NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:41:57,456 DEBUG main NodeContainer : Loop x-times 0:1:5 has new state: IDLE
+2011-09-11 19:41:57,456 DEBUG main NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:41:57,456 DEBUG main WorkflowManager : Loaded workflow from "/Applications/knime/plugins/org.knime.base_2.4.2.0030698/metanode_templates/Looper"  with no errors
+2011-09-11 19:41:57,456 DEBUG main NodeContainer : Setting dirty flag on Loop x-times 0:1:5
+2011-09-11 19:41:57,457 DEBUG main RepositoryManager : Found meta node definition 'looper': Loop x-times
+2011-09-11 19:41:58,252 INFO  main KnimeEnterpriseFileSystemPlugin : Started KNIME Enterprise Remote File System plug-in
+2011-09-11 19:41:58,290 INFO  main Activator : Starting plug-in com.knime.enterprise.client.repositoryview
+2011-09-11 19:42:03,207 INFO  main jetty : 2011-09-11 19:42:03.207:INFO:org.knime.workbench.help.jetty:Logging to org.knime.workbench.help.jetty via org.knime.workbench.helpview.JettyLogger
+2011-09-11 19:42:03,316 INFO  main jetty : 2011-09-11 19:42:03.316:INFO:org.knime.workbench.help.jetty:jetty-6.1.x
+2011-09-11 19:42:03,347 INFO  main jetty : 2011-09-11 19:42:03.347:INFO:org.knime.workbench.help.jetty:Started SelectChannelConnector@192.168.1.103:51176
+2011-09-11 19:42:04,197 DEBUG main WorkflowEditor : Creating WorkflowEditor...
+2011-09-11 19:42:04,225 DEBUG main WorkflowEditor : creating editor actions...
+2011-09-11 19:42:04,259 DEBUG main WorkflowEditor : Initializing editor UI...
+2011-09-11 19:42:04,260 DEBUG main WorkflowEditor : Opening workflow Editor on workflow.knime
+2011-09-11 19:42:04,260 DEBUG main WorkflowEditor : Setting input into editor...
+2011-09-11 19:42:04,260 DEBUG main WorkflowEditor : Resource File's project: file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/KNIME_project/
+2011-09-11 19:42:04,309 INFO  ModalContext LoadWorkflowRunnable : New workflow created.
+2011-09-11 19:42:04,310 DEBUG ModalContext NodeContainer : Workflow Manager 0:2 has new state: EXECUTED
+2011-09-11 19:42:04,310 DEBUG ModalContext WorkflowManager : Created subworkflow 0:2
+2011-09-11 19:42:04,310 DEBUG ModalContext NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:42:04,310 DEBUG ModalContext WorkflowManager : Added new subworkflow 0:2
+2011-09-11 19:42:04,310 DEBUG ModalContext WorkflowManager : Created project 0:2
+2011-09-11 19:42:04,323 DEBUG main WorkflowEditor : Saving workflow ...
+2011-09-11 19:42:04,467 DEBUG main ProjectWorkflowMap : Adding "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/KNIME_project/" to project map (1 in total)
+2011-09-11 19:42:04,467 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 19:42:04,467 DEBUG main KnimeResourceNavigator : Workflow KNIME_project 0:2 added
+2011-09-11 19:42:04,467 DEBUG main ProjectWorkflowMap : registering org.knime.workbench.editor2.WorkflowEditor@63ce50a9 to file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/KNIME_project/. 1 registered clients now.
+2011-09-11 19:42:59,703 DEBUG main NodeContainer : Setting dirty flag on KNIME_project 0:2
+2011-09-11 19:42:59,703 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 19:42:59,703 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Statistics 0:2:1 added
+2011-09-11 19:42:59,703 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-09-11 19:42:59,704 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:1;old=null;new=Statistics 0:2:1 (IDLE);timestamp=Sep 11, 2011 7:42:59 PM]
+2011-09-11 19:42:59,708 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 19:42:59,708 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:42:59,709 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:42:59,709 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:42:59,709 DEBUG main WorkflowManager : Added new node 0:2:1
+2011-09-11 19:42:59,710 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed WORKFLOW_DIRTY
+2011-09-11 19:42:59,710 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=WORKFLOW_DIRTY;node=0:2;old=null;new=null;timestamp=Sep 11, 2011 7:42:59 PM]
+2011-09-11 19:42:59,710 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 19:42:59,710 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:42:59,869 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Statistics 0:2:1 (IDLE) )
+2011-09-11 19:43:03,244 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:09,212 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1532096635 data=[org.knime.base.node.io.arffreader.ARFFReaderNodeFactory] x=1655 y=765 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 19:48:09,222 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(67, 86)
+2011-09-11 19:48:09,223 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:48:09,223 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 19:48:09,223 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow ARFF Reader 0:2:2 added
+2011-09-11 19:48:09,223 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:2;old=null;new=ARFF Reader 0:2:2 (IDLE);timestamp=Sep 11, 2011 7:48:09 PM]
+2011-09-11 19:48:09,223 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 19:48:09,233 WARN  main ARFF Reader : File is not specified.
+2011-09-11 19:48:09,233 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 19:48:09,233 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:48:09,233 DEBUG main WorkflowManager : Added new node 0:2:2
+2011-09-11 19:48:09,234 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:09,547 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( ARFF Reader 0:2:2 (IDLE) )
+2011-09-11 19:48:09,547 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 19:48:14,082 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:24,457 DEBUG main NodeContainer : Setting dirty flag on ARFF Reader 0:2:2
+2011-09-11 19:48:24,457 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:28,819 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (IDLE)
+2011-09-11 19:48:28,819 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 19:48:30,372 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:31,598 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 19:48:31,598 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (IDLE)
+2011-09-11 19:48:32,599 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 1 to 0:2:1 1
+2011-09-11 19:48:32,599 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:48:32,599 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:48:32,599 DEBUG main WorkflowManager : Added new connection from node 0:2:2(1) to node 0:2:1(1)
+2011-09-11 19:48:32,599 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 19:48:32,600 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(1) -> 0:2:1( 1)];timestamp=Sep 11, 2011 7:48:32 PM]
+2011-09-11 19:48:32,600 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 19:48:32,600 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:32,607 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:1( 1)]
+2011-09-11 19:48:32,607 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:48:32,608 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:1( 1)]
+2011-09-11 19:48:32,608 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:48:34,354 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (IDLE)
+2011-09-11 19:48:34,355 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 19:48:34,601 DEBUG main NodeContainerEditPart : Statistics: Opening node dialog after double click...
+2011-09-11 19:48:51,344 DEBUG main NodeContainer : Setting dirty flag on Statistics 0:2:1
+2011-09-11 19:48:51,345 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:48:52,591 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 19:48:54,413 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (IDLE)
+2011-09-11 19:48:55,459 DEBUG main NodeContainerEditPart : ARFF Reader: Opening node dialog after double click...
+2011-09-11 19:48:55,514 INFO  main StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_ARFFFiles.txt' does not exist.
+2011-09-11 19:49:17,163 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:49:17,228 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 19:49:17,229 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 19:49:17,240 DEBUG main Statistics : Configure succeeded. (Statistics)
+2011-09-11 19:49:17,240 DEBUG main NodeContainer : Statistics 0:2:1 has new state: CONFIGURED
+2011-09-11 19:49:17,240 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-09-11 19:49:17,240 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:49:17,240 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:49:19,750 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:49:19,750 DEBUG main Statistics : reset
+2011-09-11 19:49:19,750 DEBUG main Statistics : clean output ports.
+2011-09-11 19:49:19,750 DEBUG main NodeContainer : Statistics 0:2:1 has new state: IDLE
+2011-09-11 19:49:19,750 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-09-11 19:49:19,750 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:49:19,750 DEBUG main ARFF Reader : reset
+2011-09-11 19:49:19,750 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 19:49:19,750 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:49:19,750 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 19:49:19,753 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 19:49:19,753 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 19:49:19,753 DEBUG main Statistics : Configure succeeded. (Statistics)
+2011-09-11 19:49:19,753 DEBUG main NodeContainer : Statistics 0:2:1 has new state: CONFIGURED
+2011-09-11 19:49:19,753 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-09-11 19:49:19,753 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:49:19,753 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:49:20,515 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:49:20,515 DEBUG main Statistics : reset
+2011-09-11 19:49:20,515 DEBUG main Statistics : clean output ports.
+2011-09-11 19:49:20,515 DEBUG main NodeContainer : Statistics 0:2:1 has new state: IDLE
+2011-09-11 19:49:20,515 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-09-11 19:49:20,515 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 19:49:20,515 DEBUG main ARFF Reader : reset
+2011-09-11 19:49:20,515 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:49:20,515 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 19:49:20,515 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 19:49:20,518 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 19:49:20,518 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 19:49:20,518 DEBUG main Statistics : Configure succeeded. (Statistics)
+2011-09-11 19:49:20,518 DEBUG main NodeContainer : Statistics 0:2:1 has new state: CONFIGURED
+2011-09-11 19:49:20,518 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-09-11 19:49:20,518 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:49:20,518 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:51:50,676 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 19:51:50,676 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (CONFIGURED)
+2011-09-11 19:53:29,954 DEBUG main WorkflowEditor : Creating WorkflowEditor...
+2011-09-11 19:53:29,969 DEBUG main WorkflowEditor : creating editor actions...
+2011-09-11 19:53:29,970 DEBUG main WorkflowEditor : Initializing editor UI...
+2011-09-11 19:53:29,970 DEBUG main WorkflowEditor : Opening workflow Editor on workflow.knime
+2011-09-11 19:53:29,970 DEBUG main WorkflowEditor : Setting input into editor...
+2011-09-11 19:53:29,970 DEBUG main WorkflowEditor : Resource File's project: file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_ex/
+2011-09-11 19:53:29,982 INFO  ModalContext LoadWorkflowRunnable : New workflow created.
+2011-09-11 19:53:29,982 DEBUG ModalContext NodeContainer : Workflow Manager 0:3 has new state: EXECUTED
+2011-09-11 19:53:29,982 DEBUG ModalContext WorkflowManager : Created subworkflow 0:3
+2011-09-11 19:53:29,982 DEBUG ModalContext NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:53:29,982 DEBUG ModalContext WorkflowManager : Added new subworkflow 0:3
+2011-09-11 19:53:29,982 DEBUG ModalContext WorkflowManager : Created project 0:3
+2011-09-11 19:53:29,989 DEBUG main WorkflowEditor : Saving workflow ...
+2011-09-11 19:53:30,244 DEBUG main ProjectWorkflowMap : Adding "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_ex/" to project map (2 in total)
+2011-09-11 19:53:30,245 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 19:53:30,245 DEBUG main KnimeResourceNavigator : Workflow data_processing_ex 0:3 added
+2011-09-11 19:53:30,245 DEBUG main ProjectWorkflowMap : registering org.knime.workbench.editor2.WorkflowEditor@e17afd0 to file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_ex/. 1 registered clients now.
+2011-09-11 19:54:12,051 DEBUG Worker-1 KNIMEProjectBuilder : KNIME project builder invoked...
+2011-09-11 19:54:22,323 DEBUG main WorkflowEditor : Creating WorkflowEditor...
+2011-09-11 19:54:22,323 DEBUG main WorkflowEditor : creating editor actions...
+2011-09-11 19:54:22,324 DEBUG main WorkflowEditor : Initializing editor UI...
+2011-09-11 19:54:22,324 DEBUG main WorkflowEditor : Opening workflow Editor on workflow.knime
+2011-09-11 19:54:22,324 DEBUG main WorkflowEditor : Setting input into editor...
+2011-09-11 19:54:22,324 DEBUG main WorkflowEditor : Resource File's project: file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_example/
+2011-09-11 19:54:22,340 DEBUG ModalContext WorkflowManager : Loading workflow from "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example" (version "2.0.0" with loader class "WorkflowPersistorVersion200")
+2011-09-11 19:54:22,344 DEBUG ModalContext WorkflowManager : Created subworkflow 0:0
+2011-09-11 19:54:22,344 DEBUG ModalContext NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,443 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,444 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: EXECUTED
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:6(1) to node 0:0:5(1)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:7(1) to node 0:0:6(1)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:3(1) to node 0:0:4(1)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:2(1) to node 0:0:6(2)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:4(1) to node 0:0:2(1)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:1(1) to node 0:0:7(1)
+2011-09-11 19:54:22,444 DEBUG ModalContext WorkflowManager : Added new connection from node 0:0:5(1) to node 0:0:8(1)
+2011-09-11 19:54:22,448 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "File Reader": No such data file: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/File Reader (#1)/port_0/data.xml
+2011-09-11 19:54:22,451 INFO  ModalContext StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_ASCIIfile.txt' does not exist.
+2011-09-11 19:54:22,451 WARN  ModalContext File Reader : The file 'file:/C:/Dokumente%20und%20Einstellungen/Fabian%20Dill/Eigene%20Dateien/workspaces/experimental/dataset/benchmarks/iris/data.all' can't be accessed anymore!
+2011-09-11 19:54:22,452 DEBUG ModalContext NodeContainer : File Reader 0:0:1 has new state: EXECUTED
+2011-09-11 19:54:22,452 DEBUG ModalContext File Reader : reset
+2011-09-11 19:54:22,452 DEBUG ModalContext File Reader : clean output ports.
+2011-09-11 19:54:22,452 DEBUG ModalContext File Reader : clean output ports.
+2011-09-11 19:54:22,452 DEBUG ModalContext NodeContainer : Setting dirty flag on File Reader 0:0:1
+2011-09-11 19:54:22,452 DEBUG ModalContext NodeContainer : Setting dirty flag on Workflow Manager 0:0
+2011-09-11 19:54:22,452 DEBUG ModalContext NodeContainer : File Reader 0:0:1 has new state: IDLE
+2011-09-11 19:54:22,453 WARN  ModalContext File Reader : I/O Error while connecting to 'file:/C:/Dokumente%20und%20Einstellungen/Fabian%20Dill/Eigene%20Dateien/workspaces/experimental/dataset/benchmarks/iris/data.all'.
+2011-09-11 19:54:22,453 DEBUG ModalContext NodeContainer : File Reader 0:0:1 has new state: IDLE
+2011-09-11 19:54:22,469 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "Database Connector": Can't read spec file /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Connector (#3)/port_0/spec/spec.zip
+2011-09-11 19:54:22,470 INFO  ModalContext StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_database_drivers.txt' does not exist.
+2011-09-11 19:54:22,470 INFO  ModalContext StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_database_urls.txt' does not exist.
+2011-09-11 19:54:22,470 INFO  ModalContext DatabaseConnectionSettings : Database login timeout: 15 sec.
+2011-09-11 19:54:22,504 WARN  ModalContext DatabaseDriverLoader : Could not load driver class "sun.jdbc.odbc.JdbcOdbcDriver"
+2011-09-11 19:54:22,504 INFO  ModalContext StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_database_library_files.txt' does not exist.
+2011-09-11 19:54:22,505 INFO  ModalContext DatabaseConnectionSettings : Could not load driver from file "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar", reason: File "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar" does not exist.
+2011-09-11 19:54:22,505 INFO  ModalContext DatabaseConnectionSettings : Could not load driver from file "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar", reason: File "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar" does not exist.
+2011-09-11 19:54:22,505 INFO  ModalContext DatabaseConnectionSettings : Could not load driver from file "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar", reason: File "C:\Dokumente und Einstellungen\Fabian Dill\Eigene Dateien\KNIME Integration\lib\mysql-connector-java-5.0.8\mysql-connector-java-5.0.8-bin.jar" does not exist.
+2011-09-11 19:54:22,505 DEBUG ModalContext NodeContainer : Database Connector 0:0:3 has new state: EXECUTED
+2011-09-11 19:54:22,505 DEBUG ModalContext Database Connector : reset
+2011-09-11 19:54:22,505 DEBUG ModalContext Database Connector : clean output ports.
+2011-09-11 19:54:22,506 DEBUG ModalContext Database Connector : clean output ports.
+2011-09-11 19:54:22,506 DEBUG ModalContext NodeContainer : Setting dirty flag on Database Connector 0:0:3
+2011-09-11 19:54:22,506 DEBUG ModalContext NodeContainer : Database Connector 0:0:3 has new state: IDLE
+2011-09-11 19:54:22,506 WARN  ModalContext Database Connector : java.sql.SQLException: org.knime.core.node.InvalidSettingsException: Could not register database driver "com.mysql.jdbc.Driver", reason: com.mysql.jdbc.Driver
+2011-09-11 19:54:22,507 DEBUG ModalContext Database Connector : java.sql.SQLException: org.knime.core.node.InvalidSettingsException: Could not register database driver "com.mysql.jdbc.Driver", reason: com.mysql.jdbc.Driver
+org.knime.core.node.InvalidSettingsException: java.sql.SQLException: org.knime.core.node.InvalidSettingsException: Could not register database driver "com.mysql.jdbc.Driver", reason: com.mysql.jdbc.Driver
+	at org.knime.base.node.io.database.DBReaderConnectionNodeModel.configure(DBReaderConnectionNodeModel.java:167)
+	at org.knime.core.node.NodeModel.configureModel(NodeModel.java:972)
+	at org.knime.core.node.Node.configure(Node.java:1466)
+	at org.knime.core.node.workflow.SingleNodeContainer.nodeConfigure(SingleNodeContainer.java:442)
+	at org.knime.core.node.workflow.SingleNodeContainer.configure(SingleNodeContainer.java:363)
+	at org.knime.core.node.workflow.WorkflowManager.configureSingleNodeContainer(WorkflowManager.java:4259)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:5713)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:5560)
+	at org.knime.core.node.workflow.WorkflowManager.postLoad(WorkflowManager.java:5672)
+	at org.knime.core.node.workflow.WorkflowManager.loadContent(WorkflowManager.java:5560)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:5461)
+	at org.knime.core.node.workflow.WorkflowManager.load(WorkflowManager.java:5405)
+	at org.knime.core.node.workflow.WorkflowManager.loadProject(WorkflowManager.java:5199)
+	at org.knime.workbench.editor2.LoadWorkflowRunnable.run(LoadWorkflowRunnable.java:162)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.sql.SQLException: org.knime.core.node.InvalidSettingsException: Could not register database driver "com.mysql.jdbc.Driver", reason: com.mysql.jdbc.Driver
+	at org.knime.core.node.port.database.DatabaseReaderConnection.getDataTableSpec(DatabaseReaderConnection.java:203)
+	at org.knime.base.node.io.database.DBReaderConnectionNodeModel.configure(DBReaderConnectionNodeModel.java:155)
+	... 14 more
+Caused by: org.knime.core.node.InvalidSettingsException: Could not register database driver "com.mysql.jdbc.Driver", reason: com.mysql.jdbc.Driver
+	at org.knime.core.node.port.database.DatabaseDriverLoader.registerDriver(DatabaseDriverLoader.java:193)
+	at org.knime.core.node.port.database.DatabaseConnectionSettings.createConnection(DatabaseConnectionSettings.java:289)
+	at org.knime.core.node.port.database.DatabaseReaderConnection.getDataTableSpec(DatabaseReaderConnection.java:191)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:247)
+	at org.knime.core.node.port.database.DatabaseDriverLoader.getWrappedDriver(DatabaseDriverLoader.java:271)
+	at org.knime.core.node.port.database.DatabaseDriverLoader.registerDriver(DatabaseDriverLoader.java:189)
+	... 17 more
+2011-09-11 19:54:22,508 DEBUG ModalContext NodeContainer : Database Connector 0:0:3 has new state: IDLE
+2011-09-11 19:54:22,510 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "Column Filter": No such data file: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Column Filter (#7)/port_0/data.xml
+2011-09-11 19:54:22,510 DEBUG ModalContext NodeContainer : Column Filter 0:0:7 has new state: EXECUTED
+2011-09-11 19:54:22,510 DEBUG ModalContext Column Filter : reset
+2011-09-11 19:54:22,510 DEBUG ModalContext Column Filter : clean output ports.
+2011-09-11 19:54:22,510 DEBUG ModalContext Column Filter : clean output ports.
+2011-09-11 19:54:22,510 DEBUG ModalContext NodeContainer : Setting dirty flag on Column Filter 0:0:7
+2011-09-11 19:54:22,510 DEBUG ModalContext NodeContainer : Column Filter 0:0:7 has new state: IDLE
+2011-09-11 19:54:22,512 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "Database Column Filter": Can't read spec file /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Column Filter (#4)/port_0/spec/spec.zip
+2011-09-11 19:54:22,512 DEBUG ModalContext NodeContainer : Database Column Filter 0:0:4 has new state: EXECUTED
+2011-09-11 19:54:22,512 DEBUG ModalContext Database Column Filter : reset
+2011-09-11 19:54:22,512 DEBUG ModalContext Database Column Filter : clean output ports.
+2011-09-11 19:54:22,512 DEBUG ModalContext Database Column Filter : clean output ports.
+2011-09-11 19:54:22,512 DEBUG ModalContext NodeContainer : Setting dirty flag on Database Column Filter 0:0:4
+2011-09-11 19:54:22,512 DEBUG ModalContext NodeContainer : Database Column Filter 0:0:4 has new state: IDLE
+2011-09-11 19:54:22,520 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "Database Connection Reader": No such data file: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Connection Reader (#2)/port_0/data.xml
+2011-09-11 19:54:22,520 DEBUG ModalContext NodeContainer : Database Connection Reader 0:0:2 has new state: EXECUTED
+2011-09-11 19:54:22,520 DEBUG ModalContext Database Connection Reader : reset
+2011-09-11 19:54:22,520 DEBUG ModalContext Database Connection Reader : clean output ports.
+2011-09-11 19:54:22,521 DEBUG ModalContext Database Connection Reader : clean output ports.
+2011-09-11 19:54:22,521 DEBUG ModalContext NodeContainer : Setting dirty flag on Database Connection Reader 0:0:2
+2011-09-11 19:54:22,521 DEBUG ModalContext NodeContainer : Database Connection Reader 0:0:2 has new state: IDLE
+2011-09-11 19:54:22,522 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "Joiner (deprecated)": No such data file: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Joiner (#6)/port_0/data.xml
+2011-09-11 19:54:22,522 DEBUG ModalContext NodeContainer : Joiner (deprecated) 0:0:6 has new state: EXECUTED
+2011-09-11 19:54:22,522 DEBUG ModalContext Joiner (deprecated) : reset
+2011-09-11 19:54:22,522 DEBUG ModalContext Joiner (deprecated) : clean output ports.
+2011-09-11 19:54:22,527 DEBUG ModalContext Joiner (deprecated) : clean output ports.
+2011-09-11 19:54:22,527 DEBUG ModalContext NodeContainer : Setting dirty flag on Joiner (deprecated) 0:0:6
+2011-09-11 19:54:22,527 DEBUG ModalContext NodeContainer : Joiner (deprecated) 0:0:6 has new state: IDLE
+2011-09-11 19:54:22,531 DEBUG ModalContext NodePersistorVersion200 : Unable to load port content for node "GroupBy": No such data file: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/GroupBy (#5)/port_0/data.xml
+2011-09-11 19:54:22,610 DEBUG ModalContext DataType : DateAndTimeValue is the preferred value class of cell implementation DateAndTimeCell, made sanity check
+2011-09-11 19:54:22,611 DEBUG ModalContext DataType : LongValue is the preferred value class of cell implementation LongCell, made sanity check
+2011-09-11 19:54:22,626 DEBUG ModalContext GroupBy : Loading model internals failed: /Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/GroupBy (#5)/internal/hilite_mapping.xml.gz (No such file or directory)
+2011-09-11 19:54:22,626 DEBUG ModalContext NodeContainer : GroupBy 0:0:5 has new state: EXECUTED
+2011-09-11 19:54:22,626 DEBUG ModalContext GroupBy : reset
+2011-09-11 19:54:22,626 DEBUG ModalContext GroupBy : clean output ports.
+2011-09-11 19:54:22,626 DEBUG ModalContext GroupBy : clean output ports.
+2011-09-11 19:54:22,627 DEBUG ModalContext NodeContainer : Setting dirty flag on GroupBy 0:0:5
+2011-09-11 19:54:22,627 DEBUG ModalContext NodeContainer : GroupBy 0:0:5 has new state: IDLE
+2011-09-11 19:54:22,628 INFO  ModalContext StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/.metadata/knime/history_csvwrite.txt' does not exist.
+2011-09-11 19:54:22,629 DEBUG ModalContext NodeContainer : CSV Writer 0:0:8 has new state: EXECUTED
+2011-09-11 19:54:22,629 DEBUG ModalContext CSV Writer : reset
+2011-09-11 19:54:22,629 DEBUG ModalContext CSV Writer : clean output ports.
+2011-09-11 19:54:22,629 DEBUG ModalContext CSV Writer : clean output ports.
+2011-09-11 19:54:22,629 DEBUG ModalContext NodeContainer : Setting dirty flag on CSV Writer 0:0:8
+2011-09-11 19:54:22,629 DEBUG ModalContext NodeContainer : CSV Writer 0:0:8 has new state: IDLE
+2011-09-11 19:54:22,629 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: IDLE
+2011-09-11 19:54:22,630 DEBUG ModalContext NodeContainer : Workflow Manager 0:0 has new state: IDLE
+2011-09-11 19:54:22,630 DEBUG ModalContext NodeContainer : Cross Validation 0:1:0 has new state: IDLE
+2011-09-11 19:54:22,630 DEBUG ModalContext NodeContainer : Variables Loop (Data) 0:1:1 has new state: IDLE
+2011-09-11 19:54:22,630 DEBUG ModalContext NodeContainer : Variables Loop (Database) 0:1:2 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : Feature Elimination 0:1:3 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : Iterate List of Files 0:1:4 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : Loop x-times 0:1:5 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : KNIME MetaNode Repository 0:1 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : data_processing_ex 0:3 has new state: EXECUTED
+2011-09-11 19:54:22,631 DEBUG ModalContext NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 19:54:22,631 DEBUG ModalContext WorkflowManager : Workflow was apparently ex/imported without data, silently fixing states and writing changes
+2011-09-11 19:54:22,631 INFO  ModalContext WorkflowManager : Workflow was created with another version of KNIME (workflow version 2.0.0), converting to current version. This may take some time.
+2011-09-11 19:54:22,634 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/File Reader (#1)"
+2011-09-11 19:54:22,650 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Connection Reader (#2)"
+2011-09-11 19:54:22,651 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Connector (#3)"
+2011-09-11 19:54:22,653 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Database Column Filter (#4)"
+2011-09-11 19:54:22,654 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/GroupBy (#5)"
+2011-09-11 19:54:22,657 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Joiner (#6)"
+2011-09-11 19:54:22,659 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/Column Filter (#7)"
+2011-09-11 19:54:22,660 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example/CSV Writer (#8)"
+2011-09-11 19:54:22,665 DEBUG ModalContext WorkflowManager : Loaded workflow from "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/data_processing_example"  with errors during data load. Problems were fixed and (silently) saved.
+2011-09-11 19:54:22,686 DEBUG main ProjectWorkflowMap : Adding "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_example/" to project map (3 in total)
+2011-09-11 19:54:22,686 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 19:54:22,686 DEBUG main KnimeResourceNavigator : Workflow Workflow Manager 0:0 added
+2011-09-11 19:54:22,686 DEBUG main ProjectWorkflowMap : registering org.knime.workbench.editor2.WorkflowEditor@21a3e686 to file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_example/. 1 registered clients now.
+2011-09-11 19:54:22,690 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( File Reader 0:0:1 (IDLE) )
+2011-09-11 19:54:22,692 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:1(1) -> 0:0:7( 1)]
+2011-09-11 19:54:22,692 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,692 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Database Connection Reader 0:0:2 (IDLE) )
+2011-09-11 19:54:22,693 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:4(1) -> 0:0:2( 1)]
+2011-09-11 19:54:22,693 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,694 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:2(1) -> 0:0:6( 2)]
+2011-09-11 19:54:22,694 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,694 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Database Connector 0:0:3 (IDLE) )
+2011-09-11 19:54:22,695 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:3(1) -> 0:0:4( 1)]
+2011-09-11 19:54:22,696 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,696 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Database Column Filter 0:0:4 (IDLE) )
+2011-09-11 19:54:22,697 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:3(1) -> 0:0:4( 1)]
+2011-09-11 19:54:22,697 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,697 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:4(1) -> 0:0:2( 1)]
+2011-09-11 19:54:22,697 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,697 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( GroupBy 0:0:5 (IDLE) )
+2011-09-11 19:54:22,699 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:6(1) -> 0:0:5( 1)]
+2011-09-11 19:54:22,699 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,699 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:5(1) -> 0:0:8( 1)]
+2011-09-11 19:54:22,699 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,699 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Joiner (deprecated) 0:0:6 (IDLE) )
+2011-09-11 19:54:22,700 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:7(1) -> 0:0:6( 1)]
+2011-09-11 19:54:22,700 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,701 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:2(1) -> 0:0:6( 2)]
+2011-09-11 19:54:22,701 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,701 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:6(1) -> 0:0:5( 1)]
+2011-09-11 19:54:22,701 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,701 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Column Filter 0:0:7 (IDLE) )
+2011-09-11 19:54:22,702 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:1(1) -> 0:0:7( 1)]
+2011-09-11 19:54:22,702 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,703 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:7(1) -> 0:0:6( 1)]
+2011-09-11 19:54:22,703 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:22,703 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( CSV Writer 0:0:8 (IDLE) )
+2011-09-11 19:54:22,704 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:0:5(1) -> 0:0:8( 1)]
+2011-09-11 19:54:22,704 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 19:54:28,325 DEBUG main NodeContainerEditPart : CSV Writer 0:0:8 (IDLE)
+2011-09-11 19:54:28,326 DEBUG main NodeContainerEditPart : File Reader 0:0:1 (IDLE)
+2011-09-11 19:58:35,039 DEBUG main NodeContainerEditPart : File Reader 0:0:1 (IDLE)
+2011-09-11 19:58:35,052 DEBUG main NodeContainerEditPart : Column Filter 0:0:7 (IDLE)
+2011-09-11 19:58:42,306 DEBUG main NodeContainerEditPart : Column Filter 0:0:7 (IDLE)
+2011-09-11 19:58:42,307 DEBUG main NodeContainerEditPart : Joiner (deprecated) 0:0:6 (IDLE)
+2011-09-11 19:58:44,421 DEBUG main NodeContainerEditPart : Joiner (deprecated) 0:0:6 (IDLE)
+2011-09-11 19:58:44,421 DEBUG main NodeContainerEditPart : GroupBy 0:0:5 (IDLE)
+2011-09-11 19:59:23,144 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 19:59:26,103 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (CONFIGURED)
+2011-09-11 19:59:26,103 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:00:07,896 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1532815320 data=[org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory] x=1765 y=331 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 20:00:07,898 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(177, 235)
+2011-09-11 20:00:07,899 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:00:07,899 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 20:00:07,899 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Scatter Plot 0:2:3 added
+2011-09-11 20:00:07,899 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:07,899 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:00:07,899 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:07,899 DEBUG main WorkflowManager : Added new node 0:2:3
+2011-09-11 20:00:07,899 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:3;old=null;new=Scatter Plot 0:2:3 (IDLE);timestamp=Sep 11, 2011 8:00:07 PM]
+2011-09-11 20:00:07,899 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:00:07,900 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:08,042 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Scatter Plot 0:2:3 (IDLE) )
+2011-09-11 20:00:08,043 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:00:09,719 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:10,382 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:00:14,568 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:1( 1)]
+2011-09-11 20:00:14,568 DEBUG main ConnectionContainerEditPart : modelling info: bendpoints: 207, 57, 
+2011-09-11 20:00:14,568 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:16,401 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (CONFIGURED)
+2011-09-11 20:00:17,335 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (CONFIGURED)
+2011-09-11 20:00:27,034 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:00:27,034 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:27,034 DEBUG main Statistics : reset
+2011-09-11 20:00:27,034 DEBUG main Statistics : clean output ports.
+2011-09-11 20:00:27,034 DEBUG main NodeContainer : Statistics 0:2:1 has new state: IDLE
+2011-09-11 20:00:27,034 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:27,034 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:27,034 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_REMOVED
+2011-09-11 20:00:27,034 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_REMOVED;node=null;old=STD[0:2:2(1) -> 0:2:1( 1)];new=null;timestamp=Sep 11, 2011 8:00:27 PM]
+2011-09-11 20:00:27,035 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:00:27,035 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:28,517 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:00:29,317 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:30,588 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:00:30,588 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:00:31,791 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 1 to 0:2:3 1
+2011-09-11 20:00:31,792 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:00:31,792 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:00:31,792 DEBUG main NodeContainer : Setting dirty flag on Scatter Plot 0:2:3
+2011-09-11 20:00:31,792 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:00:31,792 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:31,792 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:00:31,792 DEBUG main WorkflowManager : Added new connection from node 0:2:2(1) to node 0:2:3(1)
+2011-09-11 20:00:31,792 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:00:31,792 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(1) -> 0:2:3( 1)];timestamp=Sep 11, 2011 8:00:31 PM]
+2011-09-11 20:00:31,792 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:00:31,792 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:00:31,796 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:3( 1)]
+2011-09-11 20:00:31,797 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:00:31,797 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:3( 1)]
+2011-09-11 20:00:31,797 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:01:00,535 DEBUG main NodeContainerEditPart : ARFF Reader: Opening node dialog after double click...
+2011-09-11 20:02:42,047 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:42,061 DEBUG main Scatter Plot : reset
+2011-09-11 20:02:42,061 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:02:42,061 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:02:42,061 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:42,061 DEBUG main ARFF Reader : reset
+2011-09-11 20:02:42,061 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 20:02:42,061 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 20:02:42,080 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 20:02:42,080 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 20:02:42,080 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:02:42,080 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:02:42,080 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:02:42,080 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:49,820 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:49,820 DEBUG main Scatter Plot : reset
+2011-09-11 20:02:49,820 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:02:49,820 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:02:49,820 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:49,820 DEBUG main ARFF Reader : reset
+2011-09-11 20:02:49,820 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 20:02:49,821 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 20:02:49,822 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 20:02:49,822 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 20:02:49,822 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:02:49,822 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:02:49,822 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:02:49,822 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:53,542 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:02:53,542 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (CONFIGURED)
+2011-09-11 20:02:53,935 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-09-11 20:02:58,594 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:02:58,594 DEBUG main Scatter Plot : reset
+2011-09-11 20:02:58,594 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:02:58,594 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:02:58,594 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:02:58,594 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:02:58,595 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:02:58,595 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:01,395 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:01,395 DEBUG main Scatter Plot : reset
+2011-09-11 20:03:01,395 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:03:01,395 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:03:01,395 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:03:01,395 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:03:01,395 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:03:01,395 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:24,254 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-09-11 20:03:40,739 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:40,739 DEBUG main Scatter Plot : reset
+2011-09-11 20:03:40,739 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:03:40,739 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:03:40,739 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:03:40,739 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:03:40,739 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:03:40,740 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:41,849 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (CONFIGURED)
+2011-09-11 20:03:41,850 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:03:42,051 DEBUG main NodeContainerEditPart : ARFF Reader: Opening node dialog after double click...
+2011-09-11 20:03:53,044 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:53,044 DEBUG main Scatter Plot : reset
+2011-09-11 20:03:53,044 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:03:53,045 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:03:53,045 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:03:53,045 DEBUG main ARFF Reader : reset
+2011-09-11 20:03:53,045 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 20:03:53,045 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement '.DS_Store' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 2. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement '.metadata' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 3. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement 'data_processing_ex' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 4. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement 'data_processing_example' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 5. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement 'iris.arff' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 6. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFFTable : ARFF reader WARNING: Unsupported statement 'KNIME_project' in header of ARFF file 'file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/', line 7. Ignoring it!
+2011-09-11 20:03:53,046 WARN  main ARFF Reader : ARFFReader: ARFF Header Error
+2011-09-11 20:03:53,046 DEBUG main ARFF Reader : ARFFReader: ARFF Header Error
+org.knime.core.node.InvalidSettingsException: ARFFReader: ARFF Header Error
+	at org.knime.base.node.io.arffreader.ARFFReaderNodeModel.configure(ARFFReaderNodeModel.java:138)
+	at org.knime.core.node.NodeModel.configure(NodeModel.java:1022)
+	at org.knime.core.node.NodeModel.configureModel(NodeModel.java:972)
+	at org.knime.core.node.Node.configure(Node.java:1466)
+	at org.knime.core.node.workflow.SingleNodeContainer.nodeConfigure(SingleNodeContainer.java:442)
+	at org.knime.core.node.workflow.SingleNodeContainer.configure(SingleNodeContainer.java:363)
+	at org.knime.core.node.workflow.WorkflowManager.configureSingleNodeContainer(WorkflowManager.java:4259)
+	at org.knime.core.node.workflow.WorkflowManager.configureNodeAndPortSuccessors(WorkflowManager.java:4428)
+	at org.knime.core.node.workflow.WorkflowManager.configureNodeAndSuccessors(WorkflowManager.java:4371)
+	at org.knime.core.node.workflow.WorkflowManager.loadNodeSettings(WorkflowManager.java:1153)
+	at org.knime.core.node.workflow.NodeContainer.applySettingsFromDialog(NodeContainer.java:910)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.doApply(WrappedNodeDialog.java:480)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.access$6(WrappedNodeDialog.java:438)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog$6.widgetSelected(WrappedNodeDialog.java:366)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:3776)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1367)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1390)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1375)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1187)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3622)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3277)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.knime.workbench.ui.wrapper.WrappedNodeDialog.open(WrappedNodeDialog.java:155)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.openDialog(NodeContainerEditPart.java:700)
+	at org.knime.workbench.editor2.editparts.NodeContainerEditPart.performRequest(NodeContainerEditPart.java:308)
+	at org.eclipse.gef.tools.SelectEditPartTracker.performOpen(SelectEditPartTracker.java:194)
+	at org.eclipse.gef.tools.SelectEditPartTracker.handleDoubleClick(SelectEditPartTracker.java:137)
+	at org.eclipse.gef.tools.AbstractTool.mouseDoubleClick(AbstractTool.java:1069)
+	at org.eclipse.gef.tools.SelectionTool.mouseDoubleClick(SelectionTool.java:525)
+	at org.eclipse.gef.EditDomain.mouseDoubleClick(EditDomain.java:231)
+	at org.eclipse.gef.ui.parts.DomainEventDispatcher.dispatchMouseDoubleClicked(DomainEventDispatcher.java:291)
+	at org.eclipse.draw2d.LightweightSystem$EventHandler.mouseDoubleClick(LightweightSystem.java:518)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:189)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:3776)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1367)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1390)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1375)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1187)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3622)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3277)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:95)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+Caused by: org.knime.core.node.InvalidSettingsException: Incorrect/Incomplete ARFF file. No data section found.
+	at org.knime.base.node.io.arffreader.ARFFTable.createDataTableSpecFromARFFfile(ARFFTable.java:172)
+	at org.knime.base.node.io.arffreader.ARFFReaderNodeModel.configure(ARFFReaderNodeModel.java:134)
+	... 63 more
+2011-09-11 20:03:53,047 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 20:03:53,047 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:02,986 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:02,987 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 20:04:02,987 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 20:04:02,987 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:04:02,987 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:04:02,987 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:04:02,987 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:03,849 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:03,849 DEBUG main Scatter Plot : reset
+2011-09-11 20:04:03,849 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:04:03,849 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:04:03,849 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:03,849 DEBUG main ARFF Reader : reset
+2011-09-11 20:04:03,849 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 20:04:03,849 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: IDLE
+2011-09-11 20:04:03,850 DEBUG main ARFF Reader : Configure succeeded. (ARFF Reader)
+2011-09-11 20:04:03,850 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: CONFIGURED
+2011-09-11 20:04:03,851 WARN  main Scatter Plot : Some columns are ignored: bounds missing.
+2011-09-11 20:04:03,851 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:04:03,851 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:04:03,851 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:04:07,229 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:04:07,230 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (CONFIGURED)
+2011-09-11 20:04:07,431 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-09-11 20:05:47,253 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (CONFIGURED)
+2011-09-11 20:05:47,264 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (CONFIGURED)
+2011-09-11 20:05:50,585 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:05:50,586 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: MARKEDFOREXEC
+2011-09-11 20:05:50,586 DEBUG main NodeContainer : ARFF Reader 0:2:2 has new state: QUEUED
+2011-09-11 20:05:50,621 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:05:50,621 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:05:50,622 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 WorkflowManager : ARFF Reader 0:2:2 doBeforePreExecution
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 NodeContainer : ARFF Reader 0:2:2 has new state: PREEXECUTE
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 WorkflowManager : ARFF Reader 0:2:2 doBeforeExecution
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 NodeContainer : ARFF Reader 0:2:2 has new state: EXECUTING
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:05:50,622 DEBUG KNIME-Worker-0 LocalNodeExecutionJob : ARFF Reader 0:2:2 Start execute
+2011-09-11 20:05:50,702 INFO  KNIME-Worker-0 LocalNodeExecutionJob : ARFF Reader 0:2:2 End execute (0 secs)
+2011-09-11 20:05:50,702 DEBUG KNIME-Worker-0 WorkflowManager : ARFF Reader 0:2:2 doBeforePostExecution
+2011-09-11 20:05:50,702 DEBUG KNIME-Worker-0 NodeContainer : ARFF Reader 0:2:2 has new state: POSTEXECUTE
+2011-09-11 20:05:50,702 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:05:50,702 DEBUG KNIME-Worker-0 WorkflowManager : ARFF Reader 0:2:2 doAfterExecute - success
+2011-09-11 20:05:50,702 DEBUG KNIME-Worker-0 NodeContainer : ARFF Reader 0:2:2 has new state: EXECUTED
+2011-09-11 20:05:50,703 DEBUG KNIME-Worker-0 Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:05:50,703 DEBUG KNIME-Worker-0 NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:05:50,703 DEBUG KNIME-Worker-0 KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:05:50,703 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:05:50,703 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:05:50,703 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:05:56,153 DEBUG main OpenDialogAction : Opening node dialog...
+2011-09-11 20:06:21,904 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:06:29,110 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:06:29,120 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:06:29,120 DEBUG main Scatter Plot : reset
+2011-09-11 20:06:29,120 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:06:29,121 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:06:29,121 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:06:29,121 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:06:29,121 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_REMOVED
+2011-09-11 20:06:29,121 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_REMOVED;node=null;old=STD[0:2:2(1) -> 0:2:3( 1)];new=null;timestamp=Sep 11, 2011 8:06:29 PM]
+2011-09-11 20:06:29,121 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:06:29,122 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:06:31,162 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:06:35,248 DEBUG main OpenDialogAction : Opening node dialog...
+2011-09-11 20:07:16,510 DEBUG main OpenPortViewAction : Open Port View ARFF Reader (#1)
+2011-09-11 20:08:16,182 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1533303606 data=[org.knime.base.node.preproc.partition.PartitionNodeFactory] x=1836 y=371 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 20:08:16,184 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(248, 275)
+2011-09-11 20:08:16,184 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:08:16,184 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 20:08:16,184 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:08:16,184 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Partitioning 0:2:4 added
+2011-09-11 20:08:16,184 DEBUG main WorkflowManager : Added new node 0:2:4
+2011-09-11 20:08:16,184 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:4;old=null;new=Partitioning 0:2:4 (IDLE);timestamp=Sep 11, 2011 8:08:16 PM]
+2011-09-11 20:08:16,184 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:08:16,185 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:08:16,197 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Partitioning 0:2:4 (IDLE) )
+2011-09-11 20:08:16,198 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:08:18,747 DEBUG main NodeContainerEditPart : Partitioning 0:2:4 (IDLE)
+2011-09-11 20:08:18,747 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:08:20,052 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:08:36,949 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 1 to 0:2:4 1
+2011-09-11 20:08:36,958 WARN  main Partitioning : No sampling method selected
+2011-09-11 20:08:36,958 DEBUG main NodeContainer : Partitioning 0:2:4 has new state: IDLE
+2011-09-11 20:08:36,958 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:08:36,958 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:08:36,959 DEBUG main WorkflowManager : Added new connection from node 0:2:2(1) to node 0:2:4(1)
+2011-09-11 20:08:36,959 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:08:36,959 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(1) -> 0:2:4( 1)];timestamp=Sep 11, 2011 8:08:36 PM]
+2011-09-11 20:08:36,959 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:08:36,959 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:08:36,963 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:4( 1)]
+2011-09-11 20:08:36,963 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:08:36,964 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:4( 1)]
+2011-09-11 20:08:36,964 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:08:37,916 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:08:37,917 DEBUG main NodeContainerEditPart : Partitioning 0:2:4 (IDLE)
+2011-09-11 20:08:38,096 DEBUG main NodeContainerEditPart : Partitioning: Opening node dialog after double click...
+2011-09-11 20:09:14,684 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:09:14,699 DEBUG main NodeContainer : Setting dirty flag on Partitioning 0:2:4
+2011-09-11 20:09:14,699 DEBUG main Partitioning : Configure succeeded. (Partitioning)
+2011-09-11 20:09:14,699 DEBUG main NodeContainer : Partitioning 0:2:4 has new state: CONFIGURED
+2011-09-11 20:09:14,699 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:09:23,310 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:09:23,310 DEBUG main NodeContainer : Partitioning 0:2:4 has new state: MARKEDFOREXEC
+2011-09-11 20:09:23,310 DEBUG main NodeContainer : Partitioning 0:2:4 has new state: QUEUED
+2011-09-11 20:09:23,310 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:09:23,310 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:09:23,310 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:09:23,310 DEBUG KNIME-Worker-1 WorkflowManager : Partitioning 0:2:4 doBeforePreExecution
+2011-09-11 20:09:23,310 DEBUG KNIME-Worker-1 NodeContainer : Partitioning 0:2:4 has new state: PREEXECUTE
+2011-09-11 20:09:23,311 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:09:23,311 DEBUG KNIME-Worker-1 WorkflowManager : Partitioning 0:2:4 doBeforeExecution
+2011-09-11 20:09:23,311 DEBUG KNIME-Worker-1 NodeContainer : Partitioning 0:2:4 has new state: EXECUTING
+2011-09-11 20:09:23,311 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:09:23,311 DEBUG KNIME-Worker-1 LocalNodeExecutionJob : Partitioning 0:2:4 Start execute
+2011-09-11 20:09:23,316 INFO  KNIME-Worker-1 LocalNodeExecutionJob : Partitioning 0:2:4 End execute (0 secs)
+2011-09-11 20:09:23,316 DEBUG KNIME-Worker-1 WorkflowManager : Partitioning 0:2:4 doBeforePostExecution
+2011-09-11 20:09:23,316 DEBUG KNIME-Worker-1 NodeContainer : Partitioning 0:2:4 has new state: POSTEXECUTE
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 WorkflowManager : Partitioning 0:2:4 doAfterExecute - success
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 NodeContainer : Partitioning 0:2:4 has new state: EXECUTED
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:09:23,317 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:09:23,317 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:10:53,445 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:10:55,010 DEBUG main NodeContainerEditPart : Partitioning 0:2:4 (EXECUTED)
+2011-09-11 20:11:02,978 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:11:02,978 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:02,978 DEBUG main Partitioning : reset
+2011-09-11 20:11:02,978 DEBUG main Partitioning : clean output ports.
+2011-09-11 20:11:02,978 DEBUG main Partitioning : clean output ports.
+2011-09-11 20:11:02,979 DEBUG main NodeContainer : Partitioning 0:2:4 has new state: IDLE
+2011-09-11 20:11:02,979 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:02,979 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:02,979 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_REMOVED
+2011-09-11 20:11:02,979 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_REMOVED;node=null;old=STD[0:2:2(1) -> 0:2:4( 1)];new=null;timestamp=Sep 11, 2011 8:11:02 PM]
+2011-09-11 20:11:02,979 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:11:02,979 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:11:03,773 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 20:11:04,899 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:11:06,383 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (IDLE)
+2011-09-11 20:11:06,383 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:11:07,666 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 1 to 0:2:1 1
+2011-09-11 20:11:07,666 DEBUG main Statistics : Configure succeeded. (Statistics)
+2011-09-11 20:11:07,666 DEBUG main NodeContainer : Statistics 0:2:1 has new state: CONFIGURED
+2011-09-11 20:11:07,666 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:07,666 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:07,666 DEBUG main WorkflowManager : Added new connection from node 0:2:2(1) to node 0:2:1(1)
+2011-09-11 20:11:07,666 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:11:07,667 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:11:07,667 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(1) -> 0:2:1( 1)];timestamp=Sep 11, 2011 8:11:07 PM]
+2011-09-11 20:11:07,667 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:11:07,670 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:1( 1)]
+2011-09-11 20:11:07,670 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:11:07,671 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:1( 1)]
+2011-09-11 20:11:07,671 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:11:09,151 DEBUG main NodeContainerEditPart : ARFF Reader 0:2:2 (EXECUTED)
+2011-09-11 20:11:09,151 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (CONFIGURED)
+2011-09-11 20:11:11,537 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:11:11,537 DEBUG main NodeContainer : Statistics 0:2:1 has new state: MARKEDFOREXEC
+2011-09-11 20:11:11,537 DEBUG main NodeContainer : Statistics 0:2:1 has new state: QUEUED
+2011-09-11 20:11:11,537 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:11:11,537 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:11:11,537 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:11:11,537 DEBUG KNIME-Worker-2 WorkflowManager : Statistics 0:2:1 doBeforePreExecution
+2011-09-11 20:11:11,537 DEBUG KNIME-Worker-2 NodeContainer : Statistics 0:2:1 has new state: PREEXECUTE
+2011-09-11 20:11:11,538 DEBUG KNIME-Worker-2 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:11:11,538 DEBUG KNIME-Worker-2 WorkflowManager : Statistics 0:2:1 doBeforeExecution
+2011-09-11 20:11:11,538 DEBUG KNIME-Worker-2 NodeContainer : Statistics 0:2:1 has new state: EXECUTING
+2011-09-11 20:11:11,538 DEBUG KNIME-Worker-2 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:11:11,538 DEBUG KNIME-Worker-2 LocalNodeExecutionJob : Statistics 0:2:1 Start execute
+2011-09-11 20:11:11,556 DEBUG KNIME-Worker-2 DataType : DataValue is the preferred value class of cell implementation MissingCell, made sanity check
+2011-09-11 20:11:11,561 INFO  KNIME-Worker-2 LocalNodeExecutionJob : Statistics 0:2:1 End execute (0 secs)
+2011-09-11 20:11:11,561 DEBUG KNIME-Worker-2 WorkflowManager : Statistics 0:2:1 doBeforePostExecution
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 NodeContainer : Statistics 0:2:1 has new state: POSTEXECUTE
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 WorkflowManager : Statistics 0:2:1 doAfterExecute - success
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 NodeContainer : Statistics 0:2:1 has new state: EXECUTED
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:11,562 DEBUG KNIME-Worker-2 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:11:11,562 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:15:32,008 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:15:36,519 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1533743943 data=[org.knime.base.node.io.table.read.ReadTableNodeFactory] x=1931 y=660 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 20:15:36,521 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(343, 564)
+2011-09-11 20:15:36,521 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:15:36,521 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 20:15:36,521 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Table Reader 0:2:5 added
+2011-09-11 20:15:36,521 WARN  main Table Reader : No file set.
+2011-09-11 20:15:36,522 DEBUG main NodeContainer : Table Reader 0:2:5 has new state: IDLE
+2011-09-11 20:15:36,522 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:15:36,522 DEBUG main WorkflowManager : Added new node 0:2:5
+2011-09-11 20:15:36,522 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:5;old=null;new=Table Reader 0:2:5 (IDLE);timestamp=Sep 11, 2011 8:15:36 PM]
+2011-09-11 20:15:36,522 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:15:36,522 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:15:36,623 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Table Reader 0:2:5 (IDLE) )
+2011-09-11 20:15:36,623 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:15:59,155 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:15:59,173 DEBUG main Table Reader : clean output ports.
+2011-09-11 20:15:59,173 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:15:59,173 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:15:59,173 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Table Reader 0:2:5 removed
+2011-09-11 20:15:59,174 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_REMOVED;node=0:2;old=Table Reader 0:2:5 (IDLE);new=null;timestamp=Sep 11, 2011 8:15:59 PM]
+2011-09-11 20:15:59,174 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:15:59,174 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:16:19,383 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:16:43,322 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:16:43,322 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:16:44,447 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:16:45,391 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:16:45,392 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:16:48,204 DEBUG main CreateConnectionCommand : adding connection from 0:2:1 1 to 0:2:3 1
+2011-09-11 20:16:48,204 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:16:48,205 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: CONFIGURED
+2011-09-11 20:16:48,205 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:16:48,205 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:16:48,205 DEBUG main WorkflowManager : Added new connection from node 0:2:1(1) to node 0:2:3(1)
+2011-09-11 20:16:48,205 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:16:48,205 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:1(1) -> 0:2:3( 1)];timestamp=Sep 11, 2011 8:16:48 PM]
+2011-09-11 20:16:48,205 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:16:48,205 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:16:48,209 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:3( 1)]
+2011-09-11 20:16:48,209 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:16:48,209 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:3( 1)]
+2011-09-11 20:16:48,209 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:16:55,843 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:16:55,843 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (CONFIGURED)
+2011-09-11 20:16:58,385 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:16:58,385 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: MARKEDFOREXEC
+2011-09-11 20:16:58,385 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: QUEUED
+2011-09-11 20:16:58,386 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:16:58,386 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 WorkflowManager : Scatter Plot 0:2:3 doBeforePreExecution
+2011-09-11 20:16:58,386 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 NodeContainer : Scatter Plot 0:2:3 has new state: PREEXECUTE
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 WorkflowManager : Scatter Plot 0:2:3 doBeforeExecution
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 NodeContainer : Scatter Plot 0:2:3 has new state: EXECUTING
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:16:58,386 DEBUG KNIME-Worker-3 LocalNodeExecutionJob : Scatter Plot 0:2:3 Start execute
+2011-09-11 20:16:58,405 INFO  KNIME-Worker-3 LocalNodeExecutionJob : Scatter Plot 0:2:3 End execute (0 secs)
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 WorkflowManager : Scatter Plot 0:2:3 doBeforePostExecution
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 NodeContainer : Scatter Plot 0:2:3 has new state: POSTEXECUTE
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 WorkflowManager : Scatter Plot 0:2:3 doAfterExecute - success
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 NodeContainer : Scatter Plot 0:2:3 has new state: EXECUTED
+2011-09-11 20:16:58,405 DEBUG KNIME-Worker-3 KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:16:58,406 DEBUG KNIME-Worker-3 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:16:58,406 DEBUG KNIME-Worker-3 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:16:58,406 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:17:00,466 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-09-11 20:17:28,367 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (EXECUTED)
+2011-09-11 20:17:32,787 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:17:32,788 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:17:32,788 DEBUG main Scatter Plot : reset
+2011-09-11 20:17:32,788 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:17:32,788 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:17:32,788 DEBUG main NodeContainer : Scatter Plot 0:2:3 has new state: IDLE
+2011-09-11 20:17:32,788 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:17:32,788 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:17:32,788 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_REMOVED
+2011-09-11 20:17:32,788 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_REMOVED;node=null;old=STD[0:2:1(1) -> 0:2:3( 1)];new=null;timestamp=Sep 11, 2011 8:17:32 PM]
+2011-09-11 20:17:32,788 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:17:32,789 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:18:06,721 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:18:28,611 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:19:08,234 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1533955657 data=[org.knime.base.node.viz.table.TableNodeFactory] x=2031 y=485 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 20:19:08,235 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(443, 389)
+2011-09-11 20:19:08,236 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:08,236 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 20:19:08,236 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:08,236 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Interactive Table 0:2:5 added
+2011-09-11 20:19:08,236 DEBUG main WorkflowManager : Added new node 0:2:5
+2011-09-11 20:19:08,236 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:5;old=null;new=Interactive Table 0:2:5 (IDLE);timestamp=Sep 11, 2011 8:19:08 PM]
+2011-09-11 20:19:08,236 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:19:08,236 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:19:08,345 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Interactive Table 0:2:5 (IDLE) )
+2011-09-11 20:19:08,346 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:19:10,033 DEBUG main NodeContainerEditPart : Interactive Table 0:2:5 (IDLE)
+2011-09-11 20:19:10,034 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:19:11,372 DEBUG main CreateConnectionCommand : adding connection from 0:2:1 1 to 0:2:5 1
+2011-09-11 20:19:11,372 DEBUG main Interactive Table : Configure succeeded. (Interactive Table)
+2011-09-11 20:19:11,372 DEBUG main NodeContainer : Setting dirty flag on Interactive Table 0:2:5
+2011-09-11 20:19:11,372 DEBUG main NodeContainer : Interactive Table 0:2:5 has new state: CONFIGURED
+2011-09-11 20:19:11,372 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:11,373 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:11,373 DEBUG main WorkflowManager : Added new connection from node 0:2:1(1) to node 0:2:5(1)
+2011-09-11 20:19:11,373 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:19:11,373 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:1(1) -> 0:2:5( 1)];timestamp=Sep 11, 2011 8:19:11 PM]
+2011-09-11 20:19:11,373 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:19:11,373 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:19:11,376 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:5( 1)]
+2011-09-11 20:19:11,376 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:19:11,377 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:5( 1)]
+2011-09-11 20:19:11,377 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:19:12,440 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:19:12,441 DEBUG main NodeContainerEditPart : Interactive Table 0:2:5 (CONFIGURED)
+2011-09-11 20:19:13,794 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:19:13,794 DEBUG main NodeContainer : Interactive Table 0:2:5 has new state: MARKEDFOREXEC
+2011-09-11 20:19:13,794 DEBUG main NodeContainer : Interactive Table 0:2:5 has new state: QUEUED
+2011-09-11 20:19:13,795 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:19:13,795 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 WorkflowManager : Interactive Table 0:2:5 doBeforePreExecution
+2011-09-11 20:19:13,795 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 NodeContainer : Interactive Table 0:2:5 has new state: PREEXECUTE
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 WorkflowManager : Interactive Table 0:2:5 doBeforeExecution
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 NodeContainer : Interactive Table 0:2:5 has new state: EXECUTING
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:19:13,795 DEBUG KNIME-Worker-4 LocalNodeExecutionJob : Interactive Table 0:2:5 Start execute
+2011-09-11 20:19:13,806 INFO  KNIME-Worker-4 LocalNodeExecutionJob : Interactive Table 0:2:5 End execute (0 secs)
+2011-09-11 20:19:13,806 DEBUG KNIME-Worker-4 WorkflowManager : Interactive Table 0:2:5 doBeforePostExecution
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 NodeContainer : Interactive Table 0:2:5 has new state: POSTEXECUTE
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 WorkflowManager : Interactive Table 0:2:5 doAfterExecute - success
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 NodeContainer : Interactive Table 0:2:5 has new state: EXECUTED
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:13,807 DEBUG KNIME-Worker-4 NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:19:13,807 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:19:21,148 DEBUG main NodeContainerEditPart : Interactive Table: Opening node dialog after double click...
+2011-09-11 20:19:40,149 DEBUG main NodeContainerEditPart : Interactive Table: Opening node dialog after double click...
+2011-09-11 20:21:40,769 DEBUG main OpenViewAction : Open Node View Interactive Table (#0)
+2011-09-11 20:21:40,819 DEBUG AWT-EventQueue-0 TableNodeModel : Registering view at model (total count 1)
+2011-09-11 20:21:47,871 DEBUG main NodeContainerEditPart : Interactive Table 0:2:5 (EXECUTED)
+2011-09-11 20:21:47,872 DEBUG main NodeContainerEditPart : Partitioning 0:2:4 (IDLE)
+2011-09-11 20:21:53,093 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:21:53,093 DEBUG main Partitioning : clean output ports.
+2011-09-11 20:21:53,093 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:21:53,093 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:21:53,093 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Partitioning 0:2:4 removed
+2011-09-11 20:21:53,093 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_REMOVED;node=0:2;old=Partitioning 0:2:4 (IDLE);new=null;timestamp=Sep 11, 2011 8:21:53 PM]
+2011-09-11 20:21:53,093 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:21:53,094 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:21:53,732 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:3 (IDLE)
+2011-09-11 20:21:55,548 DEBUG main VerifyingCompoundCommand : Executing <1> commands.
+2011-09-11 20:21:55,548 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:21:55,548 DEBUG main KnimeResourceNavigator : state changed to EXECUTED
+2011-09-11 20:21:55,548 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-09-11 20:21:55,548 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:21:55,548 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:21:55,548 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Scatter Plot 0:2:3 removed
+2011-09-11 20:21:55,548 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:21:55,549 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_REMOVED;node=0:2;old=Scatter Plot 0:2:3 (IDLE);new=null;timestamp=Sep 11, 2011 8:21:55 PM]
+2011-09-11 20:21:55,549 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:21:57,074 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:21:58,109 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:21:59,121 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:21:59,122 DEBUG main NodeContainerEditPart : Interactive Table 0:2:5 (EXECUTED)
+2011-09-11 20:22:01,281 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:22:15,378 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=1534142801 data=[org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory] x=1945 y=536 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-09-11 20:22:15,379 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(357, 440)
+2011-09-11 20:22:15,380 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-09-11 20:22:15,380 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-09-11 20:22:15,380 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Scatter Plot 0:2:6 added
+2011-09-11 20:22:15,380 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:22:15,380 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-09-11 20:22:15,380 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:22:15,380 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:6;old=null;new=Scatter Plot 0:2:6 (IDLE);timestamp=Sep 11, 2011 8:22:15 PM]
+2011-09-11 20:22:15,380 DEBUG main WorkflowManager : Added new node 0:2:6
+2011-09-11 20:22:15,380 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:22:15,380 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:22:15,507 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Scatter Plot 0:2:6 (IDLE) )
+2011-09-11 20:22:15,507 DEBUG main NodeContainerEditPart : Interactive Table 0:2:5 (EXECUTED)
+2011-09-11 20:22:18,258 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:6 (IDLE)
+2011-09-11 20:22:18,258 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:22:20,261 DEBUG main CreateConnectionCommand : adding connection from 0:2:1 2 to 0:2:6 1
+2011-09-11 20:22:20,261 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-09-11 20:22:20,261 DEBUG main NodeContainer : Setting dirty flag on Scatter Plot 0:2:6
+2011-09-11 20:22:20,261 DEBUG main NodeContainer : Scatter Plot 0:2:6 has new state: CONFIGURED
+2011-09-11 20:22:20,261 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-09-11 20:22:20,261 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 20:22:20,261 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-09-11 20:22:20,261 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:22:20,261 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-09-11 20:22:20,261 DEBUG main WorkflowManager : Added new connection from node 0:2:1(2) to node 0:2:6(1)
+2011-09-11 20:22:20,262 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:1(2) -> 0:2:6( 1)];timestamp=Sep 11, 2011 8:22:20 PM]
+2011-09-11 20:22:20,262 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-09-11 20:22:20,262 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:22:20,266 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(2) -> 0:2:6( 1)]
+2011-09-11 20:22:20,266 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:22:20,267 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(2) -> 0:2:6( 1)]
+2011-09-11 20:22:20,267 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-09-11 20:22:21,756 DEBUG main NodeContainerEditPart : Statistics 0:2:1 (EXECUTED)
+2011-09-11 20:22:21,757 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:6 (CONFIGURED)
+2011-09-11 20:22:23,421 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-09-11 20:22:23,422 DEBUG main NodeContainer : Scatter Plot 0:2:6 has new state: MARKEDFOREXEC
+2011-09-11 20:22:23,422 DEBUG main NodeContainer : Scatter Plot 0:2:6 has new state: QUEUED
+2011-09-11 20:22:23,422 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-09-11 20:22:23,422 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:22:23,422 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 WorkflowManager : Scatter Plot 0:2:6 doBeforePreExecution
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 NodeContainer : Scatter Plot 0:2:6 has new state: PREEXECUTE
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 WorkflowManager : Scatter Plot 0:2:6 doBeforeExecution
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 NodeContainer : Scatter Plot 0:2:6 has new state: EXECUTING
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:22:23,422 DEBUG KNIME-Worker-5 LocalNodeExecutionJob : Scatter Plot 0:2:6 Start execute
+2011-09-11 20:22:23,423 INFO  KNIME-Worker-5 LocalNodeExecutionJob : Scatter Plot 0:2:6 End execute (0 secs)
+2011-09-11 20:22:23,423 DEBUG KNIME-Worker-5 WorkflowManager : Scatter Plot 0:2:6 doBeforePostExecution
+2011-09-11 20:22:23,423 DEBUG KNIME-Worker-5 NodeContainer : Scatter Plot 0:2:6 has new state: POSTEXECUTE
+2011-09-11 20:22:23,423 DEBUG KNIME-Worker-5 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-09-11 20:22:23,424 DEBUG KNIME-Worker-5 WorkflowManager : Scatter Plot 0:2:6 doAfterExecute - success
+2011-09-11 20:22:23,424 DEBUG KNIME-Worker-5 NodeContainer : Scatter Plot 0:2:6 has new state: EXECUTED
+2011-09-11 20:22:23,424 DEBUG KNIME-Worker-5 KnimeResourceNavigator : state changed to EXECUTED
+2011-09-11 20:22:23,424 DEBUG KNIME-Worker-5 NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-09-11 20:22:23,424 DEBUG KNIME-Worker-5 NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-09-11 20:22:23,424 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:22:25,514 DEBUG main OpenViewAction : Open Node View Scatter Plot (#0)
+2011-09-11 20:22:25,613 DEBUG AWT-EventQueue-0 TwoColumnPlotter : x column changed: sepallength
+2011-09-11 20:22:25,646 DEBUG AWT-EventQueue-0 TwoColumnPlotter : y column changed: sepallength_Count
+2011-09-11 20:22:25,653 DEBUG AWT-EventQueue-0 DefaultVisualizationNodeModel : Registering view at model (total count 1)
+2011-09-11 20:22:40,139 DEBUG AWT-EventQueue-0 DefaultVisualizationNodeModel : Unregistering view from model (0 remaining).
