@@ -23,6 +23,10 @@ void setup() {
   for(int i = 0; i < numbers.length; i++){
     ellipse(numbers[i] * 8, width/2, 8, 8);
   }
+  
+  for(int i = 0; i < numbers.length; i++){
+    ellipse(ceil(random(0,99)) *8, height/2 + 20, 8, 8);
+  }
 }
 
 void draw() {
