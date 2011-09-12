@@ -8,7 +8,27 @@
 SimpleSpreadsheetManager sm;
 String sUrl = "t6mq_WLV5c5uj6mUNSryBIA";
 String googleUser = GUSER;
-String googlePass = GPASS;
+String googlePass = GPASS; 
+
+void barGraph(int[] nums, float y){
+  //Make a list of number counts
+  int[] counts = new int [100];
+  
+  //Fill it with zeros
+  for(int i = 1; i < 100; i++){
+    counts[i] = 0;
+  }
+  
+  //Tally the counts
+  for(int i = 0; i < nums.length; i++){
+    counts[nums[i]]++;
+  }
+  
+  //Draw the bar graph
+  for(int i = 0; i < counts.length; i++){
+    rect(i * 8, y, 8, -counts[i] * 10);
+  }
+}
   
 void setup() {
   //This code happens once, right when our sketch is launched
@@ -18,15 +38,9 @@ void setup() {
   
   //Ask for some list of numbers
   int[] numbers = getNumbers();
-  fill(255,40);
-  noStroke();
-  for(int i = 0; i < numbers.length; i++){
-    ellipse(numbers[i] * 8, width/2, 8, 8);
-  }
   
-  for(int i = 0; i < numbers.length; i++){
-    ellipse(ceil(random(0,99)) *8, height/2 + 20, 8, 8);
-  }
+  //Draw bar graph
+  barGraph(numbers, 400);
 }
 
 void draw() {
