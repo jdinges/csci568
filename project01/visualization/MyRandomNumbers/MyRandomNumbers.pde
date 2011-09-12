@@ -26,7 +26,9 @@ void barGraph(int[] nums, float y){
   
   //Draw the bar graph
   for(int i = 0; i < counts.length; i++){
-    fill(255, 255 - (counts[i] * 30), 0);
+    //fill(255, 255 - (counts[i] * 30), 0);
+    colorMode(HSB);
+    fill(counts[i] * 30, 255, 255);
     rect(i * 8, y, 8, -counts[i] * 10);
   }
 }
