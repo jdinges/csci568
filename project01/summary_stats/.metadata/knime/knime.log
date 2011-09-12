@@ -1443,3 +1443,52 @@ Caused by: org.knime.core.node.InvalidSettingsException: Incorrect/Incomplete AR
 2011-09-11 20:22:25,646 DEBUG AWT-EventQueue-0 TwoColumnPlotter : y column changed: sepallength_Count
 2011-09-11 20:22:25,653 DEBUG AWT-EventQueue-0 DefaultVisualizationNodeModel : Registering view at model (total count 1)
 2011-09-11 20:22:40,139 DEBUG AWT-EventQueue-0 DefaultVisualizationNodeModel : Unregistering view from model (0 remaining).
+2011-09-11 20:35:12,434 DEBUG main WorkflowEditor : Saving workflow ...
+2011-09-11 20:35:12,488 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/KNIME_project/Statistics (#1)"
+2011-09-11 20:35:12,565 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/KNIME_project/ARFF Reader (#2)"
+2011-09-11 20:35:12,575 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/KNIME_project/Interactive Table (#5)"
+2011-09-11 20:35:12,602 DEBUG ModalContext SingleNodeContainerPersistorVersion200 : Created node directory "/Users/Fawx/Documents/Data Mining/src/project01/summary_stats/KNIME_project/Scatter Plot (#6)"
+2011-09-11 20:35:12,605 DEBUG ModalContext Buffer : Buffer file (/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20110911_1596399953049536109.bin.gz) is 0.001MB in size
+2011-09-11 20:35:12,744 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-09-11 20:35:12,897 DEBUG main WorkflowRootEditPart : WorkflowRootEditPart deactivated
+2011-09-11 20:35:12,899 DEBUG main WorkflowEditor : Disposing editor...
+2011-09-11 20:35:12,899 DEBUG main ProjectWorkflowMap : unregistering org.knime.workbench.editor2.WorkflowEditor@63ce50a9 from file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/KNIME_project/. 0 left.
+2011-09-11 20:35:12,899 DEBUG main ProjectWorkflowMap : Removing "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/KNIME_project/" from project map (2 remaining)
+2011-09-11 20:35:12,899 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:35:12,899 DEBUG main KnimeResourceNavigator : Workflow KNIME_project 0:2 removed
+2011-09-11 20:35:12,899 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-09-11 20:35:12,900 DEBUG main Statistics : clean output ports.
+2011-09-11 20:35:12,900 DEBUG main ARFF Reader : clean output ports.
+2011-09-11 20:35:12,901 DEBUG main TableNodeModel : Unregistering view from model (0 remaining).
+2011-09-11 20:35:13,104 DEBUG main Interactive Table : clean output ports.
+2011-09-11 20:35:13,104 DEBUG main Scatter Plot : clean output ports.
+2011-09-11 20:35:13,104 DEBUG main NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:35:13,107 DEBUG main WorkflowRootEditPart : WorkflowRootEditPart deactivated
+2011-09-11 20:35:13,107 DEBUG main WorkflowEditor : Disposing editor...
+2011-09-11 20:35:13,107 DEBUG main ProjectWorkflowMap : unregistering org.knime.workbench.editor2.WorkflowEditor@e17afd0 from file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_ex/. 0 left.
+2011-09-11 20:35:13,107 DEBUG main ProjectWorkflowMap : Removing "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_ex/" from project map (1 remaining)
+2011-09-11 20:35:13,107 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:35:13,108 DEBUG main KnimeResourceNavigator : Workflow data_processing_ex 0:3 removed
+2011-09-11 20:35:13,108 DEBUG main NodeContainer : data_processing_ex 0:3 has new state: EXECUTED
+2011-09-11 20:35:13,108 ERROR main VMFileLocker : CODING PROBLEM	Files should not be un/locked. Only directories.
+2011-09-11 20:35:13,108 DEBUG main NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:35:13,109 DEBUG main WorkflowRootEditPart : WorkflowRootEditPart deactivated
+2011-09-11 20:35:13,111 DEBUG main WorkflowEditor : Disposing editor...
+2011-09-11 20:35:13,111 DEBUG main ProjectWorkflowMap : unregistering org.knime.workbench.editor2.WorkflowEditor@21a3e686 from file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_example/. 0 left.
+2011-09-11 20:35:13,111 DEBUG main ProjectWorkflowMap : Removing "file:/Users/Fawx/Documents/Data%20Mining/src/project01/summary_stats/data_processing_example/" from project map (0 remaining)
+2011-09-11 20:35:13,111 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-09-11 20:35:13,111 DEBUG main KnimeResourceNavigator : Workflow Workflow Manager 0:0 removed
+2011-09-11 20:35:13,111 DEBUG main NodeContainer : Workflow Manager 0:0 has new state: IDLE
+2011-09-11 20:35:13,130 DEBUG main File Reader : clean output ports.
+2011-09-11 20:35:13,130 DEBUG main Database Connection Reader : clean output ports.
+2011-09-11 20:35:13,130 DEBUG main Database Connector : clean output ports.
+2011-09-11 20:35:13,130 DEBUG main Database Column Filter : clean output ports.
+2011-09-11 20:35:13,130 DEBUG main GroupBy : clean output ports.
+2011-09-11 20:35:13,130 DEBUG main Joiner (deprecated) : clean output ports.
+2011-09-11 20:35:13,131 DEBUG main Column Filter : clean output ports.
+2011-09-11 20:35:13,131 DEBUG main CSV Writer : clean output ports.
+2011-09-11 20:35:13,131 DEBUG main NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-09-11 20:35:13,435 DEBUG KNIME-Temp-File-Deleter Buffer : Deleted temporary file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20110911_5366436760484029222.bin.gz"
+2011-09-11 20:35:13,435 DEBUG KNIME-Temp-File-Deleter Buffer : Deleted temporary file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20110911_2627695639703837956.bin.gz"
+2011-09-11 20:35:13,435 DEBUG KNIME-Temp-File-Deleter Buffer : Deleted temporary file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20110911_1596399953049536109.bin.gz"
+2011-09-11 20:35:13,435 DEBUG KNIME-Temp-File-Deleter Buffer : Deleted temporary file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20110911_4422273595856011018.bin.gz"
