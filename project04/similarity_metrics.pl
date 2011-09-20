@@ -15,7 +15,7 @@ sub test_euclidean{
 	my @vector_02 = (4, 5, 6);
 	my $actual_euclidean = 5.19615242270663;
 	my $eDistance = &euclideanDistance([@vector_01], [@vector_02]);
-	if($actual_euclidean == $eDistance){
+	if("$actual_euclidean" eq "$eDistance"){
 		print"Euclidean Distance = $eDistance\n\n";
 	} else {
 		print"Euclidean Distance failed\n$actual_euclidean != $eDistance\n\n";
@@ -29,7 +29,7 @@ sub test_smc
 	my @vector_04 = (1, 1, 1, 0, 1);
 	my $actual_smc = 0.8;
 	my $smc = &SMC([@vector_03], [@vector_04]);
-	if($actual_smc == $smc){
+	if("$actual_smc" eq "$smc"){
 		print"SMC = $smc\n\n";
 	} else {
 		print"SMC failed!\n$actual_smc != $smc\n\n";
@@ -43,7 +43,7 @@ sub test_jaccard
 	my @vector_06 = (0, 1, 0, 1, 0, 1);
 	my $actual_jaccard = 0.5;
 	my $jac = &jaccard([@vector_05], [@vector_06]);
-	if($actual_jaccard == $jac){
+	if("$actual_jaccard" eq "$jac"){
 		print"Jaccard = $jac\n\n";
 	} else {
 		print"Jaccard failed!\n$actual_jaccard != $jac\n\n";
@@ -57,7 +57,7 @@ sub test_pearson_1
 	my @vector_08 = (9, 4, 1, 0, 1, 4, 9);
 	my $actual_pearson = 0;
 	my $pearson = &Pearson([@vector_07], [@vector_08]);
-	if($actual_pearson == $pearson){
+	if("$actual_pearson" eq "$pearson"){
 		print"Pearson = $pearson\n\n";
 	} else {
 		print"Pearson failed\n$actual_pearson != $pearson\n\n";
@@ -71,7 +71,7 @@ sub test_pearson_2
 	my @vector_10 = (1, -2, 0, -1, 2);
 	my $actual_pearson = -1;
 	my $pearson = &Pearson([@vector_09], [@vector_10]);
-	if($actual_pearson == $pearson){
+	if("$actual_pearson" eq "$pearson"){
 		print"Pearson = $pearson\n\n";
 	} else {
 		print"Pearson failed\n$actual_pearson != $pearson\n\n";
@@ -85,7 +85,7 @@ sub test_pearson_3
 	my @vector_12 = (1, 2, 0, 1, 2);
 	my $actual_pearson = 1;
 	my $pearson = &Pearson([@vector_11], [@vector_12]);
-	if($actual_pearson == $pearson){
+	if("$actual_pearson" eq "$pearson"){
 		print"Pearson = $pearson\n\n";
 	} else {
 		print"Pearson failed\n$actual_pearson != $pearson\n\n";
@@ -99,7 +99,7 @@ sub test_cosine
 	my @vector_14 = (1, 0, 0, 0, 0, 0, 0, 1, 0, 2);
 	my $actual_cosine = 0.314970394174356;
 	my $cosine = &Cosine([@vector_13], [@vector_14]);
-	if($actual_cosine == $cosine){
+	if("$actual_cosine" eq "$cosine"){
 		print"Cosine = $cosine\n\n";
 	} else {
 		print"Cosine failed!\n$actual_cosine != $cosine\n\n";
