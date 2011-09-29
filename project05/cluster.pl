@@ -23,7 +23,7 @@ sub KMeans
 	my($k, $listRef) = @_;
 	my @data = @{$listRef};
 	my $datasize = @data;
-	
+	my @clusterList = ();
 	# Generate K random data points
 	my @karray = ();
 	for($i = 0; $i<$k; $i++){
@@ -55,8 +55,23 @@ sub KMeans
 		foreach my $kEuclid (@clusters){
 			push(@comparable, $kEuclid->[$i]);
 		}
-		my @ordered = sort(@comparable);
+		my @ordered = sort {$a <=> $b} (@comparable);
 		#print"$ordered[0], $ordered[1] VS. $comparable[0], $comparable[1]\n";
+		my $target = $ordered[0];
+		my $index = -1;
+		for(my $j = 0; $j < $k; $j++){
+			if($comparable[$j] == $target){
+				print"match! $comparable[$j] = $target\t => index = $j\n";
+				$index = $j;
+				last;
+			}
+		}
+		push(@clusterList, $index);
+	}
+	
+	my $clusterSize = @clusterList;
+	for(my $i = 0; $i<$datasize; $i++){
+		print"Data Point = $data[$i]->[0], $data[$i]->[1], $data[$i]->[2], $data[$i]->[3]\t => \t#$clusterList[$i]\n";
 	}
 }
 
