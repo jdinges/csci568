@@ -49,7 +49,7 @@ sub KMeans
 	}
 	
 	for(my $h = 0; $h < 5; $h++){
-		
+		@clusterList = ();
 		# Calculate the euclidean distance for each point compared to each centroid
 		my @clusters = ();
 		for(my $i = 0; $i < $k; $i++){
@@ -91,51 +91,37 @@ sub KMeans
 			print"Data Point = $data[$i]->[0], $data[$i]->[1], $data[$i]->[2], $data[$i]->[3]\t => \t#$clusterList[$i]\n";
 		}
 		
-		# cluster
-		for(my $i = 0; $i < $k; $i++){
-			my @totalcluster = (0, 0, 0, 0);
-			my $clustercount = 0;
-			# cluster-data map
-			for(my $j = 0; $j < $clusterSize; $j++){
-				my $element = $clusterList[$j]; 
-				if($element == $i){
-					$clustercount++;
-					my @dataArray = @{$data[$j]};
-					my $dataArraySize = @dataArray;
-					
-					# data
-					for(my $a = 0; $a<$dataArraySize; $a++){
-						my $attribute = $dataArray[$a];
-						if($attribute=~/\d+/){
-							$totalcluster[$a] = $totalcluster[$a] + $attribute;
-							#print"Cluster $i, Data Point $j, totalcluster[$a] = $totalcluster[$a]\n";
-						} elsif ($clustercount) {
-							print"no attribute increase\n";
-						}
-					}
-				}
-			}
-			# average
-			my $totalClusterSize = @totalcluster;
-			print"Cluster #$i centroid = ";
-			if($clustercount != 0){
-				for(my $b = 0; $b<$totalClusterSize; $b++){
-					my $totalattribute = $totalcluster[$b];
-					if($totalattribute=~/\d+/){
-						$totalcluster[$b] = $totalattribute / $clustercount; 
-						print"$totalcluster[$b], ";
-					}
-				}
-				print"\n";
-				# update centroid
-				$karray[$i] = [@totalcluster];
-			} else {
-				print"$karray[$i]->[0], $karray[$i]->[1], $karray[$i]->[2], $karray[$i]->[3] ... NO MATCH";
-				print"\n";
+		&CalculateCentroid([@clusterList], [@data], $k);
+		
+	}
+	
+}
+
+sub CalculateCentroid
+{
+	my($clusterRef, $dataRef, $k) = @_;
+	my @clusterList = @{$clusterRef};
+	my $clusterLength = @clusterList;
+	my @data = @{$dataRef};
+	my $dataLength = @data;
+	
+	if($dataLength != $clusterLength){
+		print"Data Length = $dataLength DOES NOT EQUAL Cluster Length = $clusterLength\n";
+		exit 0;
+	}
+	
+	my @clusterCounts = (0, 0);
+	for(my $i = 0; $i < $k; $i++){
+		for(my $j = 0; $j < $clusterLength; $j++){
+			if($clusterList[$j] == $i){
+				$clusterCounts[$i] = $clusterCounts[$i] + 1;
 			}
 		}
 	}
 	
+	for(my $i = 0; $i < $k; $i++){
+		print"Cluster $i has $clusterCounts[$i]\n";
+	}
 }
 
 sub euclideanDistance
