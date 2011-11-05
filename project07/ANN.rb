@@ -1,14 +1,13 @@
 class Network
+  
   @layers = Array.new
   
   def initialize(layer_count)
     puts "Creating network..."
-    for i in 0..layer_count
-      puts "How many nodes do you want in this layer?"
-      node_count = gets
-      puts "Great. And what kind of layer is this?"
+    for i in 0..layer_count-1
+      puts "What do you want this layer to be called?"
       layer_type = gets
-      layer = Layer.new(node_count, layer_type)
+      layer = Layer.new(layer_type)
       @layers.push(layer)
     end
   end
@@ -18,26 +17,50 @@ class Network
   end
   
   def self.run
-    for i in 0..@layers.length
+    for i in 0..@layers.length-1
+      
       thisLayer = @layers[i]
-      for j in 0..thisLayer.length
+      theseNodes = thisLayer.nodes
+      
+      for j in 0..theseNodes.length-1
         
+        thisNode = theseNode[j]
+        theseEdges = thisNode.edges
+        
+        sum = 0;
+        
+        for k in 0..theseEdges.length-1
+          
+          thisEdge = theseEdges[k]
+          sum += thisEdge * thisNode.value
+          
+        end
+        
+        thisNode.value = sum
+        
+        if i == @layers.length-1
+          puts "Node #{j} = #{thisNode.value}"
+        
+      end
+      
+    end
+    
+  end
+      
   
 end
 
 class Layer
-  @nodes = Array.new
-  @name
   
-  def initialize(node_count, layer_name)
+  attr_accessor :name
+  @nodes = Array.new
+  
+  def initialize(layer_name)
     @name = layer_name
-    puts "Creating layer..."
-    for i in 0..node_count
-      puts "What is the value of the node?"
-      node_value = gets
-      node = Node.new(node_value)
-      @nodes.push(node)
-    end
+  end
+  
+  def self.addNode(node)
+    @nodes.push(node)
   end
   
   def self.nodes
@@ -47,7 +70,8 @@ class Layer
 end
 
 class Node
-  @value
+  
+  attr_accessor :value
   @edges = Array.new
   
   def intialize(my_weight)
@@ -58,22 +82,19 @@ class Node
     @edges.push(edge)
   end
   
-  def self.value
-    @value
-  end
-  
 end
 
 class Edge
-  @weight
   
-  def initialize(my_weight)
+  attr_accessor :weight, :source, :target
+  
+  def initialize(my_weight, my_source, my_target)
     @weight = my_weight
+    @source = my_source
+    @target = my_target
   end
-  
-  def self.weight
-    @weight
-  end
+
 end
 
 # Main
+theNetwork = Network.new(3)
