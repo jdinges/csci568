@@ -40,6 +40,7 @@ class Network
         
         if i == @layers.length-1
           puts "Node #{j} = #{thisNode.value}"
+        end
         
       end
       
