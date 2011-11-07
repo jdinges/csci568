@@ -156,8 +156,8 @@ sub readCSV
 {
     my($targetFile) = @_;
     if(!(-e $targetFile)){
-	print"File $targetFile does not exist within the specified path.\n";
-	exit 1;
+		print"File $targetFile does not exist within the specified path.\n";
+		exit 1;
     }
 
     open(FIL,$targetFile);

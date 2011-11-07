@@ -38,10 +38,11 @@ class Network
           
         end
         
-        thisNode.value = sum
+        puts "Node #{j} new value = #{sum}"
+        @layers[i].nodes[j].value = sum
         
         if i == @layers.length-1
-          puts "Node #{j} = #{thisNode.value}"
+          puts "Node #{j} = #{@layers[i].nodes[j].value}"
         end
         
       end
@@ -115,9 +116,9 @@ theNetwork = Network.new(3)
 # Input layer...
 
 # Create nodes...
-iNode1 = Node.new(0)
-iNode2 = Node.new(0)
-iNode3 = Node.new(0)
+iNode1 = Node.new(1)
+iNode2 = Node.new(1)
+iNode3 = Node.new(1)
 
 # Create edges
 iEdge1 = Edge.new(1.0,nil,iNode1)
@@ -133,8 +134,65 @@ theNetwork.layers[0].addNode(iNode1)
 theNetwork.layers[0].addNode(iNode2)
 theNetwork.layers[0].addNode(iNode3)
 
+# Hidden layer...
 
+# Create nodes...
+hNode1 = Node.new(1)
+hNode2 = Node.new(1)
 
+# Creates edges
+hEdge1_1 = Edge.new(1.0, iNode1, hNode1)
+hEdge1_2 = Edge.new(1.0, iNode1, hNode2)
+
+hEdge2_1 = Edge.new(1.0, iNode2, hNode1)
+hEdge2_2 = Edge.new(1.0, iNode2, hNode2)
+
+hEdge3_1 = Edge.new(1.0, iNode3, hNode1)
+hEdge3_2 = Edge.new(1.0, iNode3, hNode2)
+
+# Add edges to Nodes...
+hNode1.addEdge(hEdge1_1)
+hNode1.addEdge(hEdge2_1)
+hNode1.addEdge(hEdge3_1)
+
+hNode2.addEdge(hEdge1_2)
+hNode2.addEdge(hEdge2_2)
+hNode2.addEdge(hEdge3_2)
+
+# Add to network
+theNetwork.layers[1].addNode(hNode1)
+theNetwork.layers[1].addNode(hNode2)
+
+# Output layer...
+
+# Create nodes
+oNode1 = Node.new(1)
+oNode2 = Node.new(1)
+oNode3 = Node.new(1)
+
+#  Create edges
+oEdge1_1 = Edge.new(1.0, hNode1, oNode1)
+oEdge1_2 = Edge.new(1.0, hNode1, oNode2)
+oEdge1_3 = Edge.new(1.0, hNode1, oNode3)
+
+oEdge2_1 = Edge.new(1.0, hNode2, oNode1)
+oEdge2_2 = Edge.new(1.0, hNode2, oNode2)
+oEdge2_3 = Edge.new(1.0, hNode2, oNode3)
+
+# Add edges to nodes...
+oNode1.addEdge(oEdge1_1)
+oNode1.addEdge(oEdge2_1)
+
+oNode2.addEdge(oEdge1_2)
+oNode2.addEdge(oEdge2_2)
+
+oNode3.addEdge(oEdge1_3)
+oNode3.addEdge(oEdge2_3)
+
+# Add to network...
+theNetwork.layers[2].addNode(oNode1)
+theNetwork.layers[2].addNode(oNode2)
+theNetwork.layers[2].addNode(oNode3)
 
 # Run
 theNetwork.run
