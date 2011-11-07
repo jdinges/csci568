@@ -1,14 +1,15 @@
 class Network
   
-  @layers = Array.new
+  #@layers = Array.new
   
   def initialize(layer_count)
+    @layers = Array.new()
     puts "Creating network..."
     for i in 0..layer_count-1
       puts "What do you want this layer to be called?"
       layer_type = gets
       layer = Layer.new(layer_type)
-      @layers.push(layer)
+      @layers<<layer
     end
   end
   
@@ -54,10 +55,10 @@ end
 class Layer
   
   attr_accessor :name
-  @nodes = Array.new
   
   def initialize(layer_name)
     @name = layer_name
+    @nodes = Array.new
   end
   
   def self.addNode(node)
@@ -73,10 +74,10 @@ end
 class Node
   
   attr_accessor :value
-  @edges = Array.new
   
   def intialize(my_weight)
     @value = my_weight
+    @edges = Array.new
   end
   
   def self.addEdge(edge)
