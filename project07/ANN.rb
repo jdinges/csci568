@@ -147,7 +147,7 @@ def backpropegate(network, out1, out2, out3)
       for k in 0..network.layers[i].nodes[j].edges.length - 1
         error = network.layers[i].nodes[j].edges[k].target.error
         prev = network.layers[i].nodes[j].edges[k].source.value
-
+        #puts "delta = #{N * error * dtanh(prev)}"
         network.layers[i].nodes[j].edges[k].weight += N * error * dtanh(prev)
 
       end
@@ -173,6 +173,7 @@ def train(network, out1, out2, out3)
     #(node2r - out2).abs > acceptableError or 
     #(node3r - out3).abs > acceptableError)
   for i in 0..9
+    puts"Iteration #{i+1}:"
     puts "\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
     
     network.layers[2].nodes[0].error = out1 - node1r
@@ -185,6 +186,7 @@ def train(network, out1, out2, out3)
     node2r = newNetwork.layers[2].nodes[1].value
     node3r = newNetwork.layers[2].nodes[2].value
     network = newNetwork
+    network.run
     
     puts "\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
     
