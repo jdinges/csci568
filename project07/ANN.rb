@@ -84,11 +84,12 @@ end
 
 class Node
   
-  attr_accessor :value, :edges
+  attr_accessor :value, :edges, :error
   
   def initialize(my_value)
     @value = my_value
     @edges = Array.new
+    @error = 0
   end
   
   def addEdge(edge)
@@ -115,12 +116,24 @@ class Range
   end
 end
 
-def backpropegate(network)
+def backpropegate(network, out1, out2, out3)
   for i in (network.layers.length-1).downto(0)
     thisLayer = network.layers[i]
     for j in 0..thisLayer.nodes
       thisNode = thisLayer.nodes[j]
-      
+      diff = out1 - thisNode.value
+      network.layers[i].nodes[j].error = diff
+      theseEdges = thisNode.edges
+      for k in 0..theseEdges.length - 1
+        if i != 0
+          thisEdge = theseEdges[k]
+          source = thisEdge.source
+          source.error = diff * weight
+        else
+          #fancy stuff
+        end
+      end
+    end
   end
     
 end
