@@ -20,7 +20,7 @@ class Network
   def run
     for i in 1..@layers.length-1
       thisLayer = @layers[i]
-      puts "For layer #{thisLayer.name}: There are #{thisLayer.nodes.length} nodes"
+      #puts "For layer #{thisLayer.name}: There are #{thisLayer.nodes.length} nodes"
       
       theseNodes = thisLayer.nodes
       
@@ -34,16 +34,16 @@ class Network
         for k in 0..theseEdges.length-1
           
           thisEdge = theseEdges[k]
-          puts "\t#{sum} += #{thisEdge.weight * thisEdge.source.value}"
+          #puts "\t#{sum} += #{thisEdge.weight * thisEdge.source.value}"
           sum += thisEdge.weight * thisEdge.source.value
           
         end
         
-        puts "\tNode #{j} new value = #{sum}"
+        #puts "\tNode #{j} new value = #{sum}"
         @layers[i].nodes[j].value = sum
         
         if i == @layers.length-1
-          puts "Node #{j} = #{@layers[i].nodes[j].value}"
+          #puts "Node #{j+1} = #{@layers[i].nodes[j].value}"
         end
         
       end
@@ -115,6 +115,43 @@ class Range
   end
 end
 
+def backpropegate(network)
+  for i in (network.layers.length-1).downto(0)
+    thisLayer = network.layers[i]
+    for j in 0..thisLayer.nodes
+      thisNode = thisLayer.nodes[j]
+      
+  end
+    
+end
+
+def train(network, out1, out2, out3)
+  # First thing to do is compute what my output 
+  # is given current set up.
+  network.run
+  
+  node1r = network.layers[2].nodes[0].value
+  node2r = network.layers[2].nodes[1].value
+  node3r = network.layers[2].nodes[2].value
+  
+  puts "node1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
+  
+  acceptableError = 0.001
+  
+  while ((node1r - out1).abs > acceptableError or 
+    (node2r - out2).abs > acceptableError or 
+    (node3r - out3).abs > acceptableError)
+    
+    results = backpropegate(network)
+    #node1r = results[0]
+    #node2r = results[1]
+    #node3r = results[2]
+    
+  end
+        
+end
+  
+
 # Main
 theNetwork = Network.new(3)
 
@@ -143,8 +180,6 @@ hNode1 = Node.new(0)
 hNode2 = Node.new(0)
 
 # Creates edges
-generator = 2.0*rand-1
-puts "rand = #{rand}"
 hEdge1_1 = Edge.new(2.0*rand-1, iNode1, hNode1)
 hEdge1_2 = Edge.new(2.0*rand-1, iNode1, hNode2)
 
@@ -202,3 +237,6 @@ theNetwork.layers[2].addNode(oNode3)
 
 # Run
 theNetwork.run
+
+# Training
+train(theNetwork, 1.0, -1.0, 0.0)
