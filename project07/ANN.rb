@@ -40,7 +40,7 @@ class Network
         end
         
         #puts "\tNode #{j} new value = #{sum}"
-        @layers[i].nodes[j].value = sum
+        @layers[i].nodes[j].value = Math::tanh(sum)
         
         if i == @layers.length-1
           #puts "Node #{j+1} = #{@layers[i].nodes[j].value}"
@@ -116,26 +116,42 @@ class Range
   end
 end
 
+N = 0.5
+
+def dtanh(x)
+  return 1.0 - x * x
+end
+
 def backpropegate(network, out1, out2, out3)
-  for i in (network.layers.length-1).downto(0)
+  
+  # Load error terms in each node
+  for i in (network.layers.length-1).downto(1)
     thisLayer = network.layers[i]
-    for j in 0..thisLayer.nodes
-      thisNode = thisLayer.nodes[j]
-      diff = out1 - thisNode.value
-      network.layers[i].nodes[j].error = diff
-      theseEdges = thisNode.edges
+    for j in 0..thisLayer.nodes.length-1
+      theseEdges = thisLayer.nodes[j].edges
       for k in 0..theseEdges.length - 1
-        if i != 0
-          thisEdge = theseEdges[k]
-          source = thisEdge.source
-          source.error = diff * weight
-        else
-          #fancy stuff
-        end
+        # Adjust error on nodes
+        thisEdge = theseEdges[k]
+        source = thisEdge.source
+        #--------------- Parent Node Error ------------- += --------------- This Node's Error -------------- * ----- Edge Connecting Two's Weight -------
+        network.layers[i].nodes[j].edges[k].source.error += network.layers[i].nodes[j].edges[k].target.error * network.layers[i].nodes[j].edges[k].weight
       end
     end
   end
-    
+  
+  # Adjust weights...
+  for i in 1..network.layers.length-1
+    for j in 0..network.layers[i].nodes.length - 1
+      for k in 0..network.layers[i].nodes[j].edges.length - 1
+        error = network.layers[i].nodes[j].edges[k].target.error
+        prev = network.layers[i].nodes[j].edges[k].source.value
+        network.layers[i].nodes[j].edges[k].weight += N * error * dtanh(prev)
+      end
+    end
+  end
+  
+  return network
+  
 end
 
 def train(network, out1, out2, out3)
@@ -147,18 +163,22 @@ def train(network, out1, out2, out3)
   node2r = network.layers[2].nodes[1].value
   node3r = network.layers[2].nodes[2].value
   
-  puts "node1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
-  
   acceptableError = 0.001
   
   while ((node1r - out1).abs > acceptableError or 
     (node2r - out2).abs > acceptableError or 
     (node3r - out3).abs > acceptableError)
     
-    results = backpropegate(network)
-    #node1r = results[0]
-    #node2r = results[1]
-    #node3r = results[2]
+    puts "node1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
+    
+    network.layers[2].nodes[0].error = out1 - node1r
+    network.layers[2].nodes[1].error = out2 - node2r
+    network.layers[2].nodes[2].error = out3 - node3r
+    
+    network = backpropegate(network, out1, out2, out3)
+    node1r = network.layers[2].nodes[0].value
+    node2r = network.layers[2].nodes[1].value
+    node3r = network.layers[2].nodes[2].value
     
   end
         
