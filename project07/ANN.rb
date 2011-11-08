@@ -127,12 +127,14 @@ def backpropegate(network, out1, out2, out3)
   # Load error terms in each node
   for i in (network.layers.length-1).downto(1)
     thisLayer = network.layers[i]
+    #puts "Layer #{i+1}:"
     for j in 0..thisLayer.nodes.length-1
       theseEdges = thisLayer.nodes[j].edges
       for k in 0..theseEdges.length - 1
         # Adjust error on nodes
         thisEdge = theseEdges[k]
         source = thisEdge.source
+        #puts"\tNode #{j+1} error = #{network.layers[i].nodes[j].edges[k].source.error += network.layers[i].nodes[j].edges[k].target.error * network.layers[i].nodes[j].edges[k].weight}"
         #--------------- Parent Node Error ------------- += --------------- This Node's Error -------------- * ----- Edge Connecting Two's Weight -------
         network.layers[i].nodes[j].edges[k].source.error += network.layers[i].nodes[j].edges[k].target.error * network.layers[i].nodes[j].edges[k].weight
       end
@@ -145,7 +147,9 @@ def backpropegate(network, out1, out2, out3)
       for k in 0..network.layers[i].nodes[j].edges.length - 1
         error = network.layers[i].nodes[j].edges[k].target.error
         prev = network.layers[i].nodes[j].edges[k].source.value
+
         network.layers[i].nodes[j].edges[k].weight += N * error * dtanh(prev)
+
       end
     end
   end
@@ -165,20 +169,24 @@ def train(network, out1, out2, out3)
   
   acceptableError = 0.001
   
-  while ((node1r - out1).abs > acceptableError or 
-    (node2r - out2).abs > acceptableError or 
-    (node3r - out3).abs > acceptableError)
-    
-    puts "node1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
+  #while ((node1r - out1).abs > acceptableError or 
+    #(node2r - out2).abs > acceptableError or 
+    #(node3r - out3).abs > acceptableError)
+  for i in 0..9
+    puts "\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
     
     network.layers[2].nodes[0].error = out1 - node1r
     network.layers[2].nodes[1].error = out2 - node2r
     network.layers[2].nodes[2].error = out3 - node3r
     
-    network = backpropegate(network, out1, out2, out3)
-    node1r = network.layers[2].nodes[0].value
-    node2r = network.layers[2].nodes[1].value
-    node3r = network.layers[2].nodes[2].value
+    newNetwork = backpropegate(network, out1, out2, out3)
+    
+    node1r = newNetwork.layers[2].nodes[0].value
+    node2r = newNetwork.layers[2].nodes[1].value
+    node3r = newNetwork.layers[2].nodes[2].value
+    network = newNetwork
+    
+    puts "\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}"
     
   end
         
