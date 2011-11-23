@@ -1,0 +1,1 @@
+/Users/Fawx/Documents/Data Mining/src/project08/mushroom.data.csv

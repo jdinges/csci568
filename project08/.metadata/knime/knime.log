@@ -497,3 +497,264 @@
 2011-11-21 21:04:55,493 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
 2011-11-21 21:04:55,494 DEBUG main KnimeResourceNavigator : Workflow KNIME_project 0:2 added
 2011-11-21 21:04:55,494 DEBUG main ProjectWorkflowMap : registering org.knime.workbench.editor2.WorkflowEditor@15f87254 to file:/Users/Fawx/Documents/Data%20Mining/src/project08/KNIME_project/. 1 registered clients now.
+2011-11-21 21:58:02,400 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=-912044770 data=[org.knime.base.node.io.csvreader.CSVReaderNodeFactory] x=1757 y=354 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-11-21 21:58:02,402 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(144, 249)
+2011-11-21 21:58:02,403 DEBUG main NodeContainer : Setting dirty flag on KNIME_project 0:2
+2011-11-21 21:58:02,403 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-11-21 21:58:02,405 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow CSV Reader 0:2:1 added
+2011-11-21 21:58:02,405 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-11-21 21:58:02,405 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:1;old=null;new=CSV Reader 0:2:1 (IDLE);timestamp=Nov 21, 2011 9:58:02 PM]
+2011-11-21 21:58:02,419 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 21:58:02,419 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:58:02,419 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 21:58:02,420 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed WORKFLOW_DIRTY
+2011-11-21 21:58:02,420 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=WORKFLOW_DIRTY;node=0:2;old=null;new=null;timestamp=Nov 21, 2011 9:58:02 PM]
+2011-11-21 21:58:02,420 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 21:58:02,428 WARN  main CSV Reader : No settings available
+2011-11-21 21:58:02,428 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: IDLE
+2011-11-21 21:58:02,428 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:58:02,428 DEBUG main WorkflowManager : Added new node 0:2:1
+2011-11-21 21:58:02,429 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:58:02,604 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( CSV Reader 0:2:1 (IDLE) )
+2011-11-21 21:58:04,828 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:58:06,032 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:58:26,304 DEBUG main NodeContainerEditPart : CSV Reader: Opening node dialog after double click...
+2011-11-21 21:58:26,459 INFO  main StringHistory : History file '/Users/Fawx/Documents/Data Mining/src/project08/.metadata/knime/history_csv_read.txt' does not exist.
+2011-11-21 21:58:53,726 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:58:53,726 DEBUG main NodeContainer : Setting dirty flag on CSV Reader 0:2:1
+2011-11-21 21:58:53,727 DEBUG main CSV Reader : Configure succeeded. (CSV Reader)
+2011-11-21 21:58:53,728 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: CONFIGURED
+2011-11-21 21:58:53,728 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 21:58:53,728 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 21:58:53,728 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 21:58:59,766 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 21:58:59,766 DEBUG main CSV Reader : reset
+2011-11-21 21:58:59,766 DEBUG main CSV Reader : clean output ports.
+2011-11-21 21:58:59,766 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: IDLE
+2011-11-21 21:58:59,766 DEBUG main CSV Reader : Configure succeeded. (CSV Reader)
+2011-11-21 21:58:59,766 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: CONFIGURED
+2011-11-21 21:58:59,766 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 21:59:32,961 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=-911954207 data=[org.knime.base.node.viz.statistics.Statistics2NodeFactory] x=1888 y=543 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-11-21 21:59:32,963 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(275, 438)
+2011-11-21 21:59:32,981 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-11-21 21:59:32,981 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-11-21 21:59:32,981 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Statistics 0:2:2 added
+2011-11-21 21:59:32,981 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:59:32,981 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:59:32,981 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 21:59:32,981 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:2;old=null;new=Statistics 0:2:2 (IDLE);timestamp=Nov 21, 2011 9:59:32 PM]
+2011-11-21 21:59:32,981 DEBUG main WorkflowManager : Added new node 0:2:2
+2011-11-21 21:59:32,981 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 21:59:32,982 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:59:33,102 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Statistics 0:2:2 (IDLE) )
+2011-11-21 21:59:33,103 DEBUG main NodeContainerEditPart : CSV Reader 0:2:1 (CONFIGURED)
+2011-11-21 21:59:34,626 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:59:36,325 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (IDLE)
+2011-11-21 21:59:36,325 DEBUG main NodeContainerEditPart : CSV Reader 0:2:1 (CONFIGURED)
+2011-11-21 21:59:37,753 DEBUG main CreateConnectionCommand : adding connection from 0:2:1 1 to 0:2:2 1
+2011-11-21 21:59:37,754 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:59:37,754 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 21:59:37,754 DEBUG main WorkflowManager : Added new connection from node 0:2:1(1) to node 0:2:2(1)
+2011-11-21 21:59:37,754 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-11-21 21:59:37,754 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:1(1) -> 0:2:2( 1)];timestamp=Nov 21, 2011 9:59:37 PM]
+2011-11-21 21:59:37,754 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 21:59:37,754 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 21:59:37,761 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:2( 1)]
+2011-11-21 21:59:37,761 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 21:59:37,761 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:1(1) -> 0:2:2( 1)]
+2011-11-21 21:59:37,761 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 21:59:42,379 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-11-21 21:59:42,379 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: MARKEDFOREXEC
+2011-11-21 21:59:42,379 DEBUG main NodeContainer : CSV Reader 0:2:1 has new state: QUEUED
+2011-11-21 21:59:42,402 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-11-21 21:59:42,402 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 21:59:42,402 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 WorkflowManager : CSV Reader 0:2:1 doBeforePreExecution
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 NodeContainer : CSV Reader 0:2:1 has new state: PREEXECUTE
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 WorkflowManager : CSV Reader 0:2:1 doBeforeExecution
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 NodeContainer : CSV Reader 0:2:1 has new state: EXECUTING
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 21:59:42,402 DEBUG KNIME-Worker-0 LocalNodeExecutionJob : CSV Reader 0:2:1 Start execute
+2011-11-21 21:59:42,709 WARN  KNIME-Worker-0 FileAnalyzer : Didn't get any value for column(s) with index #16. Please verify column type(s).
+2011-11-21 21:59:42,865 DEBUG KNIME-TableIO-1 DataType : DataValue is the preferred value class of cell implementation MissingCell, made sanity check
+2011-11-21 21:59:43,057 DEBUG KNIME-Worker-0 Buffer : Buffer file (/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20111121_2598282744839097793.bin.gz) is 0.063MB in size
+2011-11-21 21:59:43,096 INFO  KNIME-Worker-0 LocalNodeExecutionJob : CSV Reader 0:2:1 End execute (0 secs)
+2011-11-21 21:59:43,096 DEBUG KNIME-Worker-0 WorkflowManager : CSV Reader 0:2:1 doBeforePostExecution
+2011-11-21 21:59:43,096 DEBUG KNIME-Worker-0 NodeContainer : CSV Reader 0:2:1 has new state: POSTEXECUTE
+2011-11-21 21:59:43,096 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 21:59:43,097 DEBUG KNIME-Worker-0 WorkflowManager : CSV Reader 0:2:1 doAfterExecute - success
+2011-11-21 21:59:43,097 DEBUG KNIME-Worker-0 NodeContainer : CSV Reader 0:2:1 has new state: EXECUTED
+2011-11-21 21:59:43,118 DEBUG KNIME-Worker-0 Statistics : Configure succeeded. (Statistics)
+2011-11-21 21:59:43,118 DEBUG KNIME-Worker-0 NodeContainer : Setting dirty flag on Statistics 0:2:2
+2011-11-21 21:59:43,118 DEBUG KNIME-Worker-0 NodeContainer : Statistics 0:2:2 has new state: CONFIGURED
+2011-11-21 21:59:43,119 DEBUG KNIME-Worker-0 KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 21:59:43,119 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 21:59:43,119 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 21:59:43,119 DEBUG KNIME-Worker-0 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 21:59:44,976 DEBUG main NodeContainerEditPart : CSV Reader 0:2:1 (EXECUTED)
+2011-11-21 21:59:44,976 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (CONFIGURED)
+2011-11-21 21:59:45,786 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:25,410 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=-911721759 data=[org.knime.base.node.viz.table.TableNodeFactory] x=2123 y=510 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-11-21 22:03:25,411 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(510, 405)
+2011-11-21 22:03:25,414 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-11-21 22:03:25,414 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-11-21 22:03:25,414 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Interactive Table 0:2:3 added
+2011-11-21 22:03:25,414 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 22:03:25,414 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 22:03:25,414 DEBUG main WorkflowManager : Added new node 0:2:3
+2011-11-21 22:03:25,414 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:03:25,414 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:3;old=null;new=Interactive Table 0:2:3 (IDLE);timestamp=Nov 21, 2011 10:03:25 PM]
+2011-11-21 22:03:25,415 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 22:03:25,415 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:25,556 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Interactive Table 0:2:3 (IDLE) )
+2011-11-21 22:03:25,556 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (CONFIGURED)
+2011-11-21 22:03:29,043 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:30,540 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:32,508 DEBUG main NodeContainerEditPart : Interactive Table 0:2:3 (IDLE)
+2011-11-21 22:03:32,508 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (CONFIGURED)
+2011-11-21 22:03:33,825 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 1 to 0:2:3 1
+2011-11-21 22:03:33,825 DEBUG main Interactive Table : Configure succeeded. (Interactive Table)
+2011-11-21 22:03:33,825 DEBUG main NodeContainer : Setting dirty flag on Interactive Table 0:2:3
+2011-11-21 22:03:33,825 DEBUG main NodeContainer : Interactive Table 0:2:3 has new state: CONFIGURED
+2011-11-21 22:03:33,825 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 22:03:33,825 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:33,825 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:33,825 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:03:33,825 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-11-21 22:03:33,825 DEBUG main WorkflowManager : Added new connection from node 0:2:2(1) to node 0:2:3(1)
+2011-11-21 22:03:33,826 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(1) -> 0:2:3( 1)];timestamp=Nov 21, 2011 10:03:33 PM]
+2011-11-21 22:03:33,826 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 22:03:33,826 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:33,829 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:3( 1)]
+2011-11-21 22:03:33,829 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 22:03:33,829 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(1) -> 0:2:3( 1)]
+2011-11-21 22:03:33,829 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 22:03:36,909 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-11-21 22:03:36,909 DEBUG main NodeContainer : Statistics 0:2:2 has new state: MARKEDFOREXEC
+2011-11-21 22:03:36,909 DEBUG main NodeContainer : Statistics 0:2:2 has new state: QUEUED
+2011-11-21 22:03:36,909 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-11-21 22:03:36,909 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:03:36,910 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 WorkflowManager : Statistics 0:2:2 doBeforePreExecution
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 NodeContainer : Statistics 0:2:2 has new state: PREEXECUTE
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 WorkflowManager : Statistics 0:2:2 doBeforeExecution
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 NodeContainer : Statistics 0:2:2 has new state: EXECUTING
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:03:36,910 DEBUG KNIME-Worker-1 LocalNodeExecutionJob : Statistics 0:2:2 Start execute
+2011-11-21 22:03:36,912 DEBUG KNIME-Worker-1 Buffer : Opening input stream on file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20111121_2598282744839097793.bin.gz", 1 open streams
+2011-11-21 22:03:37,114 DEBUG KNIME-Worker-1 Buffer : Closing input stream on "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20111121_2598282744839097793.bin.gz", 0 remaining
+2011-11-21 22:03:37,123 INFO  KNIME-Worker-1 LocalNodeExecutionJob : Statistics 0:2:2 End execute (0 secs)
+2011-11-21 22:03:37,123 DEBUG KNIME-Worker-1 WorkflowManager : Statistics 0:2:2 doBeforePostExecution
+2011-11-21 22:03:37,123 DEBUG KNIME-Worker-1 NodeContainer : Statistics 0:2:2 has new state: POSTEXECUTE
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 WorkflowManager : Statistics 0:2:2 doAfterExecute - success
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 NodeContainer : Statistics 0:2:2 has new state: EXECUTED
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 Interactive Table : Configure succeeded. (Interactive Table)
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 NodeContainer : Interactive Table 0:2:3 has new state: CONFIGURED
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:37,124 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:37,124 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:03:54,896 DEBUG main NodeTemplateDropTargetListener2 : drop: DropTargetEvent{DropTarget {} time=-911692272 data=[org.knime.base.node.viz.plotter.scatter.ScatterPlotterNodeFactory] x=2059 y=637 item=null operations=1 operation=1 feedback=1 dataTypes={ 12 } currentDataType=12}
+2011-11-21 22:03:54,898 DEBUG main NodeTemplateDropTargetListener2 : to control: Point(446, 532)
+2011-11-21 22:03:54,898 DEBUG main KnimeResourceNavigator : state changed to IDLE
+2011-11-21 22:03:54,898 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed NODE_ADDED
+2011-11-21 22:03:54,898 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : Workflow Scatter Plot 0:2:4 added
+2011-11-21 22:03:54,898 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 22:03:54,898 DEBUG main NodeContainer : KNIME_project 0:2 has new state: IDLE
+2011-11-21 22:03:54,898 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:03:54,898 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=NODE_ADDED;node=0:2:4;old=null;new=Scatter Plot 0:2:4 (IDLE);timestamp=Nov 21, 2011 10:03:54 PM]
+2011-11-21 22:03:54,898 DEBUG main WorkflowManager : Added new node 0:2:4
+2011-11-21 22:03:54,899 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 22:03:54,899 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:55,026 DEBUG main WorkflowRootEditPart : part: NodeContainerEditPart( Scatter Plot 0:2:4 (IDLE) )
+2011-11-21 22:03:55,026 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (EXECUTED)
+2011-11-21 22:03:55,796 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:4 (IDLE)
+2011-11-21 22:03:55,796 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (EXECUTED)
+2011-11-21 22:03:57,067 DEBUG main CreateConnectionCommand : adding connection from 0:2:2 2 to 0:2:4 1
+2011-11-21 22:03:57,067 DEBUG main Scatter Plot : Configure succeeded. (Scatter Plot)
+2011-11-21 22:03:57,067 DEBUG main NodeContainer : Setting dirty flag on Scatter Plot 0:2:4
+2011-11-21 22:03:57,067 DEBUG main NodeContainer : Scatter Plot 0:2:4 has new state: CONFIGURED
+2011-11-21 22:03:57,067 DEBUG main KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 22:03:57,067 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:57,068 DEBUG main NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:03:57,068 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:03:57,068 DEBUG KNIME-Workflow-Notifier KnimeResourceNavigator : ROOT's workflow has changed CONNECTION_ADDED
+2011-11-21 22:03:57,068 DEBUG main WorkflowManager : Added new connection from node 0:2:2(2) to node 0:2:4(1)
+2011-11-21 22:03:57,068 DEBUG KNIME-Workflow-Notifier WorkflowEditor : Workflow event triggered: WorkflowEvent [type=CONNECTION_ADDED;node=null;old=null;new=STD[0:2:2(2) -> 0:2:4( 1)];timestamp=Nov 21, 2011 10:03:57 PM]
+2011-11-21 22:03:57,068 DEBUG KNIME-Workflow-Notifier WorkflowRootEditPart : WorkflowRoot: workflow changed, refreshing children/connections..
+2011-11-21 22:03:57,068 DEBUG main WorkflowRootEditPart : WorkflowRoot: command stack changed
+2011-11-21 22:03:57,072 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(2) -> 0:2:4( 1)]
+2011-11-21 22:03:57,072 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 22:03:57,072 DEBUG main ConnectionContainerEditPart : refreshing visuals for: STD[0:2:2(2) -> 0:2:4( 1)]
+2011-11-21 22:03:57,072 DEBUG main ConnectionContainerEditPart : modelling info: null
+2011-11-21 22:03:59,733 DEBUG main NodeContainerEditPart : Statistics 0:2:2 (EXECUTED)
+2011-11-21 22:03:59,734 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:4 (CONFIGURED)
+2011-11-21 22:04:03,886 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-11-21 22:04:03,887 DEBUG main NodeContainer : Scatter Plot 0:2:4 has new state: MARKEDFOREXEC
+2011-11-21 22:04:03,887 DEBUG main NodeContainer : Scatter Plot 0:2:4 has new state: QUEUED
+2011-11-21 22:04:03,887 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-11-21 22:04:03,887 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 WorkflowManager : Scatter Plot 0:2:4 doBeforePreExecution
+2011-11-21 22:04:03,887 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 NodeContainer : Scatter Plot 0:2:4 has new state: PREEXECUTE
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 WorkflowManager : Scatter Plot 0:2:4 doBeforeExecution
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 NodeContainer : Scatter Plot 0:2:4 has new state: EXECUTING
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:03,887 DEBUG KNIME-Worker-1 LocalNodeExecutionJob : Scatter Plot 0:2:4 Start execute
+2011-11-21 22:04:03,894 INFO  KNIME-Worker-1 LocalNodeExecutionJob : Scatter Plot 0:2:4 End execute (0 secs)
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 WorkflowManager : Scatter Plot 0:2:4 doBeforePostExecution
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 NodeContainer : Scatter Plot 0:2:4 has new state: POSTEXECUTE
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 WorkflowManager : Scatter Plot 0:2:4 doAfterExecute - success
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 NodeContainer : Scatter Plot 0:2:4 has new state: EXECUTED
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 KnimeResourceNavigator : state changed to CONFIGURED
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:04:03,894 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: CONFIGURED
+2011-11-21 22:04:03,894 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:04:04,672 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:4 (EXECUTED)
+2011-11-21 22:04:04,672 DEBUG main NodeContainerEditPart : Interactive Table 0:2:3 (CONFIGURED)
+2011-11-21 22:04:05,941 DEBUG main ExecuteAction : Creating execution job for 1 node(s)...
+2011-11-21 22:04:05,941 DEBUG main NodeContainer : Interactive Table 0:2:3 has new state: MARKEDFOREXEC
+2011-11-21 22:04:05,941 DEBUG main NodeContainer : Interactive Table 0:2:3 has new state: QUEUED
+2011-11-21 22:04:05,941 DEBUG main KnimeResourceNavigator : state changed to EXECUTING
+2011-11-21 22:04:05,941 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:05,941 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: EXECUTING
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 WorkflowManager : Interactive Table 0:2:3 doBeforePreExecution
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 NodeContainer : Interactive Table 0:2:3 has new state: PREEXECUTE
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 WorkflowManager : Interactive Table 0:2:3 doBeforeExecution
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 NodeContainer : Interactive Table 0:2:3 has new state: EXECUTING
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:05,941 DEBUG KNIME-Worker-1 LocalNodeExecutionJob : Interactive Table 0:2:3 Start execute
+2011-11-21 22:04:05,943 INFO  KNIME-Worker-1 LocalNodeExecutionJob : Interactive Table 0:2:3 End execute (0 secs)
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 WorkflowManager : Interactive Table 0:2:3 doBeforePostExecution
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 NodeContainer : Interactive Table 0:2:3 has new state: POSTEXECUTE
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTING
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 WorkflowManager : Interactive Table 0:2:3 doAfterExecute - success
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 NodeContainer : Interactive Table 0:2:3 has new state: EXECUTED
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 KnimeResourceNavigator : state changed to EXECUTED
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-11-21 22:04:05,943 DEBUG KNIME-Worker-1 NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-11-21 22:04:05,943 DEBUG KNIME-WFM-Parent-Notifier NodeContainer : Workflow Manager 0 has new state: IDLE
+2011-11-21 22:04:12,074 DEBUG main NodeContainerEditPart : Interactive Table: Opening node dialog after double click...
+2011-11-21 22:04:42,090 DEBUG main NodeContainerEditPart : Interactive Table 0:2:3 (EXECUTED)
+2011-11-21 22:04:42,090 DEBUG main NodeContainerEditPart : Scatter Plot 0:2:4 (EXECUTED)
+2011-11-21 22:04:42,269 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-11-21 22:04:58,357 DEBUG main NodeContainerEditPart : Scatter Plot: Opening node dialog after double click...
+2011-11-22 03:09:41,429 DEBUG main WorkflowRootEditPart : WorkflowRootEditPart deactivated
+2011-11-22 03:09:41,431 DEBUG main WorkflowEditor : Disposing editor...
+2011-11-22 03:09:41,431 DEBUG main ProjectWorkflowMap : unregistering org.knime.workbench.editor2.WorkflowEditor@15f87254 from file:/Users/Fawx/Documents/Data%20Mining/src/project08/KNIME_project/. 0 left.
+2011-11-22 03:09:41,431 DEBUG main ProjectWorkflowMap : Removing "file:/Users/Fawx/Documents/Data%20Mining/src/project08/KNIME_project/" from project map (0 remaining)
+2011-11-22 03:09:41,431 DEBUG main KnimeResourceNavigator : ROOT's workflow has changed NODE_REMOVED
+2011-11-22 03:09:41,431 DEBUG main KnimeResourceNavigator : Workflow KNIME_project 0:2 removed
+2011-11-22 03:09:41,432 DEBUG main NodeContainer : KNIME_project 0:2 has new state: EXECUTED
+2011-11-22 03:09:41,432 DEBUG main CSV Reader : clean output ports.
+2011-11-22 03:09:41,433 DEBUG main Statistics : clean output ports.
+2011-11-22 03:09:41,433 DEBUG main Interactive Table : clean output ports.
+2011-11-22 03:09:41,433 DEBUG main Scatter Plot : clean output ports.
+2011-11-22 03:09:41,433 DEBUG KNIME-Temp-File-Deleter Buffer : Deleted temporary file "/var/folders/t_/fwf5749x1ll962pwjxmmjwgh0000gn/T/knime_container_20111121_2598282744839097793.bin.gz"
+2011-11-22 03:09:41,433 DEBUG main NodeContainer : Workflow Manager 0 has new state: IDLE
