@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Clustering</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Clustering</h1>
+  <h2>Introduction</h2>
+  <p class="introduction">Identifying clusters is always useful when looking at groupings in data. While cluster analysis is one of the most important aspects of data mining, it can also be one of the most tricky. Humans are extremely good at recognizing visual patterns in unorganized data, so identifying clusters is really easy for us. However, computers, which are only able to analyze one thing at a time, often have trouble identifying the "big picture" when it comes to clusters. Luckily, there have been several algorithms developed to make this process easier on the computer: K-Means, Agglomerative Hierarchical, and DBSCAN.</p>
+  <pre class="code">
+#
+# the python implementation here
+#
+#
+  </pre>
+
+	<h2>K-Means</h2>
+	<p class="introduction">The K-Means algorithm is a very simple one. The premise is this: the user or algorithm determines how many clusters they think will be present in the data set. Next, choose k random points, these will act as centers. For each k, determine which points are closest to it, and not to another point. When all points have been discretized into clusters, go back and calculate the center of the clusters using only the points in that cluster (not the randomly generated point). Once the center has been calculated, move the random point k to that center. Then start all over again, except this time, leave the k center points and recalculate which points are closest and then find their center and move the k center points again. Repeat.</p>
+	<p class="introduction">The advantages of K-Means is that at the end, you'll end up with exactly the number of clusters that you expected and it is efficent. The drawbacks are that it can only identify K points, so you better be sure (or lucky) that the K you've chosen accurately reflects the clusters in the data. Another drawback is that there is no inherent stopping condition, the user has to provide one (either a delta threshold or a run count). It also has difficulty with outliers and identifying non-spherical clusters. Code is included below.</p>
+	<pre class="code">
+#!/usr/bin/perl
+
+use constant MAX_LENGTH =&gt; 10;
+use constant NUMBER_ATTRIBUTES =&gt; 4;
+
+&amp;runMain;
+
+sub runMain
+{
+	if($#ARGV + 1 != 1){
+		print&quot;Provide an input file containing your data\n\ncluster.pl &lt;filename&gt;\n&quot;;
+		exit 0;
+	}
+	my $filename = $ARGV[0];
+	print&quot;Going to read $filename...\n&quot;;
+	my @contents = &amp;readCSV($filename);
+	my @data = &amp;sortCSV([@contents]);
+	&amp;KMeans(2, [@data]);
+}
+
+sub KMeans
+{
+	my($k, $listRef) = @_;
+	my @data = @{$listRef};
+	my $datasize = @data;
+	my @clusterList = ();
+	# Calculate maximums for each attribute
+	my @maximums;
+	for(my $i = 0; $i&lt;NUMBER_ATTRIBUTES; $i++){
+		my @localmaximums = ();
+		for(my $j = 0; $j&lt;$datasize; $j++){
+			#print&quot;data[$j]-&gt;[$i] = $data[$j]-&gt;[$i]\n&quot;;
+			push(@localmaximums,$data[$j]-&gt;[$i]);
+		}
+		my $max = (sort {$a &lt;=&gt; $b} @localmaximums)[-1];
+		#print&quot;Max for attribute $i = $max\n&quot;;
+		push(@maximums,$max);
+	}
+
+	# Generate K random data points
+	my @karray = ();
+	for($i = 0; $i&lt;$k; $i++){
+		my @randomAttributes = ();
+		for($j = 0; $j&lt;NUMBER_ATTRIBUTES; $j++){
+			my $newnumber = rand($maximums[$j]);
+			push(@randomAttributes, $newnumber);
+		}
+		push(@karray, [@randomAttributes]);
+	}
+
+	for(my $h = 0; $h &lt; 5; $h++){
+		@clusterList = ();
+		# Calculate the euclidean distance for each point compared to each centroid
+		my @clusters = ();
+		for(my $i = 0; $i &lt; $k; $i++){
+			my @keuclidean = ();
+			my $comparek = $karray[$i];
+			print&quot;For k = $comparek-&gt;[0],$comparek-&gt;[1],$comparek-&gt;[2],$comparek-&gt;[3]\n&quot;;
+			foreach my $datapoint (@data){
+				my $eValue = &amp;euclideanDistance($datapoint, $comparek);
+				#print&quot;Euclidean Distance of $datapoint-&gt;[0], $datapoint-&gt;[1], $datapoint-&gt;[2], $datapoint-&gt;[3] = $eValue\n&quot;;
+				push(@keuclidean,$eValue);
+			}
+			#print&quot;\n&quot;;
+			push(@clusters,[@keuclidean]);
+		}
+
+		# Organize into clusters. Use cluster list. The index of clusterList maps to the data point
+		# and the value at that index maps to which cluster the data point belongs in.
+		for(my $i = 0; $i &lt; $datasize; $i++){
+			my @comparable = ();
+			foreach my $kEuclid (@clusters){
+				push(@comparable, $kEuclid-&gt;[$i]);
+			}
+			my @ordered = sort {$a &lt;=&gt; $b} (@comparable);
+			#print&quot;$ordered[0], $ordered[1] VS. $comparable[0], $comparable[1]\n&quot;;
+			my $target = $ordered[0];
+			my $index = -1;
+			for(my $j = 0; $j &lt; $k; $j++){
+				if($comparable[$j] == $target){
+					#print&quot;match! $comparable[$j] = $target\t =&gt; index = $j\n&quot;;
+					$index = $j;
+					last;
+				}
+			}
+			push(@clusterList, $index);
+		}
+
+		my $clusterSize = @clusterList;
+		for(my $i = 0; $i&lt;$datasize; $i++){
+			print&quot;Data Point = $data[$i]-&gt;[0], $data[$i]-&gt;[1], $data[$i]-&gt;[2], $data[$i]-&gt;[3]\t =&gt; \t#$clusterList[$i]\n&quot;;
+		}
+
+		&amp;CalculateCentroid([@clusterList], [@data], $k);
+
+	}
+
+}
+
+sub CalculateCentroid
+{
+	my($clusterRef, $dataRef, $k) = @_;
+	my @clusterList = @{$clusterRef};
+	my $clusterLength = @clusterList;
+	my @data = @{$dataRef};
+	my $dataLength = @data;
+
+	if($dataLength != $clusterLength){
+		print&quot;Data Length = $dataLength DOES NOT EQUAL Cluster Length = $clusterLength\n&quot;;
+		exit 0;
+	}
+
+	my @clusterCounts = (0, 0);
+	for(my $i = 0; $i &lt; $k; $i++){
+		for(my $j = 0; $j &lt; $clusterLength; $j++){
+			if($clusterList[$j] == $i){
+				$clusterCounts[$i] = $clusterCounts[$i] + 1;
+			}
+		}
+	}
+
+	for(my $i = 0; $i &lt; $k; $i++){
+		print&quot;Cluster $i has $clusterCounts[$i]\n&quot;;
+	}
+}
+
+sub euclideanDistance
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize -1 != $datSize){
+		print&quot;distSize = $distSize NOT EQUAL datSize = $datSize\n&quot;;
+		return -1;
+	}
+
+	my $total = 0;
+	for($i = 0; $i &lt; $distSize - 1; $i++){
+		my $distElement = $dist[$i];
+		my $datElement = $dat[$i];
+
+		$total += ($distElement - $datElement) ** 2;
+	}
+	return $total ** (1/2)
+}
+
+sub readCSV
+{
+    my($targetFile) = @_;
+    if(!(-e $targetFile)){
+	print&quot;File $targetFile does not exist within the specified path.\n&quot;;
+	exit 1;
+    }
+
+    open(FIL,$targetFile);
+    my @contents = &lt;FIL&gt;;
+    close(FIL);
+
+    return @contents;
+}
+
+sub sortCSV
+{
+	my($arrayRef) = @_;
+	my @array = @{$arrayRef};
+	my @returnArray = ();
+	foreach my $line (@array) {
+		if($line=~/\w+/){
+			my @attributes = split(/,/,$line);
+			push(@returnArray, [@attributes]);
+		}
+	}
+	return @returnArray
+}
+  </pre>
+	
+	<h2>Agglomerative Hierarchical</h2>
+	<p class="introduction">Agglomerative Hierarchical (AH) is greedy clustering algorithm that will always result in a single cluster. The trick to using it is to take steps back to observe what were the previous clusters before they were absorbed into the single cluster. The algorithm is fairly simple: starts with a data point from the data set, finds its closest neighbor, calculates the center of the two points, finds the next closest point to that center, calculates center of old center and new closest point, moves the center there and repeats.</p>
+	<p class="introduction">As I mentioned earlier, AH doesn't identify N number of clusters and then stop, it keeps going until there's only one cluster. Unlike K-Means, AH isn't restricted to K number of clusters, as it runs through the algorithm, AH identifies as many clusters as their are steps to the algorithm. One of the strengths of AH is it's ability to recognize a hierarchy in data where hierarchy is present. Another is that it can sometimes produce better clusters than other methods<sup>1</sup>. Drawbacks include expensive computation, merges can become detrimental when dealing with noisy data.</p>
+	
+	<h2>DBSCAN</h2>
+	<p class="introduction">The last algorithm to be discussed is DBSCAN. The algorithm for DBSCAN is as follows. Take an epsilon and minimum points values. Epsilon will represent a threshold distance that a point must be from another point. Minimum number of points refers to the minimum points that will be in a cluster for it to be valid. First, pick a random point p and calculate all of the points within epsilon of p. If there are greater than or equal to the number of minimum points within epsilon of p, then p is part of a cluster and we say that pis a core point and is on the interior of the cluster. However, if there are not >=min_points then we have two options. Option 1: If p is within epsilon of a core point, then it is called a border point. Option 2: If p is NOT within epsilon of a core point, then it is labeled as noise.</p>
+	<p class="introduction">Some advantages to DBSCAN is that it's robust to noise, arbitrary shapes, and non-globular (s-shaped) clusters. Its biggest disadvantage is its sensitivity to varying density clusters.</p>
+	
+	<div class="sources">
+		<h2>Sources</h2>
+	  <ol>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 526.</li>
+		</ol>
+	</div>
+	
+</div>
+</body>
+</html>

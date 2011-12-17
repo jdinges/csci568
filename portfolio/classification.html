@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Classification</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Classification</h1>
+
+  <h2>Introduction</h2>
+  <p class="introduction">Classification is the process of, according to Yong Bakos, "Assigning objects to one of several predefined categories". Another way of looking at it is describing elements that distinguish a category or the task of learning a target function f that maps each attribute set x to one of the predefined class labels y. However you think about it, in this section I will be discussing the following classification algorithms: Decision Tree, Rule-Based, Nearest Neighbor, Bayesian, and Artificial Neural Networks. Before we get into the algorithms though, there are a few more fundamentals that need to be addressed. First and foremost, there are two general uses of classification models, the first is prediction and the second is description. The general process to classification is as follows: step one, split the data set into a training set and a testing set; step two, train the model, usually using one of the algorithms that will be discussed later; step three, test the model, determine its accuracy and modify where appropriate; and step four, apply model to new data.</p>
+
+	<h2>Decision Tree</h2>
+	<p class="introduction">A decision tree can be summarized as a series of questions that split the data all the way down until, ideally, until only data of one class is present in each sub category. There is a commonly used algorithm when constructing a decision tree, Hunt's algorithm, that makes this process fairly simple. It states that the first thing to do is take a data set and consider all records to be nodes. Next, ask the question "do all of the data records have the same class label / is threshold reached / is max depth reached?". If this is true, then we're done. If it's not true, then we ask the question about the data and split the tree and we return to our question "do all records have the same class label / is threshold reached / is max depth reached?". This process (ask the question, split the tree, analyze the purity of the results) continues until one of the above conditions in the question is satisfied. This process eventually raises two questions: how do we determine ideal attribute test, and how/when do we stop? Determining the ideal attribute test is the key to decision trees. A major quest arises of how do a split different attributes of different types? For binary attributes, split on true or false. For nominal attributes, it's best to split on n number of nodes so that the decision turns into the result of a binary question. Ordinal attributes should be split like nominal so long as the order is preserved. Lastly, continuous attributes should be split  by comparing a chosen point or a range. It's important to remember that what determines a good attribute split is whether the children are of greater purity than the parents. If the children are more pure than the parents, then we say that it was a good attribute split.</p>
+	
+	<h4>Overfitting and Underfitting</h4>
+	<p class="introduction">One of the key issues with classifiers is knowing whether or not your training data properly represented the domain. There are two possible extremes of training data: too much training resulting in a phenomenon known as overfitting, and too little training which results in underfitting. Overfitting is a result of listening to too many bad samples, noise, and excessive training. Underfitting is a result of training with not enough attributes and too little training. There are a some known solutions to over and underfitting - pre-pruning and post-pruning. Pre-pruning is all about stopping tree growth by measuring gain. There is something called the gain-threshold which will allow us to compare the gain from growth to the threshold to determine whether or not to branch out or not. The other method is post-pruning. Post-pruning has the same concept as pre-pruning as it relates to gain, however, post-pruning lets the cheap grow freely and then at the end look at each node and determine if the gain surpassed the gain-threshold which results in the life or death of a node.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">Some benefits of using a decision tree is that it doesn't require any prior knowledge about the data attributes, they're computationally inexpensive to generate, they're easy to interpret, they're robust to noise, and redundant won't harm the tree. However, there are some drawbacks to using decision trees, namely: finding the optimal solution is an NP-complete problem, they don't generalize well to some boolean problems, susceptible to data fragmentation (the farther down we go in the tree the less data points which means data becomes statistically insignificant), subtrees may be replicated several times making the whole tree hard to interpret<sup>1</sup>.</p>
+	
+	<h2>Rule-Based</h2>
+	<p class="introduction">A rule-based classifier is built on the simple principal of using a bunch of "if...then..." rules. They look something like this: R -&gt; {r<sub>1</sub> &amp; r<sub>2</sub> &amp; ... &amp; r<sub>n</sub> -&gt; y<sub>n</sub>}. There is a default, or empty, rule defined as R -&gt; {() -&gt; y}. The order of the rules affect the quality of the classifier, therefore better rules should be on top. I'll get to how to determine just how a rule is "better" in a little bit. Rules have similar characteristics as decision trees, but once all of the predicate conditions (those on the left hand side of the "-&gt;"), then we have a result. You can think of rules as the path a decision tree takes when it arrives at a leaf node. There are two ways of measuring rule quality - coverage and accuracy. Coverage is how many times a rule fires on all of the records. Accuracy, or confidence, is how many times the rule is correct over how many time the rule fires. There are some ideal qualities of rule sets - mutually exclusive rules and exhaustive rules. Mutually exclusive rules cover exactly one record and one record is covered by only one rule. Exhaustive rules are ones that cover every possible combination. If we have a rule that's not exhaustive, then we have need of the default rule (no predicate). Rules are generally ordered, but they can be unordered. However, by leaving rules to be unordered, they lose some of the efficiencies of ordering rules. There are some benefits and draw backs to both ordered and unordered rules. Unordered rules have an easier time building a model, but once that model is built ordered rules will arrive at their consequence (their y), quicker. In general, it's better to order rules based on prevalence, where more prevalent rules go on top of the rule list.</p>
+	
+	<h4>Building A Rule Set</h4>
+	<p class="introduction">Building a rule set requires rule extraction. Rule extraction is best achieved by the sequential covering algorithm. The sequential covering algorithm uses the Learn-One-Rule function to extract the best rules for a given class that covers the current training records. While this is running we say that all of the training records of the current class are to be positive, those records that do not apply to the current class are negative. A rule is then judged to be useful/appealing/desirable if it adheres to most, if not all, of the positive records and few, or none, of the negative records. If a rule passes this test, it is mostly positive, then it is added to the bottom of the rule list. The Learn-One-Rule function is where we extract a classification rule that covers most of the positive examples an few, if any, of the negative examples. In order to accomplish this it uses rule growth which can be accomplished in two ways - general to specific or specific to general. General to specific rule generation takes a the default rule and then selects its antecedent to be the desired class. From there, it looks at some of the decision tree. It picks a node from the tree and then greedily chooses a child condition of that node to add to the new rule's antecedent. This continues until the quality isn't improved. The specific to general approach, as you can imagine, goes backwards and picks a very specific rule and grows up the tree. At the end it will prune some useless antecedents that don't improve rule coverage. The biggest problem is how do you find an optimal rule? Often times you'll be faced with a decision of maximizing accuracy or coverage<sup>2</sup>.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">Rule-based classifiers can allow for a more complex decision boundary than decision trees, easily produce descriptive models that are quite similar to decision trees, and they can adopt to class imbalances. However, as previously stated, sometimes we must choose to maximize either accuracy or convergence - not a desirable trait<sup>3</sup>.
+	
+	<h2>Nearest Neighbor</h2>
+	<p class ="introduction">"<i>If it walks like a duck, quacks like a duck, and looks like a duck, then it's probably a duck</i>". The nearest neighbor classifier is concerned with labeling a data point by looking at what's near it. If there are multiple data objects next to it, it picks the most prevalent one. Another method would be to figure in the point's distance from the center point as a weighing scheme - the closer a point is to center, the higher the weight. One draw back is having a search area that is too large.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">Some benefits of using the nearest neighbor approach is they don't require model building, can create oddly shaped decision boundaries which prove to be more flexible. However, some drawbacks include the requirement of proximity measure to determine what is near one point, they can be expensive, susceptible to noise, can produce incorrect predictions<sup>4</sup>.</p>
+	
+	<h2>Bayesian</h2>
+	<p class="introduction">Bayesian classifiers are concerned with cases where the definite rules may not be possible. An example presented in the book looks at a person developing heart disease. The attributes of concern are diet and exercise. Usually, when a person controls their diet and gets regular exercise, they have less of a chance of heart problems, but are not guaranteed to not suffer from heart afflictions. Bayes classifiers, then, look to provide an approach to modeling probabilistic relationships. They use Bayes Theorem to classify instances where the classes are non-deterministic</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">Some benefit of Bayes Classifiers are that they are robust to isolated noise points and irrelevant attributes. However, there are also some drawbacks to using Bayes classifiers. For one, correlated attributes can degrade performance. Another example is constructing a network can be really time consuming.
+	
+	<h2>Artificial Neural Networks</h2>
+	<p class="introduction">An Artificial Neural Network (ANN) was designed to mimic the structure of the human brain. Additionally, it was designed so that it could adapt, or learn, as it went along. ANN operate by taking some input values to nodes and then applying weights to those values, summing them together and entering them into an activation function. You can use back-propegation to learn a model to an ANN. This is best illustrated in the following Ruby code of an ANN.</p>
+	<pre class="code">
+class Network
+
+  attr_accessor :layers
+
+  def initialize(layer_count)
+    @layers = Array.new()
+    puts &quot;Creating network...&quot;
+    for i in 0..layer_count-1
+      puts &quot;What do you want this layer to be called?&quot;
+      layer_type = gets
+      layer = Layer.new(layer_type)
+      @layers&lt;&lt;layer
+    end
+  end
+
+  #def self.layers
+   # @layers
+  #end
+
+  def run
+    for i in 1..@layers.length-1
+      thisLayer = @layers[i]
+      #puts &quot;For layer #{thisLayer.name}: There are #{thisLayer.nodes.length} nodes&quot;
+
+      theseNodes = thisLayer.nodes
+
+      for j in 0..theseNodes.length-1
+
+        thisNode = theseNodes[j]
+        theseEdges = thisNode.edges
+
+        sum = 0;
+
+        for k in 0..theseEdges.length-1
+
+          thisEdge = theseEdges[k]
+          #puts &quot;\t#{sum} += #{thisEdge.weight * thisEdge.source.value}&quot;
+          sum += thisEdge.weight * thisEdge.source.value
+
+        end
+
+        #puts &quot;\tNode #{j} new value = #{sum}&quot;
+        #puts &quot;\tValue = #{ Math::tanh(sum)}&quot;
+        @layers[i].nodes[j].value = Math::tanh(sum)
+
+        if i == @layers.length-1
+          puts &quot;\tNode #{j+1} = #{@layers[i].nodes[j].value}&quot;
+        end
+
+      end
+
+    end
+
+  end
+
+
+end
+
+class Layer
+
+  attr_accessor :name, :nodes
+
+  def initialize(layer_name)
+    @name = layer_name
+    @nodes = Array.new
+  end
+
+  def addNode(node)
+    @nodes.push(node)
+  end
+
+  def nodes
+    if @nodes.length &gt; 0
+      return @nodes
+    else
+      return Array.new
+    end
+  end
+
+  def self.push(node)
+    @nodes&lt;&lt;node
+  end
+
+end
+
+class Node
+
+  attr_accessor :value, :edges, :error
+
+  def initialize(my_value)
+    @value = my_value
+    @edges = Array.new
+    @error = 0
+  end
+
+  def addEdge(edge)
+    @edges.push(edge)
+  end
+
+end
+
+class Edge
+
+  attr_accessor :weight, :source, :target
+
+  def initialize(my_weight, my_source, my_target)
+    @weight = my_weight
+    @source = my_source
+    @target = my_target
+  end
+
+end
+
+class Range
+  def rand
+    return self.begin + Kernel.rand(self.end-self.begin)
+  end
+end
+
+N = 0.5
+
+def dtanh(x)
+  return 1.0 - x * x
+end
+
+def backpropegate(network, out1, out2, out3)
+
+  # Clear error for all nodes
+  for i in 1..network.layers.length-2
+    for j in 0..network.layers[i].nodes.length-1
+      network.layers[i].nodes[j].error = 0
+    end
+  end
+
+  # Load error terms in each node
+  for i in (network.layers.length-1).downto(1)
+    thisLayer = network.layers[i]
+    #puts &quot;Layer #{i+1}:&quot;
+    for j in 0..thisLayer.nodes.length-1
+      theseEdges = thisLayer.nodes[j].edges
+      for k in 0..theseEdges.length - 1
+        # Adjust error on nodes
+        thisEdge = theseEdges[k]
+        source = thisEdge.source
+
+        #puts&quot;\t\tLayer #{i+1}: Node #{j+1} error = #{network.layers[i].nodes[j].edges[k].source.error += network.layers[i].nodes[j].edges[k].target.error * network.layers[i].nodes[j].edges[k].weight}&quot;
+        #--------------- Parent Node Error ------------- += --------------- This Node's Error -------------- * ----- Edge Connecting Two's Weight -------
+        network.layers[i].nodes[j].edges[k].source.error += network.layers[i].nodes[j].edges[k].target.error * network.layers[i].nodes[j].edges[k].weight
+      end
+    end
+  end
+
+  # Adjust weights...
+  puts &quot;\tWeights:&quot;
+  for i in 1..network.layers.length-1
+    for j in 0..network.layers[i].nodes.length - 1
+      for k in 0..network.layers[i].nodes[j].edges.length - 1
+        error = network.layers[i].nodes[j].edges[k].target.error
+        prev = network.layers[i].nodes[j].edges[k].source.value
+        #puts &quot;\t\tLayer #{i+1}: Node #{j+1} error = #{error}&quot;#{N * error * dtanh(prev)}&quot;
+        puts &quot;\t\tLayer #{i+1}: Node #{j+1}: Edge#{k+1} = #{N * error * dtanh(error) * prev}&quot;
+        network.layers[i].nodes[j].edges[k].weight += N * error * dtanh(error) * prev
+
+      end
+    end
+  end
+
+  return network
+
+end
+
+def train(network, out1, out2, out3)
+  # First thing to do is compute what my output 
+  # is given current set up.
+  network.run
+
+  node1r = network.layers[2].nodes[0].value
+  node2r = network.layers[2].nodes[1].value
+  node3r = network.layers[2].nodes[2].value
+
+  acceptableError = 0.001
+  i = 1
+  while ((node1r - out1).abs &gt; acceptableError or 
+    (node2r - out2).abs &gt; acceptableError or 
+    (node3r - out3).abs &gt; acceptableError)
+  #for i in 0..19
+    puts&quot;Iteration #{i+1}:&quot;
+    #puts &quot;\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}&quot;
+
+    network.layers[2].nodes[0].error = out1 - node1r
+    network.layers[2].nodes[1].error = out2 - node2r
+    network.layers[2].nodes[2].error = out3 - node3r
+
+    puts &quot;\tError:&quot;
+    puts &quot;\t\tnode 1 = #{network.layers[2].nodes[0].error}&quot;
+    puts &quot;\t\tnode 2 = #{network.layers[2].nodes[1].error}&quot;
+    puts &quot;\t\tnode 3 = #{network.layers[2].nodes[2].error}&quot;
+
+    newNetwork = backpropegate(network, out1, out2, out3)
+
+    newNetwork.run
+
+    node1r = newNetwork.layers[2].nodes[0].value
+    node2r = newNetwork.layers[2].nodes[1].value
+    node3r = newNetwork.layers[2].nodes[2].value
+
+    network = newNetwork
+    #puts &quot;\tnode1r = #{node1r}, node2r = #{node2r}, node3r = #{node3r}&quot;
+    i += 1
+    sleep 2
+  end
+
+end
+
+
+# Main
+theNetwork = Network.new(3)
+
+# Set up network layout
+
+#----------------#
+# Input layer... #
+#----------------#
+
+# Create nodes...
+iNode1 = Node.new(1.0)
+iNode2 = Node.new(0.25)
+iNode3 = Node.new(-0.5)
+
+# Add to network...
+theNetwork.layers[0].addNode(iNode1)
+theNetwork.layers[0].addNode(iNode2)
+theNetwork.layers[0].addNode(iNode3)
+
+#-----------------#
+# Hidden layer... #
+#-----------------#
+
+# Create nodes...
+hNode1 = Node.new(0)
+hNode2 = Node.new(0)
+
+# Creates edges
+hEdge1_1 = Edge.new(2.0*rand-1, iNode1, hNode1)
+hEdge1_2 = Edge.new(2.0*rand-1, iNode1, hNode2)
+
+hEdge2_1 = Edge.new(2.0*rand-1, iNode2, hNode1)
+hEdge2_2 = Edge.new(2.0*rand-1, iNode2, hNode2)
+
+hEdge3_1 = Edge.new(2.0*rand-1, iNode3, hNode1)
+hEdge3_2 = Edge.new(2.0*rand-1, iNode3, hNode2)
+
+# Add edges to Nodes...
+hNode1.addEdge(hEdge1_1)
+hNode1.addEdge(hEdge2_1)
+hNode1.addEdge(hEdge3_1)
+
+hNode2.addEdge(hEdge1_2)
+hNode2.addEdge(hEdge2_2)
+hNode2.addEdge(hEdge3_2)
+
+# Add to network
+theNetwork.layers[1].addNode(hNode1)
+theNetwork.layers[1].addNode(hNode2)
+
+#-----------------#
+# Output layer... #
+#-----------------#
+
+# Create nodes
+oNode1 = Node.new(0)
+oNode2 = Node.new(0)
+oNode3 = Node.new(0)
+
+#  Create edges
+oEdge1_1 = Edge.new(2.0*rand-1, hNode1, oNode1)
+oEdge1_2 = Edge.new(2.0*rand-1, hNode1, oNode2)
+oEdge1_3 = Edge.new(2.0*rand-1, hNode1, oNode3)
+
+oEdge2_1 = Edge.new(2.0*rand-1, hNode2, oNode1)
+oEdge2_2 = Edge.new(2.0*rand-1, hNode2, oNode2)
+oEdge2_3 = Edge.new(2.0*rand-1, hNode2, oNode3)
+
+# Add edges to nodes...
+oNode1.addEdge(oEdge1_1)
+oNode1.addEdge(oEdge2_1)
+
+oNode2.addEdge(oEdge1_2)
+oNode2.addEdge(oEdge2_2)
+
+oNode3.addEdge(oEdge1_3)
+oNode3.addEdge(oEdge2_3)
+
+# Add to network...
+theNetwork.layers[2].addNode(oNode1)
+theNetwork.layers[2].addNode(oNode2)
+theNetwork.layers[2].addNode(oNode3)
+
+# Run
+theNetwork.run
+
+# Training
+train(theNetwork, 1.0, -1.0, 0.0)
+  </pre>
+	
+	<div class="sources">
+		<h2>Sources</h2>
+	  <ol>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 169.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 213-215.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 223.</li>
+		</ol>
+	  
+	</div>
+
+</div>
+</body>
+</html>

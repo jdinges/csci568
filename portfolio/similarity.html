@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Similarity Metrics</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Similarity Metrics</h1>
+
+  <h2>Introduction</h2>
+  <p class="introduction">Similarity is used asses the numerical degree to which two objects relate, or are alike. In this section I'll be discussing the following similarity metrics: Euclidean Distance, Simple Matching Coefficient (SMC), Jaccard, Tanimoto, Pearson Correlation, and Cosine Similarity. However, before we get to any specific implementation, it's important to note that there is a difference when representing similarity between two nominal attributes and two ordinal attributes.</p>
+	<p class="introduction">For nominal attributes, similarity is measured in boolean values; something is either similar or it is dissimilar.</p>
+	<p class="introduction">For ordinal attributes, attributes that have some sort of order, we first need to map whatever is ordered into numbers. So, for example, the possible attributes Cold, Warm, Hot could be mapped to 0, 1, 2. From there it is a matter of calculating their distance d. Distance is measured by simply subtracting the first attribute from the second and taking the absolute value from that. So, d(Hot, Cold) = 1. However, we want to consider similarity in a range from 0 to 1, so our value has to be transformed to fit into that range. To do this we simply take that value (1) and divide by the number of possible states, or positions, the attribute can exist in and subtract one. So, we end up with an equation that looks something like this: d = |x-y| / (n-1)<sup>1</sup>. This isn't the end though. Similarity is defined how alike two objects are, we just calculated how <i>unalike</i> two objects are, to correct for this, we simply subtract that number from one. So, finally, it can be said that similarity between two ordinal attributes can be calculated as s = 1 - d.</p>
+	<p class="introduction">For interval/ratio attributes (continuous), the range of difference between values can be 0 to infinity instead of 0 to 1<sup>1</sup>. So when looking for Distance d, we can say that d = |x-y| and leave it at that. Yet, similarity can be expressed in several different ways, however the most common is to say that similarity is s = 1 / (1 + d). Other ways to express this are s = -d, s = e<sup>-d</sup>, and s = 1 - ( (d - min(d)) / (max(d) - min(d)) )</p>
+	<p class="introduction">The following sections look at different proximity measures. Proximity measures a way of examining a form of the distance between two data objects. Some different situations may call for the use of different similarity metrics such as these. Within each sub-heading, I will include a brief summary of what it does, when to use it, and some cases.</p>
+
+	<h2>Euclidean Distance</h2>
+	<p class="introduction">Euclidean distance is one of the most basic similarity metrics. The idea behind it is, if you were to map a data object onto a graph, what is the distance between them? The answer, in two dimensional space is to use the Pythagorean Theorem (a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>) and solve for c. In this case c = (a<sup>2</sup> + b<sup>2</sup>)<sup>1/2</sup>. Yet, how do we find a<sup>2</sup>? The answer is that it's the same as our traditional distance equation a = (x<sub>1</sub> - x<sub>2</sub>). When we plug in those values for appropriate attributes, we find our a and b. However, what happens when you get out of two dimensional space? The answer is to keep the same idea, but simply calculate the difference of two points squared for all attributes. As expressed earlier, Euclidean distance is good for judging distance between to objects in some n-dimensional space. I have included Euclidean Distance below in Perl.</p>
+	<pre class="code">
+sub euclideanDistance
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $total = 0;
+	for($i = 0; $i < $distSize; $i++){
+		my $distElement = $dist[$i];
+		my $datElement = $dat[$i];
+
+		$total += ($distElement - $datElement) ** 2;
+	}
+	return $total ** (1/2)
+}
+  </pre>
+	
+	<h2>Simple Matching Coefficient</h2>
+	<p class="introduction">Simple Matching Coefficient (SMC) is used for use in a determinate set of binary data. That is, it works best when we're looking at the presence and absence of some attribute. You would use SMC when looking at say students who answered questions similarly on a true or false quiz. SMC is works by looking at the number of matching attributes / the number of attributes. Another way to look at is ( f<sub>11</sub> + f<sub>00</sub> ) / ( f<sub>01</sub> + f<sub>10</sub> + f<sub>11</sub> + f<sub>00</sub> ), where the 1 and 0 relate to say the answer of question one and question two of the students true/false quiz. I have included code below.</p>
+	<pre class="code">
+sub SMC
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $f_00 = 0;
+	my $f_01 = 0;
+	my $f_10 = 0;
+	my $f_11 = 0;
+	for($i = 0; $i < $distSize; $i++){
+		my $distElement = $dist[$i];
+		my $datElement = $dat[$i];
+
+		if($distElement == 0 && $datElement == 0){
+			$f_00++;
+		}
+		if($distElement == 0 && $datElement == 1){
+			$f_01++;
+		}
+		if($distElement == 1 && $datElement == 0){
+			$f_10++;
+		}
+		if($distElement == 1 && $datElement == 1){
+			$f_11++;
+		}
+	}
+
+	#print"f_00 = $f_00\n";
+	#print"f_01 = $f_01\n";
+	#print"f_10 = $f_10\n";
+	#print"f_11 = $f_11\n";
+
+	return ($f_11 + $f_00)/($f_00 + $f_01 + $f_10 + $f_11);
+}
+  </pre>
+
+	<h2>Jaccard</h2>
+	<p class="introduction">The Jaccard method offers a slight twist on the SMC because it looks only at the <i>presence</i> of certain attributes. Expressed in the same terms as SMC, Jaccard = f<sub>11</sub> / ( f<sub>01)</sub> + f<sub>10</sub> + f<sub>11</sub> ). Again, we can say that we're only looking at the number of matching present attributes over the number of values present. Jaccard is typically used when looking at market basket data. When retailers are analyzing their sales records, they aren't really concerned that customers who bought urinal cakes didn't also buy Xbox 360 controllers, they're concerned with what <i>else</i> the customers bought, in addition to the urinal cakes. Code is below</p>
+	<pre class="code">
+sub jaccard
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $f_00 = 0;
+	my $f_01 = 0;
+	my $f_10 = 0;
+	my $f_11 = 0;
+	for($i = 0; $i < $distSize; $i++){
+		my $distElement = $dist[$i];
+		my $datElement = $dat[$i];
+
+		if($distElement == 0 && $datElement == 0){
+			$f_00++;
+		}
+		if($distElement == 0 && $datElement == 1){
+			$f_01++;
+		}
+		if($distElement == 1 && $datElement == 0){
+			$f_10++;
+		}
+		if($distElement == 1 && $datElement == 1){
+			$f_11++;
+		}
+	}
+
+	#print"f_00 = $f_00\n";
+	#print"f_01 = $f_01\n";
+	#print"f_10 = $f_10\n";
+	#print"f_11 = $f_11\n";
+
+	return $f_11/($f_01 + $f_10 + $f_11);
+}
+  </pre>
+	
+	<h2>Tanimoto</h2>
+	<p class="introduction">The Tanimoto coefficient is known as the extended Jaccard. It is used for continuous attributes. Another way of thinking of it is the Jaccard coefficient is simply a specific case of the Tanimoto coefficient with binary attributes<sup>2</sup>. You would use the Tanimoto coefficient on an asymmetric data set (most attributes are not present). Tanimoto can be expressed as tanimoto(x,y) = ( x dot y ) / ( ||x||<sup>2</sup> + ||y||<sup>2</sup> - x dot y).</p>
+	
+	<h2>Pearson Correlation</h2>
+	<p class="introduction">The Pearson Correlation coefficient is the least squares distance from a straight line. It measures how close two lines fit together or diverge. It's measured on a scale from [-1, 1]. It's good for linear relationships. Pearson Correlation coefficient is expressed as corr(x,y) = covariance(x,y) / ( standard_deviation(x) * standard_deviation(y) ). You would use it when looking at similarity metrics without create inflation. I have included code below</p>
+	<pre class="code">
+sub Average
+{
+	my @vector = @_;
+	my $vectorSize = @vector;
+	my $total = 0;
+	foreach my $element (@vector){
+		$total += $element;
+	}
+	return $total/$vectorSize;
+}
+
+sub Covariance
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $x_avg = &Average(@dist);
+	my $y_avg = &Average(@dat);
+	my $total = 0;
+
+	for($i = 0; $i< $distSize; $i++){
+		$total += ($dist[$i] - $x_avg) * ($dat[$i] - $y_avg)
+	}
+
+	return $total/($distSize - 1);
+}
+
+sub Standard_Deviation
+{
+	my @vector = @_;
+	my $vectorSize = @vector;
+	my $vector_avg = &Average(@vector);
+	my $total = 0;
+
+	foreach my $element (@vector){
+		$total += (($element - $vector_avg) ** 2);
+	}
+	return ($total/($vectorSize - 1)) ** (1/2);
+}
+
+sub Pearson
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $covariance = &Covariance($distRef, $datRef);
+	my $std_dev_x = &Standard_Deviation(@dist);
+	my $std_dev_y = &Standard_Deviation(@dat);
+
+	return $covariance/($std_dev_x * $std_dev_y);
+
+}
+	</pre>
+	
+	<h2>Cosine Similarity</h2>
+	<p class="introduction">Lastly, there's cosine similarity. Cosine similarity is useful when examining the frequency of words in documents. It compares the counts of different words and then calculates the cosine of the angle between the two objects<sup>3</sup>. Its equation is expressed as cos_sim(x,y) = (x dot y) / (||x|| * ||y||). Code is included below.</p>
+	<pre class="code">
+sub Dot_Product
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $total = 0;
+	for($i = 0; $i< $distSize; $i++){
+		$total += $dist[$i] * $dat[$i];
+	}
+	return $total;
+}
+
+sub Vector_Length
+{
+	my @vector = @_;
+	my $dot_vector = &Dot_Product([@vector], [@vector]);
+	return $dot_vector ** (1/2);
+}
+sub Cosine
+{
+	my($distRef, $datRef) = @_;
+	my @dist = @{$distRef};
+	my $distSize = @dist;
+	my @dat = @{$datRef};
+	my $datSize = @dat;
+
+	if($distSize != $datSize){
+		print"distSize = $distSize NOT EQUAL datSize = $datSize\n";
+		return -1;
+	}
+
+	my $dot_prod = &Dot_Product($distRef, $datRef);
+	my $x_length = &Vector_Length(@dist);
+	my $y_length = &Vector_Length(@dat);
+
+	return $dot_prod/($x_length*$y_length);
+}
+  </pre>
+
+	<div class="sources">
+		<h2>Sources</h2>
+	  <ol>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 68.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 76.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 75.</li>
+		</ol>
+	  
+	</div>
+</div>
+</body>
+</html>

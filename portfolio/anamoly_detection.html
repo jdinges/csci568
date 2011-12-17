@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Anomaly Detection</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Anomaly Detection</h1>
+  <h2>Introduction</h2>
+  <p class="introduction">Anomalies are synonymous with outliers in that they are so far removed from other data points. In this section I will discuss several different approaches to anomaly detection, namely: statistical, proximity-based, density-based, and clustering-based. Before we get into that, it's important to understand why we want to find anomalies. If you're constructing a decision tree, detecting anomalies can help greatly simplify their structure. However, sometimes it's important to detect anomalies for other reasons. A credit card company may notice that the area codes of places you've used your card has suddenly expanded beyond a 45 mile radius of your home to include a major city on the opposite side of the nation despite the fact that no more than three minutes late, you make another purchase two blocks from your home. These kind of situations are just what credit card companies look for. Clearly you could not have gotten all the way across the country and back in three minutes, therefore something must be wrong. By being able to quickly identify these types of situations, credit card companies can quickly remedy the situation. Another situation is in the case of faulty equipment. When running some diagnostics on your car, your mechanic will pay great attention to anomalies in the data, for they could indicate some deeper underlying issue. Classically, anomaly detection is done in preprocessing.</p>
+
+	<h2>Statistical</h2>
+	<p class="introduction">Statistical approaches to anomaly detection are concerned with building models to represent the data and then analyzing if any point just don't quite fit into the model. For example, if you were to model an distribution of exam scores from a class, the anomalous data would not fit into the model. However, it can be difficult to build a model because of a limited supply of hard data which requires the use of other techniques. In a statistical setting, an outlier is defined as an object that has a low probability with respect o a probability distribution model of the data. There are some issues with this approach, one is the possibility of choosing the wrong distribution model (Gaussian, Poisson, binomial, etc.), then you are likely to mislabel anomalies. Another issue is mixing distributions, in cases like these, it can be difficult to identify outliers. There are three generally accepted statistical distributions to consider when looking for outliers: univariate normal distribution, multivariate normal distribution and mixture model.</p>
+	<p class="introduction">In the case of univariate normal distribution, we're looking at a traditional Gaussian curve with a mean of 0 and a standard deviation of 1. An outlier is defined as any absolute value of an attribute value that is greater than or equal to the probability of finding that point at that distance from the center of the curve.</p>
+	<p class="introduction">Multivariate normal distribution requires an extra dimension to our Gaussian curve. This, in turn, means that if we're going to use a threshold like we did in univariate approach, we need to find some way of caluclating the distance away from center. Specifically, we need a way of calculating distance that "takes the shape of the data distribution"(Steinbach, 662). This can be accomplished by using the Mahalanobis distance function.</p>
+	<p class="introduction">Lastly, there is the mixture model approach. In cases such as these, we use an iterative approach that takes an empty set of anomalous values and a set of normal objects, as long as the transfer increases the likelihood of the data, it is sent to the anomalous set<sup>1</sup>.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">The biggest strength a statistical approach is that it's often simple, efficient, and it works. However, one big drawback to using a statistical approach is that they suffer in higher dimensional data and there are fewer options for multivariate data.</p>
+	
+	<h2>Proximity-Based</h2>
+	<p class="introduction">Proximity-based anomaly detection techniques are usually the first thing people think of when asked how do you detected anomalies. You detected anomalies based on how far away from other data points a suspect point is. In cases such as these, we're often looking for a specific, or threshold, distance that a suspect data point is in relation to other data points.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">The greatest benefit to proximity-based techniques is that they're simple. The drawback is that they take O(n<sup>2</sup>) time and are dependent on the parameters chosen<sup>2</sup>.</p>
+	
+	<h2>Density-Based</h2>
+	<p class="introduction">Density-based anomaly detection techniques use the same idea as proximity-based detection techniques. Because objects in low regions of density and are far away from their neighbors, we can use some of the same techniques employed by proximity-based approaches. More sophisticated density-approaches will acknowledge the fact that data can be in areas of varying density. In cases such as these, our methods will look at the density of the suspect point's neighbors and if it is significantly less than those, it will be classified as an anomaly. The question then is how do we measure density? There are several techniques, but perhaps the most recognized is inverse distance to the k neighbors. Another approach is to calculate the relative density as the density of a point and the average density of its nearest neighbors<sup>3</sup>.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">The big benefit of using the density based approach is that tells you by what degree an object is an outlier and is often immune to regions of varying density. However, the drawback, as with proximity-based approaches is the O(n<sup>2</sup>) time. Additionally, density-based approach also suffers from parameter selection dependence problems.</p>
+	
+	<h2>Clustering-Based</h2>
+	<p class="introduction">The last approach to be discussed is the cluster-based approach. This approach targets values that don't fit into clusters. There are basically two separate sub-approaches to the cluster-based method. The first requires that clusters be of a specific size. If it identifies any "clusters" as smaller than that given size, it discards them as outliers. The second approach is to cluster all objects and then determine the degree of which they belong to said cluster<sup>4</sup>.</p>
+	
+	<h4>Benefits and Drawbacks</h4>
+	<p class="introduction">One of the big strengths of using cluster based approaches is that the clustering algorithm only takes linear time to construct. Additionally identifying clusters comes with identifying anomalies. Yet, the drawback is that the number and quality of the outliers is heavily dependent on the number of clusters chosen<sup>5</sup>.</p>
+	
+	<div class="sources">
+		<h2>Sources</h2>
+	  <ol>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 664.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 666.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 668.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 671.</li>
+			<li>Nan, Pang-Ning; Steinbach, Michael; Kumar, Vipin. <i>Introduction to Data Mining</i>. Addison-Wesley. 2006. pp 675.</li>
+		</ol>
+	  
+	</div>
+
+</div>
+</body>
+</html>

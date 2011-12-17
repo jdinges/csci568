@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Application: The Badges Problem</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>The Badges Problem</h1>
+  <h2>Process</h2>
+  <p class="introduction">Before I get into any details on how I discovered the pattern and came up with rules for my decision tree of the winners_losers.csv, I want to just say that you’re probably not going to like how I discovered my appropriate classifiers. Truth be told, I didn’t start working on this project until Wednesday in class. By listening to some of your “hints” about the possible classifiers, I learned that the last name didn’t matter at all, the first name’s length didn’t matter, and there was one attribute that would split the data almost perfectly. Given this information, I turned my attention to the first names and went with the first thought that popped into my head - the second letter of the first name defines a person winner or loser status.</p>
+
+	<p class="introduction">Now that I had a hypothesis, I wanted to do some light testing. That is, I wanted to take a quick peek at the data and see how my hypothesis faired. From your hints I knew that if I found the correct attribute, it would be an almost perfect split. To my surprise, my first guess appeared correct. As I scrolled through the .csv file all but one of the names that I checked (which was quite a bit) adhered to my hypothesis, the name was “Dwight K. Schrute”. This name gave me a hint as to what the second attribute I would need to split on would be, but I’ll get to that later.</p>
+
+	<p class="introduction">Doing a quick scan of the .csv to see if my hypothesis seemed to be working is all well and good, but I needed something more rigorous, more robust, more complete. Because of this, my unfamiliarity of WEKA, and time constraints I decided to solve my problem by writing a Perl script that would parse the .csv file and would split on attributes that I had selected. The script is included in my project6/ directory so you can take a look at it for yourself, but on a high level, all it does is read the .csv file, split each line on the comma character, put the two parts of a line into an array and then stuff that array into a larger array that held all of the lines from the file. From here, I wrote my function to split on a particular attribute. This function itself is not very long - it simply breaks the name part of a line into each letter, puts that into an array, and then uses the array to look at the second letter of the name and see if it’s a vowel (compare to constant string of vowels) and then push into one of two arrays for winners and losers. From here I added a quick averaging function to tell me what the percent split was among each of the resulting categories. The results are shown below.</p>
+
+	<p class="introduction">The winner/loser split on vowels for vowels as second letter of first name...<br />
+		Winner: 99.5260663507109%<br />
+		Loser: 0.473933649289108%</p>
+
+	<p class="introduction">The winner/loser split on consonants for vowel as second letter of first name...<br />
+		Winner: 3.44827586206897%<br />
+		Loser: 96.551724137931%</p>
+
+	<p class="introduction">As you can see, this definitely matched the nearly perfect split that you mentioned in class. However, from what I observed when scrolling through the .csv file, I knew that there were names that were characters from The Office and I wondered if that was what was keeping this from being a perfect split. After some modifications that made the script print out the names of losers in the vowels-as-second-letters-of-first-name category and vice versa on those that were split on consonant. What resulted was that “Michael Scott” showed up in the winners category as a loser and “Andy Bernard”, “Creed Bratton”, and “Dwight K. Schrute” showed up under the losers class as winners. So, I added another function to my script that would look at a list of known Office characters and put them in the opposite winner/loser category of the one that they were currently listed. Once these changes were final, my results were as shown:</p>
+
+	<p class="introduction">Vowels:<br />
+	The winner/loser split on actors for characters from the office...<br />
+		Winner: 0%<br />
+		Loser: 100%</p>
+
+	<p class="introduction">The winner/loser split on civilians for characters from the office...<br />
+		Winner: 100%<br />
+		Loser: 0%</p>
+
+	<p class="introduction">Consonants:<br />
+	The winner/loser split on actors for characters from the office...<br />
+		Winner: 100%<br />
+		Loser: 0%</p>
+
+	<p class="introduction">The winner/loser split on civilians for characters from the office...<br />
+		Winner: 0%<br />
+		Loser: 100%</p>
+
+	<p class="introduction">What this data is showing us is that after we look at the class of vowels after the initial split and we split based on their name matching a character from The Office, the new classifications are all 100% pure on all fronts. This signifies a successful decision tree for the winners_losers.csv data set. The tree itself looks something like on the following page.</p>
+
+
+
+
+</p>
+  <pre class="code">
+#!/usr/bin/perl
+
+use constant TRUE =&gt; 1;
+use constant FALSE =&gt; 0;
+
+use constant VOWELS =&gt; qw(a e i o u);
+use constant TOTAL_VOWELS =&gt; 5;
+use constant OFFICE_CHARACTERS =&gt; (
+	&quot;Michael Scott&quot;,
+	&quot;Dwight Schrute&quot;,
+	&quot;Jim Halpert&quot;,
+	&quot;Andy Bernard&quot;,
+	&quot;Creed Bratton&quot;,
+	&quot;Pam Beasely&quot;,
+	&quot;Pam Halpert&quot;,
+	&quot;Phyllis Vans&quot;
+);
+
+&amp;runMain();
+
+sub runMain
+{
+	if($#ARGV + 1 != 1){
+		print&quot;Provide an input file containing your data\n\ncluster.pl &lt;filename&gt;\n&quot;;
+		exit 0;
+	}
+	my $filename = $ARGV[0];
+	print&quot;Going to read $filename...\n&quot;;
+	my @contents = &amp;readCSV($filename);
+	my @list = &amp;sortCSV([@contents]);
+	my($vowelsRef, $consonantsRef) = &amp;splitOnSecondLetterFirstName([@list]);
+	my($actorsRefVowels, $civiliansRefVowels) = &amp;splitOnCharacterFromTheOffice($vowelsRef);
+	my($actorsRefConsonants, $civiliansRefConsonants) = &amp;splitOnCharacterFromTheOffice($consonantsRef);
+
+
+}
+
+sub splitOnCharacterFromTheOffice
+{
+	my($listRef) = @_;
+	my @list = @{$listRef};
+
+	my @actors = ();
+	my @civilians = ();
+
+	foreach my $classificationRef (@list){
+		my @classifications = @{$classificationRef};
+		my ($name, $status) = @classifications;
+		if(&amp;isCharacterFromTheOffice($name)){
+			push(@actors,$classificationRef);
+		} else {
+			push(@civilians,$classificationRef);
+		}
+	}
+
+	&amp;determineResults([@actors],&quot;actors&quot;,&quot;characters from the office&quot;);
+	&amp;determineResults([@civilians],&quot;civilians&quot;,&quot;characters from the office&quot;);
+
+	return([@actors], [@civilians]);
+}
+
+sub isCharacterFromTheOffice
+{
+	my($name) = @_;
+	my $isCharacter = FALSE;
+	foreach my $character ( OFFICE_CHARACTERS ){
+		if($name eq $character){
+			$isCharacter = TRUE;
+			last;
+		}
+	}
+	return $isCharacter;
+}
+
+sub splitOnSecondLetterFirstName
+{
+	my($listRef) = @_;
+	my @list = @{$listRef};
+
+	my @vowels = ();
+	my @consonants = ();
+
+	foreach my $classificationRef (@list){
+		my @classifications = @{$classificationRef};
+		my ($name, $status) = @classifications;
+		my @nameArray = split(//,$name);
+		if(&amp;isVowel($nameArray[1])){
+			push(@vowels,$classificationRef);
+		} else {
+			push(@consonants,$classificationRef);
+		}
+	}
+
+	#------------------------------------------------#
+	# Uncomment the section below to print the split #
+	#------------------------------------------------#
+	#foreach my $classVowel (@vowels){
+		#chomp($classVowel-&gt;[1]);
+		#print&quot;$classVowel-&gt;[1], $classVowel-&gt;[0]\n&quot;;
+	#}
+	#foreach my $classConsonant (@consonants){
+		#chomp($classConsonant-&gt;[1]);
+		#print&quot;$classConsonant-&gt;[1], $classConsonant-&gt;[0]\n&quot;;
+	#}
+
+	&amp;determineResults([@vowels],&quot;vowels&quot;,&quot;vowels as second letter of first name&quot;);
+	&amp;determineResults([@consonants],&quot;consonants&quot;,&quot;vowel as second letter of first name&quot;);
+
+	return([@vowels], [@consonants]);
+}
+
+sub determineResults
+{
+	my($listRef, $thisClass, $splitType) = @_;
+	my @list = @{$listRef};
+	my $winnersPercent = &amp;percentWinners([@list]) * 100;
+	my $losersPercent = 100 - $winnersPercent;
+
+	print&quot;The winner/loser split on $thisClass for $splitType...\n&quot;;
+	print&quot;\tWinner: $winnersPercent%\n&quot;;
+	print&quot;\tLoser: $losersPercent%\n\n&quot;;
+
+	return ($winnersPercent, $losersPercent);
+}
+
+sub percentWinners
+{
+	my($listRef) = @_;
+	my @list = @{$listRef};
+	my $listSize = @list;
+	my $totalWinners = 0;
+	my $winner = &quot; + &quot;;
+	foreach my $person (@list){
+		chomp($person-&gt;[1]);
+		if($person-&gt;[1]=~/\+/){
+			$totalWinners = $totalWinners + 1;
+		}
+	}
+	return $totalWinners/$listSize;
+}
+
+sub isVowel
+{
+	my($letter) = @_;
+	my $isVowel = FALSE;
+	foreach my $vowel ( VOWELS ){
+		if(lc($letter) eq $vowel){
+			$isVowel = TRUE;
+			last;
+		}
+	}
+	return $isVowel;
+}
+
+sub readCSV
+{
+    my($targetFile) = @_;
+    if(!(-e $targetFile)){
+		print&quot;File $targetFile does not exist within the specified path.\n&quot;;
+		exit 1;
+    }
+
+    open(FIL,$targetFile);
+    my @contents = &lt;FIL&gt;;
+    close(FIL);
+
+    return @contents;
+}
+
+sub sortCSV
+{
+	my($arrayRef) = @_;
+	my @array = @{$arrayRef};
+	my @returnArray = ();
+	foreach my $line (@array) {
+		if($line=~/\w+/){
+			my @attributes = split(/,/,$line);
+			push(@returnArray, [@attributes]);
+		}
+	}
+	return @returnArray
+}
+  </pre>
+
+	<div class="sources">
+		<h2>Relevant Files</h2>
+	  <ol>
+			<li><a href="images/badges/winners_losers.csv">Winners Losers Data</a></li>
+		</ol>
+	  
+	</div>
+
+</div>
+</body>
+</html>

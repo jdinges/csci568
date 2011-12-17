@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Application: Mining Mushrooms</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Mining Mushrooms</h1>
+  <h2>Process</h2>
+	<p class="introduction">For the mushroom data set, we were tasked with mining for data that helped describe the mushrooms, looking specifically at statistics, classification techniques/models, anomalies, and association rules. Luckily, this data set was easily minable in the WEKA environment as it provides many of tools necessary to identify those cases listed above.</p>
+	
+  <p class="introduction">Looking at meaningful statistics, we can see that the traditional approaches aren’t going to yield useful results because of the nature of the data. The .csv file stored only categorical data, not nominal, therefore, traditional statistics looking at continuous or data would not prove effective. However, I used WEKA to generate some interesting visualizations of the data. Specifically what follows:</p>
+
+	<img src="images/mushrooms/attrib.jpg" height="85%" width="85%"/>
+	
+  <p class="introduction"><br />What we can see here is a comparison of poisonous vs. edible classification based on each of the attributes of the mushroom. Also of note is that for WEKA to properly read in a .csv file, it needs to have a little meta data, specifically attribute titles. </p>
+
+  <p class="introduction">As for classification, I once again used WEKA to analyze the mushroom data. This yielded some great results that are available in the file called Decision Tree NBTree.txt. This is the result of the NBTree from the Classify tab in WEKA. I have included the basic summary below:</p>
+
+  <p class="introduction">Correctly Classified Instances        8124              100      %<br />
+	Incorrectly Classified Instances         0                0      %<br />
+	Kappa statistic                          1     <br />
+	Mean absolute error                      0.0001<br />
+	Root mean squared error                  0.002 <br />
+	Relative absolute error                  0.026  %<br />
+	Root relative squared error              0.4095 %<br />
+	Total Number of Instances             8124</p>
+	
+  <p class="introduction">What this is showing us is that everything was classified and that there was extremely low error. The file includes a print out of the tree structure, however, it’s rather cumbersome so I’ll leave it to you peruse as you please. </p>
+
+  <p class="introduction">Next up we’ll take a look at some association analysis. Once again, I used WEKA because of it’s simplicity. The associations are summarized below. The whole document provides some other information, and while it’s not extremely relevant, I have included it as well. The summary is as follows:</p>
+
+  <p class="introduction">Best rules found:<br /><br />
+
+	 1. veil-color=w 7924 ==> veil-type=p 7924    conf:(1)<br />
+	 2. gill-attachment=f 7914 ==> veil-type=p 7914    conf:(1)<br />
+	 3. gill-attachment=f veil-color=w 7906 ==> veil-type=p 7906    conf:(1)<br />
+	 4. gill-attachment=f 7914 ==> veil-color=w 7906    conf:(1)<br />
+	 5. gill-attachment=f veil-type=p 7914 ==> veil-color=w 7906    conf:(1)<br />
+	 6. gill-attachment=f 7914 ==> veil-type=p veil-color=w 7906    conf:(1)<br />
+	 7. veil-color=w 7924 ==> gill-attachment=f 7906    conf:(1)<br />
+	 8. veil-type=p veil-color=w 7924 ==> gill-attachment=f 7906    conf:(1)<br />
+	 9. veil-color=w 7924 ==> gill-attachment=f veil-type=p 7906    conf:(1)<br />
+	10. veil-type=p 8124 ==> veil-color=w 7924    conf:(0.98)</p>
+	
+  <p class="introduction">This data accurately reflects the classification analysis that we ran earlier and provides us with some attributes to split on for our decision tree.<br /> </p>
+
+	<div class="sources">
+		<h2>Relevant Files</h2>
+	  <ol>
+			<li><a href="images/mushrooms/apriori.txt">Apriori Association Analysis</a></li>
+			<li><a href="images/mushrooms/nbtree.txt">Decision NBTree</a></li>
+			<li><a href="images/mushrooms/meta.txt">Meta Data</a></li>
+			<li><a href="images/mushrooms/knime.workflow">Knime Workflow</a></li>
+			<li><a href="images/mushrooms/mushroom.data.csv">Mushroom Data</a></li>
+		</ol>
+	  
+	</div>
+	
+</div>
+</body>
+</html>
