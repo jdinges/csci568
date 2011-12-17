@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title>Association Analysis</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" /> 
+<!--[if IE]>
+  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Association Analysis</h1>
+
+  <h2>Introduction</h2>
+  <p class="introduction">This one's gonna be short, I don't have time to really work on this and get it done right, but I will give it a quick write up. Anyway, association analysis is the process of discover interesting relationships in a data set. There are two main issues that come with association analysis: one, most associations are "spurious" - they exist, but are not really meaningful or attention worthy; two, discovering patterns is expensive. There are a couple of terms that are used frequently within association analysis: itemset, k-itemset, transaction width, itemset support count. An itemset is simply a collection of items such as {Eggs, Ham, Cigarettes}. A k-itemset simply a count of how many items are in a given itemset. Transaction width is the number of items that are given within a transaction. Itemset support count means how often a given itemset appears in several supersets.</p>
+
+	<h2>Rules</h2>
+	<p class="introduction">Rules were the next topic of concern. Rules are expressed as X -&gt; Y, however the way that they're used it would be more accurate to say that X|Y - Given X, we'll probably see Y and vice versa. For example {Milk, Diapers} -&gt; {Beer}. There are two ways of measuring rules - rule support and confidence. Rule support measures the strength of the rule and it is calculated as X u Y / N, where "u" is union. Another way to think of it is how_many_times(stuff_in_X and stuff_in_Y) / N. Rules with low support are not very interesting because they are likely a result of chance. We use rule support to eliminate uninteresting rules. Confidence, on the other hand is, how frequent the items in Y appear in X. Confidence is expressed as X u Y / Y. Confidence gives us a measure of the reliability of a rule's strength, a higher confidence implies a higher likely hood that we'll see Y given X</p>
+	
+	<h2><i>apriori</i></h2>
+	<p class="introduction">One of the biggest principles guiding association analysis is the principle of <i>apriori</i>. The <i>apriori</i> principle states that if we have an itemset and it's frequent, then its subset must be frequent. The inverse also applies: if we have an itemset and it is infrequent, then its supersets are infrequent as well. The <i>apriori</i> principle is so important because by applying it, we can significantly reduce the amount of work necessary when calculating relevant associations.</p>
+
+	<div class="sources">
+		<h2>Sources</h2>
+	  <ol>
+		</ol>
+	</div>
+</div>
+</body>
+</html>
